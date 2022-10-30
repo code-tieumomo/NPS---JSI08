@@ -394,3 +394,11 @@ localStorage.clear();
 localStorage.setItem("mang", JSON.stringify([1, 2, 3]));
 const arr = JSON.parse(localStorage.getItem("mang"));
 ```
+
+# Setup
+
+-   [VSCode](https://code.visualstudio.com/)
+-   Live Server (VSCode extension)
+-   Prettier (VSCode extension)
+-   Bật Auto Save (Menu File > Auto Save), Bật Format on Save (Menu File > Preferences > Settings > Format on Save)
+-   Cài browser (Chrome, Firefox, ...)
