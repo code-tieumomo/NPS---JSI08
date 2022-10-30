@@ -359,3 +359,38 @@ const html = `
 `;
 console.log(html); // <div> <p>abc</p> <p>2</p> <p>abc</p> </div>
 ```
+
+## Event
+
+```js
+const element = document.querySelector("CSS Selector");
+element.addEventListener("sumbit|click|change", (event) => {
+    // code
+    event.preventDefault(); // Ngăn chặn hành vi mặc định của element (form thì sẽ chuyển trang, a thì sẽ chuyển trang, ...)
+});
+```
+
+## Fetch
+
+```js
+const apiUrl = "https://jsonplaceholder.typicode.com/users";
+fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+        // Tất cả logic với dữ liệu từ API phải viết trong then thứ 2
+        console.log(data);
+    });
+```
+
+## Local Storage
+
+```js
+localStorage.setItem("key", "value");
+localStorage.getItem("key");
+localStorage.removeItem("key");
+localStorage.clear();
+
+// Lưu array, object
+localStorage.setItem("mang", JSON.stringify([1, 2, 3]));
+const arr = JSON.parse(localStorage.getItem("mang"));
+```
