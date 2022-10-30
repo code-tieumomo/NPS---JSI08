@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 1</title>
+</head>
+
+<body>
+    <!-- Lấy dữ liệu về pokemon từ API (https://pokeapi.co/api/v2/pokemon/ditto) sau đó lưu vào localStorage và render ra trang HTML -->
+    <div id="card"></div>
+
+    <script>
+        // Lấy dữ liệu từ API dùng hàm fetch
+        fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+            .then((response) => response.json())
+            .then(function (data) {
+                // Lưu dữ liệu vào localStorage
+                localStorage.setItem("pokemon", JSON.stringify(data));
+                // Lấy dữ liệu từ localStorage
+                const ditto = JSON.parse(localStorage.getItem("pokemon"));
+                // Render dữ liệu ra trang HTML
+                const html = `
+                    <img src="${ditto.sprites.front_default}" alt="">
+                    <h1>${ditto.name.toUpperCase()}</h1>
+                `;
+
+                const card = document.querySelector("#card");
+                card.insertAdjacentHTML("beforeend", html);
+            });
+    </script>
+</body>
+
+</html>
