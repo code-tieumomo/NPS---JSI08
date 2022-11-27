@@ -24,24 +24,24 @@
     -   Trang bán đồ Tết (ăn uống, trang phục)
     -   Tham khảo: [https://84yoyo.com/](https://84yoyo.com/)
     -   Bao gồm:
-        -   Trang home
-        -   Trang danh sách:
-            -   Danh sách đồ ăn
-            -   Danh sách đồ mặc
-        -   Trang chi tiết
-            -   Chi tiết đồ ăn
-            -   Chi tiết đồ mặc
-        -   Trang giỏ hàng
-        -   Trang thanh toán
-        -   Trang đăng nhập/đăng ký
+        -   -   [ ] Trang home
+        -   -   [ ] Trang danh sách:
+            -   -   [ ] Danh sách đồ ăn
+            -   -   [ ] Danh sách đồ mặc
+        -   -   [ ] Trang chi tiết
+            -   -   [ ] Chi tiết đồ ăn
+            -   -   [ ] Chi tiết đồ mặc
+        -   -   [ ] Trang giỏ hàng
+        -   -   [ ] Trang thanh toán
+        -   -   [ ] Trang đăng nhập/đăng ký
 -   Nhóm 2: Ngọc Hà + Thùy Anh
     -   Giới thiệu về các món ăn ngày tết
     -   Tham khảo: [https://www.foody.vn/](https://www.foody.vn/)
     -   Bao gồm:
-        -   Trang home (kết hợp luôn là trang danh sách)
-        -   Trang chi tiết (giới thiệu về món ăn: lịch sử, cách chế biến, nguyên liệu, ...)
-        -   Trang đăng nhập/đăng ký
-        -   Trang các địa điểm bán món ăn này
+        -   -   [ ]Trang home (kết hợp luôn là trang danh sách)
+        -   -   [ ]Trang chi tiết (giới thiệu về món ăn: lịch sử, cách chế biến, nguyên liệu, ...)
+        -   -   [ ]Trang đăng nhập/đăng ký
+        -   -   [ ]Trang các địa điểm bán món ăn này
 -   Nhóm 3: Thế Nam
     -   ...
 -   Nhóm 4: Đức Anh
@@ -49,17 +49,18 @@
     -   Tham khảo: [https://dt-foodian.myshopify.com/](https://dt-foodian.myshopify.com/)
         -   > Mật khẩu: buddha
     -   Bao gồm:
-        -   Trang home (kết hợp luôn là trang danh sách)
-        -   Trang chi tiết (giới thiệu về món ăn: lịch sử, cách chế biến, nguyên liệu, ...)
-        -   Trang đăng nhập/đăng ký
-        -   Trang các địa điểm bán món ăn này
+        -   -   [ ]Trang home (kết hợp luôn là trang danh sách)
+        -   -   [ ]Trang chi tiết (giới thiệu về món ăn: lịch sử, cách chế biến, nguyên liệu, ...)
+        -   -   [ ]Trang đăng nhập/đăng ký
+        -   -   [ ]Trang các địa điểm bán món ăn này
 -   Nhóm 5: Xuân Hoàng
     -   ...
 -   Nhóm 6: Bảo An
     -   Giới thiệu về các món ăn ngày tết
     -   Tham khảo: [https://vt-poco.myshopify.com/](https://vt-poco.myshopify.com/)
+        -   > Mật khẩu: 1
     -   Bao gồm:
-        -   Trang home (kết hợp luôn là trang danh sách)
-        -   Trang chi tiết (giới thiệu về món ăn: lịch sử, cách chế biến, nguyên liệu, ...)
-        -   Trang đăng nhập/đăng ký
-        -   Trang các địa điểm bán món ăn này
+        -   -   [ ]Trang home (kết hợp luôn là trang danh sách)
+        -   -   [ ]Trang chi tiết (giới thiệu về món ăn: lịch sử, cách chế biến, nguyên liệu, ...)
+        -   -   [ ]Trang đăng nhập/đăng ký
+        -   -   [ ]Trang các địa điểm bán món ăn này
