@@ -1,0 +1,49 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Viết style cho desktop trước (desktop-first) */
+h1 {
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    background-color: brown;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 1200px */
+@media screen and (max-width: 1200px) {
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 992px (tablet nằm ngang) */
+@media screen and (max-width: 992px) {
+    form {
+        width: 75%;
+    }
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 768px (tablet nằm dọc) */
+@media screen and (max-width: 768px) {
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 480px (smartphone) */
+@media screen and (max-width: 480px) {
+    form {
+        width: 100%;
+    }
+}
