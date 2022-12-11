@@ -40,7 +40,7 @@
     -   Bao gồm:
         -   -   [ ] Trang home (kết hợp luôn là trang danh sách)
         -   -   [ ] Trang chi tiết (giới thiệu về món ăn: lịch sử, cách chế biến, nguyên liệu, ...)
-        -   -   [ ] Trang đăng nhập/đăng ký
+        -   -   [x] Trang đăng nhập/đăng ký
         -   -   [ ] Trang các địa điểm bán món ăn này
 -   Nhóm 3: Thế Nam
     -   ...
