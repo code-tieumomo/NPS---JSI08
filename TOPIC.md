@@ -33,8 +33,8 @@
             -   -   [ ] Chi tiết đồ mặc
         -   -   [ ] Trang giỏ hàng
         -   -   [ ] Trang thanh toán
-        -   -   [ ] Trang đăng nhập/đăng ký
--   Nhóm 2: Ngọc Hà + Thùy Anh
+        -   -   [x] Trang đăng nhập/đăng ký
+-   Nhóm 2: Thùy Anh
     -   Giới thiệu về các món ăn ngày tết
     -   Tham khảo: [https://www.foody.vn/](https://www.foody.vn/)
     -   Bao gồm:
@@ -43,7 +43,14 @@
         -   -   [x] Trang đăng nhập/đăng ký
         -   -   [ ] Trang các địa điểm bán món ăn này
 -   Nhóm 3: Thế Nam
-    -   ...
+    -   Trang bán đồ trang trí Tết
+    -   Tham khảo [https://crona.themeftc.com/](https://crona.themeftc.com/)
+    -   -   [ ] Trang home
+        -   -   [ ] Trang danh sách:
+        -   -   [ ] Trang chi tiết
+        -   -   [ ] Trang giỏ hàng
+        -   -   [ ] Trang thanh toán
+        -   -   [ ] Trang đăng nhập/đăng ký
 -   Nhóm 4: Đức Anh
     -   Giới thiệu về các món ăn ngày tết
     -   Tham khảo: [https://dt-foodian.myshopify.com/](https://dt-foodian.myshopify.com/)
