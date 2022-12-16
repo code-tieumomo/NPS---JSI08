@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  background-color: blanchedalmond;
+}
+
+/* Viết style cho desktop trước (desktop-first) */
+#login-form {
+  width: 50%;
+  /* height: 100vh; */
+  margin: auto 0px;
+  padding: 50px;
+}
+
+h1 {
+  margin: 0px 0px 20px 0px;
+  font-size: 40px;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 20px;
+  margin: 0;
+}
+
+label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input {
+  padding: 15px;
+  font-size: 15px;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 5px;
+}
+
+a {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+#login-input {
+  margin-top: 20px;
+  background-color: burlywood;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+#left-img {
+  margin-left: 50px;
+  width: 50%;
+  height: 100vh;
+  background-image: url(https://file1.dangcongsan.vn/data/0/images/2021/02/08/duongntcd/13-chung-tet-td.jpg?dpi=150&quality=100&w=680);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 99;
+}
+
+#background {
+  width: 25%;
+  background-color: chocolate;
+  z-index: 0;
+  position: absolute;
+  content: "";
+  min-height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 1200px */
+@media screen and (max-width: 1200px) {
+    form {
+        width: 90%;
+    }
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 992px (tablet nằm ngang) */
+@media screen and (max-width: 992px) {
+  form {
+    width: 70%;
+  }
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 768px (tablet nằm dọc) */
+@media screen and (max-width: 768px) {
+  #login-form {
+    padding: 20px;
+  }
+
+  form {
+    width: 95%;
+  }
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 480px (smartphone) */
+@media screen and (max-width: 480px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #left-img {
+    width: 100%;
+    height: 400px;
+    margin-left: 0;
+  }
+
+  #login-form {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  #background {
+    display: none;
+  }
+}
