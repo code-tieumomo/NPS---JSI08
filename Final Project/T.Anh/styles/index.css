@@ -15,6 +15,7 @@ body {
   font-family: "Dosis", sans-serif;
   font-size: 15px;
   font-weight: 400;
+  color: #878787;
   line-height: 26px;
 }
 
@@ -261,7 +262,7 @@ div.loading {
 
 .navbar-nav > .nav-item::after {
   background-color: #333;
-  bottom: 0;
+  bottom: 54%;
   height: 1px;
   left: 0;
   position: absolute;
@@ -269,12 +270,13 @@ div.loading {
   width: 100%;
 }
 
-.navbar-nav > .nav-item:hover::after, .navbar-nav > .nav-item.active::after {
-transform: scaleX(1);
+.navbar-nav > .nav-item:hover::after,
+.navbar-nav > .nav-item.active::after {
+  transform: scaleX(1);
 }
 
 .navbar-nav > .nav-item::after {
-  content: '';
+  content: "";
   transform: scaleX(0);
   transform-origin: center;
 }
@@ -320,16 +322,16 @@ transform: scaleX(1);
   right: 0;
 }
 
-.social-sidebar .ss-inner >* {
-  padding-right:20px;
+.social-sidebar .ss-inner > * {
+  padding-right: 20px;
   text-decoration: none;
   font-size: 13px;
   font-weight: 800;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   color: #b0b0b0;
 }
 
-.social-sidebar .ss-inner >*:hover {
+.social-sidebar .ss-inner > *:hover {
   color: #111;
 }
 /* !!!!!!!!!Hỏi thầy cách ẩn ss khi kéo lên */
@@ -339,3 +341,104 @@ transform: scaleX(1);
   margin: 0 8.3%;
   height: 500px;
 }
+
+/* ________________CARD 1: BLOG INSTRUCTION_____________ */
+.card.mb-3 {
+  position: relative;
+  margin: 100px 8.3%;
+  z-index: 20;
+  border-radius: 0;
+  border: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.col-md-8 {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-self: right;
+  padding-left: 5.5%;
+  width: 50%;
+}
+
+.col-md-4 {
+  width: 50%;
+  display: flex;
+}
+
+.subtitle {
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.card-title {
+  height: min-content;
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #0b0b0b;
+}
+
+.card-text {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.page-link-btn {
+  position: relative;
+  text-decoration: none;
+  padding: 14px 34px;
+  border: 1px solid #111;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  transition-duration: 0.25s;
+}
+
+.img-fluid {
+  max-width: none;
+  position: relative;
+}
+
+/* Page link hover */
+.page-link-btn:hover {
+  color: #111;
+}
+
+.page-link-btn::after {
+  background-color: #333;
+  bottom: 50%;
+  height: 1px;
+  left: 10%;
+  right: 10%;
+  position: absolute;
+  transition-duration: 0.25s;
+  width: 60%;
+  margin: auto;
+}
+
+.page-link-btn:hover::after {
+  transform: scaleX(1);
+}
+
+.page-link-btn::after {
+  content: "";
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+
+/* _____________3 CATAGORIES COLUMN_________ */
+#three-catagories-col {
+  display: flex;
+  flex-direction: row;
+  margin: 50px 8.3%;
+  justify-content: space-between;
+}
+
