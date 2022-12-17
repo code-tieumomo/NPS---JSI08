@@ -193,6 +193,7 @@ div.loading {
   display: flex;
   justify-content: center;
   padding: 40px;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .navbar > .container-fluid {
@@ -433,12 +434,40 @@ div.loading {
   transform-origin: center;
 }
 
-
 /* _____________3 CATAGORIES COLUMN_________ */
 #three-catagories-col {
   display: flex;
   flex-direction: row;
   margin: 50px 8.3%;
-  justify-content: space-between;
+  justify-content: center;
 }
 
+.three-catagories-col-ele {
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tcc-card {
+  padding: 23px 0 0;
+  border-top: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.tcc-card-title {
+  font-weight: 600;
+  color: #0b0b0b;
+  font-size: 25px;
+}
+
+.tcc-img {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  padding-top: 137px;
+}
