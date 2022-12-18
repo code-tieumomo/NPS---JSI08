@@ -194,6 +194,11 @@ div.loading {
   justify-content: center;
   padding: 40px;
   border-bottom: 1px solid #e1e1e1;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .navbar > .container-fluid {
@@ -341,6 +346,7 @@ div.loading {
 #carouselExampleCaptions {
   margin: 0 8.3%;
   height: 500px;
+  margin-top: 103px;
 }
 
 /* ________________CARD 1: BLOG INSTRUCTION_____________ */
