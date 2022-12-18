@@ -198,7 +198,7 @@ div.loading {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 110;
 }
 
 .navbar > .container-fluid {
@@ -307,6 +307,8 @@ div.loading {
   z-index: 109;
   vertical-align: baseline;
   margin: 0;
+  position: fixed;
+  background-color: #ffffff;
 }
 
 .ss-inner {
@@ -319,12 +321,10 @@ div.loading {
 }
 
 #ss-left {
-  float: left;
   left: 0;
 }
 
 #ss-right {
-  float: right;
   right: 0;
 }
 
