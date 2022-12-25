@@ -61,8 +61,6 @@
         -   -   [ ] Trang đăng nhập/đăng ký
         -   -   [ ] Trang các địa điểm bán món ăn này
 -   Nhóm 5: Xuân Hoàng
-    -   ...
--   Nhóm 6: Bảo An
     -   Giới thiệu về các món ăn ngày tết
     -   Tham khảo: [https://vt-poco.myshopify.com/](https://vt-poco.myshopify.com/)
         -   > Mật khẩu: 1
