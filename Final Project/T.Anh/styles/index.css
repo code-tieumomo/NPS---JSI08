@@ -653,3 +653,91 @@ input[type="radio"] {
 .bst-slr-pdts-body > h5 {
   color: #111;
 }
+
+/* CUSTOMERS COMMENTS */
+.ctmrs-comments {
+  margin: 100px 8.3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+}
+
+.ctmrs-cmt-title {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #0b0b0b;
+}
+
+.ctmrs-cmt-text {
+  font-size: 18px;
+  margin: 29px auto 0;
+}
+
+.ctmrs-comments > img {
+  margin: 42px 0 0;
+}
+
+/* __________FOOTER__________ */
+.footer {
+  margin: 100px 8.3%;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-col1 {
+  width: 50%;
+  height: 300px;
+  padding-right: 100px;
+}
+
+.footer-title {
+  color: #0b0b0b;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.footer-text {
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+
+#exampleInputEmail1 {
+  border: 1px solid #111;
+  border-radius: 0;
+  width: 400px;
+  padding: 20px 29px;
+  line-height: 18px;
+  font-size: 15px;
+  font-family: "Dosis", sans-serif;
+  color: #878787;
+  border-bottom: none;
+}
+
+.form-text {
+  font-size: 15px;
+  color: #111;
+  font-style: italic;
+}
+
+.btn {
+  border: 1px solid #111;
+  border-radius: 0;
+  width: 400px;
+  padding: 20px 29px;
+  line-height: 18px;
+  font-size: 15px;
+  font-family: "Dosis", sans-serif;
+  color: #878787;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: #111;
+  color: #fff !important;
+  border: 1px solid #111;
+}
