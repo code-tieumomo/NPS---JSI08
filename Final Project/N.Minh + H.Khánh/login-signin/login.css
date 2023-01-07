@@ -94,7 +94,8 @@ p {
     align-items: center;
     background: transparent;
     margin: 10px auto;
-    border: 1px solid #eccc68;
+    /* border: 1px solid #eccc68; */
+    border: none;
     padding: 6px 8px;
     gap: 10px;
     border-radius: 5px;
