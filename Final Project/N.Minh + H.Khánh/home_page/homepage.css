@@ -8,30 +8,89 @@ body{
     /* background-color: aquamarine; */
     font-family: 'Poppins', sans-serif;
 }
+header{
+    background-color: #ff3838;
+}
+.container{
+    /* background-color: #d63031; */
+    max-width: 960px;
+    margin: 0px auto;
+}
 nav{
     display: flex;
-    background-color: #d63031;
+    justify-content: center;
+    /* justify-content: space-around; */
 }
-ul{
+#logo{
+    padding: 5px 0px;
+    pointer-events: none;
+    margin-right: 100px;
+}
+#logo img{
+    max-width: 70px;
+    border-radius: 50%;
+    height: auto;
+    margin: 0px auto;
+    /* width: 60px; */
+    /* margin-left: 100px;
+    margin-top: 5px; */
+}
+#main-menu{
     display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-#account-cart{
+#main-menu li{
+    position: relative;
+}
+#main-menu li a {
+    color: #EFCB58;
+    display: block;
+    padding: 30px 30px;
+    text-decoration: none;
+}
+#main-menu ul.sub-menu
+{
+    position: absolute;
+    background-color: #ff3838;
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+    display: none;
+}
+#main-menu li:hover ul.sub-menu{
+    display: block;
+}
+#main-menu ul.sub-menu a
+{
+    padding: 8px 15px;
+    border-bottom: 1px solid #d6b918d4;
+}
+#main-menu ul.sub-menu li:last-child a{
+    border: none;
+    /* padding: 5px; */
+}
+
+
+/* ul{
+    display: flex;
+    margin-left: 170px;
+} */
+/* #account-cart{
     margin-left: 1000px;
-}
-img{
-    width: 90px;
-}
-#for-user{
+} */
+/* #for-user{
     display: inline-block;
-}
+} */
 /* span{
     position: relative;
     left: 320%;
     bottom: 10%;
 } */
 
-.account-btn{
-    /* background: none; */
+/* .account-btn{
+    background: none; 
     border: none;
     padding: 14px;
     font-size: 20px;
@@ -56,4 +115,34 @@ img{
     border: none;
     padding: 15px;
     border-radius:50% ;
+} */
+
+/* ul li {
+    list-style: none;
+    margin: auto;
+    min-width: 140px;
+}*/
+/* a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fed330;
+    position: relative;
+    letter-spacing: 2px;
+    padding: 0px 10px;
 }
+a::after{
+    content: "";
+    position: absolute;
+    background-color: #fed330;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+a:hover{
+  color: #fff200;  
+}
+a:hover::after{
+    width: 100%;
+}  */

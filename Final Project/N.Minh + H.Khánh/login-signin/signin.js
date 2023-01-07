@@ -34,7 +34,7 @@ signupBtn.onclick = function () {
       // The signed-in user info.
       const user = result.user;
       localStorage.setItem("user", JSON.stringify(user))
-      window.location.href = "../home_page/home.html"
+      window.location.href = "../home_page/homepage.html"
       
       // ...
     })
