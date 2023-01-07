@@ -686,10 +686,10 @@ input[type="radio"] {
   flex-direction: row;
 }
 
-.footer-col1 {
+.footer-col1 , .footer-col2 {
   width: 50%;
   height: 300px;
-  padding-right: 100px;
+  padding: 60px;
 }
 
 .footer-title {
@@ -703,16 +703,26 @@ input[type="radio"] {
   letter-spacing: 0.01em;
 }
 
-#exampleInputEmail1 {
+.form-control {
   border: 1px solid #111;
   border-radius: 0;
-  width: 400px;
+  width: 50%;
   padding: 20px 29px;
   line-height: 18px;
   font-size: 15px;
   font-family: "Dosis", sans-serif;
   color: #878787;
   border-bottom: none;
+}
+
+#exampleInputName1 {
+  float: left;
+  border-right: none;
+}
+
+#exampleInputComment1 {
+  width: 100%;
+  height: 100px;
 }
 
 .form-text {
@@ -724,7 +734,7 @@ input[type="radio"] {
 .btn {
   border: 1px solid #111;
   border-radius: 0;
-  width: 400px;
+  width: 100%;
   padding: 20px 29px;
   line-height: 18px;
   font-size: 15px;
@@ -740,4 +750,14 @@ input[type="radio"] {
   background-color: #111;
   color: #fff !important;
   border: 1px solid #111;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-link >a {
+  text-decoration: none;
+  margin-right: 19px;
 }
