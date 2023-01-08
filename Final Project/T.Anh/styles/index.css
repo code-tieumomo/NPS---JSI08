@@ -760,3 +760,15 @@ input[type="radio"] {
   text-decoration: none;
   margin-right: 19px;
 }
+
+.bst-slr-pdts-inner img {
+    transition: 0.5s;
+}
+
+.bst-slr-pdts-inner:hover {
+    border-width: 2px;
+}
+
+.bst-slr-pdts-inner:hover img {
+    transform: scale(1.2);
+}
