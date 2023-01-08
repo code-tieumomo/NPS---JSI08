@@ -56,17 +56,20 @@ input {
   border-radius: 5px;
 }
 
+.text-decoration-none {
+  color: #111;
+}
+
 /* GOOGLE BUTTON */
 #login {
   cursor: pointer;
   display: flex;
   align-items: center;
   background: transparent;
-  margin: 10px auto;
-  border: 1px solid #eccc68;
-  padding: 6px 8px;
+  margin: 0;
+  border: 1px solid #111;
+  padding: 15px;
   gap: 10px;
-  border-radius: 5px;
 }
 
 #left-img {
