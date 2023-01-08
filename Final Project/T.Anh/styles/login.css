@@ -60,6 +60,11 @@ input {
   color: #111;
 }
 
+.text-decoration-none:hover {
+  text-decoration: underline !important;
+  color: #111;
+}
+
 /* GOOGLE BUTTON */
 #login {
   cursor: pointer;
@@ -70,8 +75,15 @@ input {
   border: 1px solid #111;
   padding: 15px;
   gap: 10px;
+  width: 50%;
 }
 
+#login:hover img {
+  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+}
+
+/* NỀN */
 #left-img {
   margin-left: 50px;
   width: 50%;
@@ -92,8 +104,6 @@ input {
   top: 0;
   left: 0;
 }
-
-
 
 /* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 1200px */
 @media screen and (max-width: 1200px) {
