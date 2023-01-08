@@ -5,71 +5,87 @@
 body{
     margin: 0;
     padding: 0;
-    /* background-color: aquamarine; */
     font-family: 'Poppins', sans-serif;
 }
-header{
-    background-color: #ff3838;
-}
 .container{
-    /* background-color: #d63031; */
-    max-width: 960px;
-    margin: 0px auto;
+    background-color: #a9e2ffba;
+    margin-top: 10px;
+    height: 80px;
 }
 nav{
+    margin: auto;
     display: flex;
-    justify-content: center;
-    /* justify-content: space-around; */
+    justify-content: space-between;
+    width: 97%;
+    border-radius: 10px;
 }
 #logo{
-    padding: 5px 0px;
-    pointer-events: none;
-    margin-right: 100px;
+    /* pointer-events: none; */
+    display: flex;
+    width: 100px;
+    height: 85px;
+    justify-content: center;
+    align-items: center;
 }
 #logo img{
-    max-width: 70px;
-    border-radius: 50%;
-    height: auto;
-    margin: 0px auto;
-    /* width: 60px; */
-    /* margin-left: 100px;
-    margin-top: 5px; */
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
 }
-#main-menu{
+#main-nav{
     display: flex;
     list-style: none;
+    align-items: center;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
+    width: 600px;
 }
-#main-menu li{
+#main-nav li{
     position: relative;
 }
-#main-menu li a {
-    color: #EFCB58;
+#main-nav li a {
+    color: rgb(255, 255, 255);
     display: block;
-    padding: 30px 30px;
     text-decoration: none;
 }
-#main-menu ul.sub-menu
-{
-    position: absolute;
-    background-color: #ff3838;
-    padding: 15px 0px;
-    list-style: none;
-    width: 200px;
-    display: none;
+#main-nav input {
+    height: 50px;
+    width: 400px;
+    border-radius: 10px;
+    border: 3px solid black;
+    background-color: #a9e2ffba;
+    font-size: larger;
 }
-#main-menu li:hover ul.sub-menu{
+#main-nav ul.sub-menu{
+    position:absolute;
+    background-color: #a9e2ffba;
+    margin-top: 20px;
+    padding: 15px 20px;
+    list-style: none;
+    width: 140px;
+    display: none;
+    border-radius: 15px;
+    
+}
+#main-nav li:hover ul.sub-menu{
     display: block;
 }
-#main-menu ul.sub-menu a
+#main-nav ul.sub-menu a
 {
-    padding: 8px 15px;
-    border-bottom: 1px solid #d6b918d4;
+    padding: 4px 0px;
+    /* border-bottom: 1px solid #d6b918d4; */
 }
-#main-menu ul.sub-menu li:last-child a{
+#main-nav ul.sub-menu li:last-child a{
     border: none;
     /* padding: 5px; */
+}
+.product-link {
+    display: flex;
+    align-items: center;
+}
+#main-nav img {
+    height: 55px;
 }
 
 
