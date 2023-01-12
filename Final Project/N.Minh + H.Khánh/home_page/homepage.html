@@ -22,27 +22,34 @@
         <!-- logo -->
         <div id="logo">
           <a href="./homepage.html"><img src="../img/Logo.png" alt="" /></a>
-          
         </div>
         <!-- các mục cho người dùng vd(sản phẩm,...) -->
         <ul id="main-nav">
           <li>
-            <input type="text">
+            <input type="text" />
           </li>
           <li>
-            <a href="#" class="product-link"><img src="./../img/Product.png" alt="Product-icon" id="product-icon">
+            <a href="../login-signin/login.html" class="product-link"
+              ><img
+                src="../img/user.png"
+                alt="account-icon"
+                id="account-icon"
+                height="50px"
+              />
             </a>
-            <ul class="sub-menu">
+            <!-- <ul class="sub-menu">
               <li><a href="">Bánh Chưng</a></li>
               <li><a href="">Bánh Tét</a></li>
               <li><a href="">Dưa</a></li>
               <li><a href="">Thịt</a></li>
             </ul>
+          </li> -->
           </li>
           <li>
-            <a href="#"><img src="./../img/Cart.png" alt=""></a>
+            <a href="#"
+              ><img src="../img/cart2.png" alt="" id="cart-image" height="50px"
+            /></a>
           </li>
-          
         </ul>
         <!-- thanh search, account, giỏ hàng -->
         <!-- <div id="for_user">
@@ -61,9 +68,67 @@
           <span class="cart"><a class="account-btn"><i class="fa-solid fa-cart-shopping"></i></a></span>
         </div> -->
       </nav>
+      <!-- slides start -->
+      <div class="slider">
+        <div class="slides">
+          <!-- radio button -->
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+          <!-- slide image -->
+          <div class="slide first">
+            <img src="../img/Sales happy new year.png " alt="" />
+          </div>
+          <div class="slide">
+            <img src="../img/áo dài.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="../img/happy.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="../img/new year.png" alt="" />
+          </div>
+          <!-- end -->
+          <!--  -->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+      </div>
+      <div id="more-nav">
+        <div class="ship free">
+          <a href="#" title=""
+            ><img src="../img/free ship.png" alt="" />Miễn Phí Vẫn Chuyển trên
+            toàn quốc</a
+          >
+        </div>
+        <div class="ship fast">
+          <a href="#"
+            ><img src="../img/fast ship.png" alt="" /> Vận Chuyển nhanh chóng</a
+          >
+        </div>
+        <div class="ship return">
+          <a href="#"
+            ><img src="../img/return.png" alt="" />Hoàn trả hàng bị hỏng, bị lỗi
+            trong vòng 30 ngày</a
+          >
+        </div>
+      </div>
     </header>
-
     <!-- thân trang -->
+
     <!-- cuối trang -->
+    <script src="./homepage.js"></script>
   </body>
 </html>
