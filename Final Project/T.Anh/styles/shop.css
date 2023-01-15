@@ -7,7 +7,7 @@ body {
   padding: 0px;
 }
 
-/*  */
+/* ----------CARD IMAGE-------------------- */
 #elementor {
   background-image: url(../assets/shop-card-img.webp);
   background-position: center center;
@@ -40,6 +40,7 @@ body {
   font-size: 50px;
 }
 
+/* --------------TOOL BAR----------------- */
 .tool-bar {
   display: flex;
   align-items: center;
@@ -89,6 +90,7 @@ select {
   background-color: transparent;
 }
 
+/* -----------------PRODUCT LIST--------------- */
 #products-list {
   margin: 10px;
   padding: 0px;
@@ -119,6 +121,7 @@ select {
   object-fit: cover;
   margin-bottom: 10px;
   transition: all 0.3s ease;
+  border: none;
 }
 
 .product-name {
