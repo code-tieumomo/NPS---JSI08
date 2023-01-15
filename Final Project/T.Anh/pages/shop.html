@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ANTET-shop</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
     <!-- Vendors -->
     <link rel="stylesheet" href="../vendors/bootstrap.css" />
     <script src="../vendors/bootstrap.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/shop.css" />
     <!-- Fonts -->
-    <!-- ----------Dosis -->
+    <!-- ---------Dosis -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,12 +27,11 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg border border-0">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">ANTET</a>
+        <a class="navbar-brand text-white" href="#">ANTET</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -41,9 +45,9 @@
         </button>
 
         <ul class="navbar-nav">
-          <li class="nav-item dropdown active">
+          <li class="nav-item dropdown">
             <a
-              class="nav-link"
+              class="nav-link text-white"
               aria-current="page"
               href="#"
               role="button"
@@ -62,7 +66,7 @@
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link"
+              class="nav-link text-white"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -78,9 +82,9 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown active">
             <a
-              class="nav-link"
+              class="nav-link text-white"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
@@ -109,12 +113,44 @@
       <h1>ANTET SHOP</h1>
     </div>
 
-    <!-- TOOL BAR -->
-    <div class="tool-bar">
-      <div>
-        <button id="asc" class="text-uppercase">Giá tăng dần</button>
-        <button id="desc" class="text-uppercase">Giá giảm dần</button>
+    <!-- MAIN CONTENT -->
+    <div id="body-wrap" class="d-flex w-100 justify-content-center">
+      <!-- PRODUCT LIST - left -->
+      <div class="w-75 ">
+        <div class="tool-bar">
+          <p class="tool-bar-item">những nguyên liệu chất lượng nhất</p>
+          <div class="w-50 d-flex flex-row-reverse">
+            <button 
+            class="tool-bar-item w-50 border bg-transparent text-center"
+            aria-current="page"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            sắp xếp theo
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button id="original-order" class="text-uppercase">Tất cả</button>
+              </li>
+              <li>
+                <button id="price-asc" class="text-uppercase">Giá tăng dần</button>
+              </li>
+              <li>
+                <button id="price-desc" class="text-uppercase">Giá giảm dần</button>
+              </li>
+              <li>
+                <button id="name-asc" class="text-uppercase">Tên từ A đến Z</button>
+              </li>
+              <li>
+                <button id="name-desc" class="text-uppercase">Tên từ Z đến A</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul id="products-list" class="list d-flex justify-content-around">
+          <!-- Render bằng JS ở đây -->
+        </ul>
       </div>
+      <!-- PRODUCT LIST - right -->
       <div class="catagories">
         <label for="filter" class="text-uppercase">Thể loại</label>
         <select id="filter">
@@ -125,11 +161,6 @@
         </select>
       </div>
     </div>
-
-    <!-- PRODUCT LIST -->
-    <ul id="products-list">
-      <!-- Render bằng JS ở đây -->
-    </ul>
 
     <!-- FOOTER -->
     <div class="footer">
@@ -143,21 +174,21 @@
           <a href="facebook.com"
             ><img
               class="contact-icon"
-              src="../T.Anh/assets/facebook.png"
+              src="../assets/facebook.png"
               alt="" />
             <img src="" alt=""
           /></a>
           <a href="instagram.com"
             ><img
               class="contact-icon"
-              src="../T.Anh/assets/instagram.png"
+              src="../assets/instagram.png"
               alt="" />
             <img src="" alt=""
           /></a>
           <a href="twitter.com"
             ><img
               class="contact-icon"
-              src="../T.Anh/assets/twitter.png"
+              src="../assets/twitter.png"
               alt="" />
             <img src="" alt=""
           /></a>
@@ -192,9 +223,8 @@
         </form>
       </div>
     </div>
-
     <!-- Javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/index.js"></script>
     <script src="../scripts/shop.js"></script>
   </body>
 </html>

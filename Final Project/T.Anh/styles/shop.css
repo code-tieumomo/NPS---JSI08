@@ -7,9 +7,24 @@ body {
   padding: 0px;
 }
 
+#body-wrap {
+  padding: 120px 0 36px 0;
+  margin: auto;
+}
+
+/* ----------NAVBAR------------------------ */
+.navbar {
+  position: absolute;
+  background-color: transparent !important;
+}
+
+.navbar-nav > .nav-item::after {
+  background-color: #ffff;
+}
+
 /* ----------CARD IMAGE-------------------- */
 #elementor {
-  background-image: url(../assets/shop-card-img.webp);
+  background-image: url(../assets/shop-card-img.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,7 +34,6 @@ body {
   align-self: center;
   width: 100%;
   height: 400px;
-  margin-top: 104px;
 }
 
 #elementor-overlay {
@@ -30,7 +44,6 @@ body {
   top: 0;
   left: 0;
   position: absolute;
-  margin-top: 104px;
 }
 
 #elementor > h1 {
@@ -44,15 +57,20 @@ body {
 .tool-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 100px 20px 20px 20px;
-  padding: 10px;
-  height: 45px;
-  border-radius: 7px;
 }
 
-#asc,
-#desc {
+.tool-bar-item {
+  display: inline;
+  width: 50%;
+  margin: 0 0 50px;
+  float: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  line-height: 49px;
+}
+
+.sort-filter {
   margin: 0px 5px;
   padding: 4px;
   height: 30px;
@@ -62,13 +80,11 @@ body {
   transform: 2s;
 }
 
-#asc,
-#desc:focus-visible {
+.sort-filter:focus-visible {
   outline: none;
 }
 
-#asc:hover,
-#desc:hover {
+.sort-filter:hover {
   color: #f79aab;
   font-weight: 500;
 }
@@ -91,22 +107,18 @@ select {
 }
 
 /* -----------------PRODUCT LIST--------------- */
-#products-list {
-  margin: 10px;
+.list {
   padding: 0px;
   max-width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
-.product {
+.list-item {
   display: flex;
   flex-direction: column;
   width: 250px;
   height: max-content;
-  margin-bottom: 40px;
+  margin: 0 10px 40px 10px;
   border-radius: 5px;
 }
 

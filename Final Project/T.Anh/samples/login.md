@@ -124,43 +124,67 @@ function render(productsList) {
 render(products);
 
 // ISOTOPE
-var elem = document.querySelector(".list");
-var iso = new Isotope(elem, {
+var elem = document.querySelector('.list');
+var iso = new Isotope( elem, {
   // options
-  itemSelector: ".list-item",
-  layoutMode: "fitRows",
+  itemSelector: '.list-item',
+  layoutMode: 'fitRows',
   getSortData: {
-    name: "a",
-    price: "[data-price] parseInt",
-  },
+    price: "[data-price] parseInt", // text from querySelector
+  }
 });
 
-const allBtn = document.getElementById("original-order");
-const priceAscBtn = document.getElementById("price-asc");
-const priceDescBtn = document.getElementById("price-desc");
-const nameAscBtn = document.getElementById("name-asc");
-const nameDescBtn = document.getElementById("name-desc");
 
-console.log(nameAscBtn);
 
-priceAscBtn.onclick = function () {
+
+
+
+const ascBtn = document.getElementById("asc");
+const descBtn = document.getElementById("desc");
+
+// onclick là thuộc tính của thẻ button, chứ ko phải hàm
+// Onclick được gán bằng 1 function, fucntion này sẽ chỉ có 1 tham số duy nahát đại diện cho sự kiện xảy ra
+ascBtn.onclick = function () {
+  // Sắp xếp thứ tự giá tăng dần
+  // const sortedProducts = products.sort(function (a, b) {
+  //   // Nếu giá tiền bằng nhau thì không cần đổi chỗ a và b => return 0
+  //   if (a.price == b.price) {
+  //     return 0;
+  //   } else if (a.price > b.price) {
+  //     // Nếu giá tiền của a lớn hơn b, thì đổi chỗ a và b (trả về một số lớn hơn 0) => return 1
+  //     return 1;
+  //   } else {
+  //     // Nếu giá tiền của a nhỏ hơn b, thì đổi chỗ a và b => return -1 (sắp xếp a đứng trước b)
+  //     return -1;
+  //   }
+  // });
+
+  // //   Sau khi sắp xếp xong, render lại danh sách sản phẩm
+  // render(sortedProducts);
+
   iso.arrange({ sortBy: "price", sortAscending: true });
 };
 
-priceDescBtn.onclick = function () {
+descBtn.onclick = function () {
+  // // Sắp xếp thứ tự giá tăng dần
+  // const sortedProducts = products.sort(function (a, b) {
+  //   // Nếu giá tiền bằng nhau thì không cần đổi chỗ a và b => return 0
+  //   if (a.price == b.price) {
+  //     return 0;
+  //   } else if (a.price > b.price) {
+  //     // Nếu giá tiền của a lớn hơn b, thì đổi chỗ a và b (trả về một số nhỏ hơn 0) => return -1
+  //     return -1;
+  //   } else {
+  //     // Nếu giá tiền của a nhỏ hơn b, thì đổi chỗ a và b => return 1 (sắp xếp a đứng sau b)
+  //     return 1;
+  //   }
+  // });
+
+  // //   Sau khi sắp xếp xong, render lại danh sách sản phẩm
+  // render(sortedProducts);
+
   iso.arrange({ sortBy: "price", sortAscending: false });
-};
 
-nameAscBtn.onclick = function () {
-  iso.arrange({ sortBy: "name", sortAscending: true });
-};
-
-nameDescBtn.onclick = function () {
-  iso.arrange({ sortBy: "name", sortAscending: false });
-};
-
-allBtn.onclick = function () {
-  iso.arrange({ sortBy: "original-order" });
 };
 
 // Lọc sản phẩm theo thể loại
