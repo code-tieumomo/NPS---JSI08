@@ -224,10 +224,57 @@ const products = [
 ];
 
 products.forEach((product, index) => {
-    document.getElementById("products").insertAdjacentHTML("beforeend", `
-        <li class="product" style="width: 100px">
-            <img style="width: 100%" src="${product.image}" alt="${product.title}">
-            <a href="/Final Project/Sample/pages/product.html?id=${index}">/Final Project/Sample/pages/product.html?id=${index}</a>
-        </li>
-    `);
-})
+    document.getElementById("products").insertAdjacentHTML(
+        "beforeend",
+        `
+            <li class="product grid-item" style="width: 100px" data-price="${product.price}">
+                <img style="width: 100%" src="${product.image}" alt="${product.title}">
+                <a href="/Final Project/Sample/pages/product.html?id=${index}&abc=xyz&name=Quan">${product.title}</a>
+                <div>${product.price}</div>
+            </li>
+        `
+    );
+});
+
+var elem = document.querySelector(".grid");
+var iso = new Isotope(elem, {
+    // options
+    itemSelector: ".grid-item",
+    layoutMode: "fitRows",
+    getSortData: {
+        name: "a",
+        price: "[data-price] parseInt",
+    },
+});
+
+document.querySelector("#order-by-name-asc").addEventListener("click", () => {
+    iso.arrange({ sortBy: "name", sortAscending: true });
+});
+
+document.querySelector("#order-by-name-desc").addEventListener("click", () => {
+    iso.arrange({ sortBy: "name", sortAscending: false });
+});
+
+document.querySelector("#order-by-price-asc").addEventListener("click", () => {
+    iso.arrange({ sortBy: "price", sortAscending: true });
+});
+
+document.querySelector("#order-by-price-desc").addEventListener("click", () => {
+    iso.arrange({ sortBy: "price", sortAscending: false });
+});
+
+// element argument can be a selector string
+//   for an individual element
+// var iso = new Isotope(".grid", {
+//     // options
+// });
+
+// const navbarElement = document.querySelector(".navbar");
+// window.addEventListener("scroll", () => {
+//     const position = window.scrollY;
+//     if (position >= 450) {
+//         navbarElement.classList.add("has-bg");
+//     } else {
+//         navbarElement.classList.remove("has-bg");
+//     }
+// });

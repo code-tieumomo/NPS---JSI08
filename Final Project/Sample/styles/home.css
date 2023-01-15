@@ -1,5 +1,17 @@
 /* Homepage */
 /* ... */
 #back {
-    background-image: url("./../assets/OKE.webp")
+    background-image: url("./../assets/OKE.webp");
+}
+
+#products {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.product img {
+    height: 100px;
+    object-fit: cover;
 }
