@@ -231,10 +231,6 @@ div.loading {
   margin-left: 30px;
 }
 
-.nav-item {
-  border: 30px solid transparent;
-}
-
 .navbar-nav {
   height: 100%;
   width: 100% !important;
@@ -771,3 +767,5 @@ input[type="radio"] {
 .bst-slr-pdts-inner:hover img {
     transform: scale(1.2);
 }
+
+/* ------RESPONSIVE----------- */
