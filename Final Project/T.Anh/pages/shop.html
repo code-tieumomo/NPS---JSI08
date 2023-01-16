@@ -26,6 +26,9 @@
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- ---------Quicksand -->\<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- NAVBAR -->
@@ -127,26 +130,26 @@
             aria-expanded="false">
             sắp xếp theo
             </button>
-            <ul class="dropdown-menu">
+            <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2         ">
               <li>
-                <button id="original-order" class="text-uppercase">Tất cả</button>
+                <button id="original-order" class="border-0 bg-transparent py-1">Tất cả</button>
               </li>
               <li>
-                <button id="price-asc" class="text-uppercase">Giá tăng dần</button>
+                <button id="price-asc" class="border-0 bg-transparent py-1">Giá tăng dần</button>
               </li>
               <li>
-                <button id="price-desc" class="text-uppercase">Giá giảm dần</button>
+                <button id="price-desc" class="border-0 bg-transparent py-1">Giá giảm dần</button>
               </li>
               <li>
-                <button id="name-asc" class="text-uppercase">Tên từ A đến Z</button>
+                <button id="name-asc" class="border-0 bg-transparent py-1">Tên từ A đến Z</button>
               </li>
               <li>
-                <button id="name-desc" class="text-uppercase">Tên từ Z đến A</button>
+                <button id="name-desc" class="border-0 bg-transparent py-1">Tên từ Z đến A</button>
               </li>
             </ul>
           </div>
         </div>
-        <ul id="products-list" class="list d-flex justify-content-around">
+        <ul id="products-list" class="list d-flex justify-content-between">
           <!-- Render bằng JS ở đây -->
         </ul>
       </div>
