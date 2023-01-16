@@ -106,16 +106,16 @@ function render(productsList) {
       // Nội dung chèn
       `
           
-      <li class="list-item position-static"  data-price="${element.price}">
+      <li class="list-item"  data-price="${element.price}">
             <div class="overflow-hidden"><img class="product-img" src="${element.image}"></div>
             <div class="card-body d-flex flex-column text-center mt-3 mb-4">
-              <a 
-              class="product-name justify-content-center mb-2" 
-              href="http://127.0.0.1:5500/Product/product.html?id=${element.id}">
-              ${element.name}
-              </a>
-              <span class="product-price w-100 mb-2">${element.price}đ</span>
-              <button class="border bg-transparent py-2">Thêm vào giỏ hàng</button>
+                <a 
+                class="product-name justify-content-center mb-2" 
+                href="http://127.0.0.1:5500/Product/product.html?id=${element.id}">
+                ${element.name}
+                </a>
+                <span class="product-price w-100 mb-2">${element.price}đ</span>
+              <button class="border bg-transparent py-2 text-uppercase fw-semibold">Thêm vào giỏ hàng</button>
               </div>
           </li>
       `

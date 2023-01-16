@@ -144,9 +144,19 @@ select {
   height: auto;
 }
 
+.product-name:hover {
+  color: #111;
+}
+
 .product-price {
   font-size: 16px;
   padding: 0px 10px;
   color: #878787;
   line-height: 1;
+}
+
+.card-body button:hover {
+  border: none;
+  background-color: black !important;
+  color: #ffff;
 }
