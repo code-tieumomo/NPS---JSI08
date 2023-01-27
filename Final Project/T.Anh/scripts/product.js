@@ -1,150 +1,118 @@
 const list = [
   {
     id: 1,
-    name: "Hoa mai giảo lá gai",
-    price: 215000,
-    type: "flower",
-    image: "../assets/hoa mai giảo lá gai.jpg",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "Gạo nếp 1kg",
+    price: 40000,
+    type: "rice",
+    image: "../assets/gạo nếp.jpg",
   },
   {
     id: 2,
-    name: "Bình xịt bóng lá",
-    price: 149000,
-    type: "accessories",
-    image: "../assets/bình xịt bóng lá.png",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "Lá dong",
+    price: 20000,
+    type: "leaves",
+    image: "../assets/lá dong.jpg",
   },
   {
     id: 3,
-    name: "Hoa đào Nhật Tân",
-    price: 500000,
-    type: "flower",
-    image: "../assets/hoa đào Nhật Tân.jpg",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "Thịt heo 500g",
+    price: 89000,
+    type: "meat",
+    image: "../assets/thịt heo.png",
   },
   {
     id: 4,
-    name: "Lọ hoa gốm phong cách châu Âu",
-    price: 349000,
-    type: "vase",
-    image: "../assets/lọ hoa gốm phong cách châu Âu.jpg",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "Gạo ST25 5kg",
+    price: 190000,
+    type: "rice",
+    image: "../assets/gạo ST25.jpg",
   },
   {
     id: 5,
-    name: "Cành cây tuyết dẻo trắng",
-    price: 509000,
-    type: "accessories",
-    image: "../assets/cành cây tuyết dẻo trắng.png",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "Đậu xanh không vỏ 300g",
+    price: 19000,
+    type: "others",
+    image: "../assets/đậu xanh không vỏ.jpg",
   },
   {
     id: 6,
-    name: "Hoa đồng tiền",
-    price: 800000,
-    type: "flower",
-    image: "../assets/hoa đồng tiền.png",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "1 vỉ trứng gà",
+    price: 60000,
+    type: "others",
+    image: "../assets/trứng.png",
   },
   {
     id: 7,
-    name: "Lọ hoa thủy tinh cao cấp",
-    price: 43000,
-    type: "vase",
-    image: "../assets/lọ hoa thủy tinh cao cấp.jpg",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "Gà nguyên con",
+    price: 37900,
+    type: "meat",
+    image: "../assets/thịt gà.jpg",
   },
   {
     id: 8,
-    name: "Ruy băng",
-    price: 20000,
-    type: "accessories",
-    image: "../assets/ruy băng.jpg",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "Củ kiệu sơ chế",
+    price: 85000,
+    type: "others",
+    image: "../assets/củ kiệu sơ chế.jpg",
   },
   {
     id: 9,
-    name: "Lan hồ điệp",
-    price: 200000,
-    type: "flower",
-    image: "../assets/lan hồ điệp.png",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "Chả lụa 500g",
+    price: 90000,
+    type: "cha",
+    image: "../assets/chả lụa.jpg",
   },
   {
     id: 10,
-    name: "Chậu hoa tròn",
-    price: 80000,
-    type: "vase",
-    image: "../assets/chậu hoa tròn.jpg",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "Nước mắm Nam Ngư",
+    price: 30000,
+    type: "spice",
+    image: "../assets/nước mắm.jpg",
   },
   {
     id: 11,
-    name: "Mút cắm hoa",
-    price: 20000,
-    type: "accessories",
-    image: "../assets/mút cắm hoa.jpg",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "Lá chuối 1kg",
+    price: 25000,
+    type: "leaves",
+    image: "../assets/lá chuối.jpg",
   },
   {
     id: 12,
-    name: "Lọ hoa cao xanh biển",
-    price: 200000,
-    type: "vase",
-    image: "../assets/lọ hoa cao xanh biển.jpg",
-    description:
-      "There’s no doubt you’ve seen the “swiss cheese plant” all over Pinterest as they’re one of the most popular indoor plants going around right now. Their lush green leaves with distinctive holes make a stunning statement in any room and they can grow to fit any space. Monstera plants prefer a warm climate away from direct sunlight and they benefit from regular cleaning with a soft, damp cloth.",
+    name: "Chả lụa bì 200g",
+    price: 49000,
+    type: "cha",
+    image: "../assets/chả lụa bì.jpg",
   },
 ];
-// Lưu vào localStorage
-localStorage.setItem("list", JSON.stringify(list));
+
+// // Lưu vào localStorage
+// localStorage.setItem("list", JSON.stringify(list));
 
 const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
 
 const id = params.id;
-const product = list[id];
+const product = list[id]
 if (product === undefined) {
   document.write("Product not found");
 } else {
   document.write(`
-        <h1 id="title">${product.name}</h1>
-        <div class="d-flex justify-content-between">
-            <img id="product-img" src="${product.image}" alt="${product.name}">
-            <div class="summary">
-                <p id="price" class="fs-3">${product.price}đ</p>
-                <p>${product.description}</p>
-                <button>Thêm vào giỏ hàng</button>
-            </div>
-        </div>
-      `);
+      <h1>${product.name}</h1>
+  `);
 }
-
-/**
- * Thêm chức năng thêm vào giỏ hàng
- */
-// var muaBtns = document.querySelectorAll(".san-pham .mua button");
-var giohang = document.querySelector("#gio-hang");
-/**
- * Duyệt qua từng phần tử ở trong muaBtns, mỗi lần duyệt thì đem
- * button tương ứng đặt vào biến btn (do chúng ta đặt tên)
- */
-muaBtns.forEach(function (btn) {
-  btn.onclick = function (e) {
-    var tenSP = btn.parentElement
-    localStorage.setItem(JSON.stringify(tenSP),  )
-  };
-});
+// /**
+//  * Thêm chức năng thêm vào giỏ hàng
+//  */
+// // var muaBtns = document.querySelectorAll(".san-pham .mua button");
+// var giohang = document.querySelector("#gio-hang");
+// /**
+//  * Duyệt qua từng phần tử ở trong muaBtns, mỗi lần duyệt thì đem
+//  * button tương ứng đặt vào biến btn (do chúng ta đặt tên)
+//  */
+// muaBtns.forEach(function (btn) {
+//   btn.onclick = function (e) {
+//     var tenSP = btn.parentElement
+//     localStorage.setItem(JSON.stringify(tenSP),  )
+//   };
+// });

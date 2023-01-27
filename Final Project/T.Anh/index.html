@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ANTET</title>
     <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="./assets/favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <!-- Vendors -->
     <link rel="stylesheet" href="./vendors/bootstrap.css" />
     <script src="./vendors/bootstrap.js"></script>
+    <!-- Animate on scroll -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css"
+    />
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
     <!-- Styles -->
+    <link rel="stylesheet" href="./styles/shop.css" />
     <link rel="stylesheet" href="./styles/index.css" />
     <!-- Fonts -->
     <!-- ---------Dosis -->
@@ -62,10 +65,30 @@
                 HOME
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#bog-intro"
+                    >Giới thiệu về Blog</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#shop-intro"
+                    >Giới thiệu về Shop</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#best-recipe"
+                    >Món ăn đặc biệt nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#best-seller"
+                    >Sản phẩm bán chạy nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ctmrs-comments"
+                    >Nhận xét của khách hàng</a
+                  >
                 </li>
               </ul>
             </li>
@@ -106,6 +129,11 @@
               </ul>
             </li>
           </ul>
+          <div class="d-flex navbar-nav d-flex justify-content-end ms-auto">
+            <a href="" class="nav-item nav-link border border-dark me-5"
+              >LOGIN</a
+            >
+          </div>
         </div>
       </div>
     </nav>
@@ -218,7 +246,7 @@
     </div>
 
     <!-- CARD 1: blog introduction -->
-    <div class="card mb-3">
+    <div id="blog-intro" class="card mb-3">
       <div class="row g-0">
         <div class="col-md-4">
           <img
@@ -228,15 +256,8 @@
             src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-8.jpg"
             class="img-fluid"
             alt="..."
+            data-aos="fade-down"
           />
-          <!-- <img
-          style="position: relative; z-index: 200; top: 0;"
-            width="435"
-            height="306"
-            src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-9.jpg"
-            class="img-fluid"
-            alt="..."
-          /> -->
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -256,7 +277,7 @@
     </div>
 
     <!-- CARD 2: shop introduction -->
-    <div class="card mb-3">
+    <div id="shop-intro" class="card mb-3">
       <div class="row g-0" style="flex-direction: row-reverse">
         <div class="col-md-4" style="justify-content: right">
           <img
@@ -266,15 +287,8 @@
             src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-2.jpg"
             class="img-fluid"
             alt="..."
+            data-aos="fade-up"
           />
-          <!-- <img
-          style="position: relative; z-index: 200; top: 0;"
-            width="435"
-            height="306"
-            src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-9.jpg"
-            class="img-fluid"
-            alt="..."
-          /> -->
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -295,7 +309,7 @@
       </div>
     </div>
 
-    <!-- 3 catagories column -->
+    <!-- shop catagories -->
     <div id="three-catagories-col">
       <div class="three-catagories-col-ele" style="margin: 45px 60px 0 0">
         <div class="tcc-card" style="width: 18rem">
@@ -318,6 +332,7 @@
             width="100%"
             src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/h1-custom-icon-img-9.png"
             alt=""
+            data-aos="fade-up"
           />
         </div>
       </div>
@@ -346,6 +361,7 @@
             width="100%"
             src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/h1-custom-icon-img-9.png"
             alt=""
+            data-aos="fade-up"
           />
         </div>
       </div>
@@ -371,13 +387,14 @@
             width="100%"
             src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/h1-custom-icon-img-9.png"
             alt=""
+            data-aos="fade-up"
           />
         </div>
       </div>
     </div>
 
     <!-- BEST RECIPE -->
-    <div id="best-recipe">
+    <div id="best-recipe" data-aos="fade-down">
       <h6 class="best-subtitle">NHỮNG MÓN ĂN</h6>
       <h1 class="best-title">ĐẶC BIỆT NHẤT</h1>
       <section id="slider">
@@ -396,71 +413,135 @@
     </div>
 
     <!-- BEST SELLER -->
-    <div id="best-seller">
+    <div id="best-seller" data-aos="fade-up">
       <h6 class="best-subtitle">NHỮNG SẢN PHẨM</h6>
       <h1 class="best-title">BÁN CHẠY NHẤT</h1>
-      <div class="bst-slr-products">
+      <!-- <div class="bst-slr-products">
         <div class="bst-slr-pdts-inner">
           <div class="overflow-hidden">
             <img
               class="w-100"
-              src="https://food-market.cmsmasters.net/wp-content/uploads/2015/05/15-580x580.jpg"
+              src="./assets/gạo ST25.jpg"
               alt=""
             />
           </div>
           <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Products</h6>
-            <h5>Smoked Ham</h5>
-            <h5 style="margin: 0">$8.35</h5>
+            <h6 style="margin: 0">Gạo</h6>
+            <h5>Gạo ST-25 5kg</h5>
+            <h5 style="margin: 0">190000đ</h5>
           </div>
         </div>
         <div class="bst-slr-pdts-inner">
           <div class="overflow-hidden">
             <img
               class="w-100"
-              src="https://food-market.cmsmasters.net/wp-content/uploads/2015/05/15-580x580.jpg"
+              src="./assets/thịt heo.png"
               alt=""
             />
           </div>
           <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Products</h6>
-            <h5>Smoked Ham</h5>
-            <h5 style="margin: 0">$8.35</h5>
+            <h6 style="margin: 0">Thịt</h6>
+            <h5>Thịt heo 500g</h5>
+            <h5 style="margin: 0">89000đ</h5>
           </div>
         </div>
         <div class="bst-slr-pdts-inner">
           <div class="overflow-hidden">
             <img
               class="w-100"
-              src="https://food-market.cmsmasters.net/wp-content/uploads/2015/05/15-580x580.jpg"
+              src="./assets/trứng.png"
               alt=""
             />
           </div>
           <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Products</h6>
-            <h5>Smoked Ham</h5>
-            <h5 style="margin: 0">$8.35</h5>
+            <h6 style="margin: 0">Khác</h6>
+            <h5>1 vỉ trứng gà</h5>
+            <h5 style="margin: 0">60000đ</h5>
           </div>
         </div>
         <div class="bst-slr-pdts-inner">
           <div class="overflow-hidden">
             <img
               class="w-100"
-              src="https://food-market.cmsmasters.net/wp-content/uploads/2015/05/15-580x580.jpg"
+              src="./assets/nước mắm.jpg"
               alt=""
             />
           </div>
           <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Products</h6>
-            <h5>Smoked Ham</h5>
-            <h5 style="margin: 0">$8.35</h5>
+            <h6 style="margin: 0">Gia vị</h6>
+            <h5>Nước mắm nam ngư</h5>
+            <h5 style="margin: 0">30000đ</h5>
           </div>
         </div>
-      </div>
+      </div> -->
+      <ul id="products-list" class="list d-flex justify-content-between px-3">
+        <li class="list-item">
+          <div class="overflow-hidden">
+            <img class="product-img" src="./assets/thịt heo.png" />
+          </div>
+          <div class="card-body d-flex flex-column text-center mt-3">
+            <a
+              target="_blank"
+              class="product-name justify-content-center mb-2"
+              href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/product.html?id=${element.id}"
+            >
+              thịt heo 500g
+            </a>
+            <span class="product-price w-100 mb-2">89000đ</span>
+            <button
+              class="border bg-transparent py-2 text-uppercase fw-semibold"
+            >
+              Thêm vào giỏ hàng
+            </button>
+          </div>
+        </li>
+
+        <li class="list-item">
+          <div class="overflow-hidden">
+            <img class="product-img" src="./assets/gạo ST25.jpg" />
+          </div>
+          <div class="card-body d-flex flex-column text-center mt-3">
+            <a
+              target="_blank"
+              class="product-name justify-content-center mb-2"
+              href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/product.html?id=${element.id}"
+            >
+              gạo st-25 5kg
+            </a>
+            <span class="product-price w-100 mb-2">190000đ</span>
+            <button
+              class="border bg-transparent py-2 text-uppercase fw-semibold"
+            >
+              Thêm vào giỏ hàng
+            </button>
+          </div>
+        </li>
+
+        <li class="list-item">
+          <div class="overflow-hidden">
+            <img class="product-img" src="./assets/trứng.png" />
+          </div>
+          <div class="card-body d-flex flex-column text-center mt-3">
+            <a
+              target="_blank"
+              class="product-name justify-content-center mb-2"
+              href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/product.html?id=${element.id}"
+            >
+              1 vỉ trứng gà
+            </a>
+            <span class="product-price w-100 mb-2">60000</span>
+            <button
+              class="border bg-transparent py-2 text-uppercase fw-semibold"
+            >
+              Thêm vào giỏ hàng
+            </button>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <!-- CUSTOMERS COMMENTS -->
-    <div class="ctmrs-comments">
+    <div id="ctmrs-comments" data-aos="fade">
       <div class="ctmrs-cmt-body">
         <h5 class="ctmrs-cmt-title">HAPPY CUSTOMERS</h5>
         <p class="ctmrs-cmt-text">
