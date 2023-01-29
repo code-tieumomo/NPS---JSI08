@@ -190,6 +190,55 @@ div.loading {
 
 /* ______________NAVBAR___________________ */
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 110;
+  background-color: #fff !important;
+  border-bottom: 1px solid #d3d3d3;
+
+  width: 100%;
+  padding: 30px 8.3%;
+}
+
+.navbar-nav {
+  width: 100%;
+  gap: 70px;
+  justify-content: center;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  border: 1px solid #111;
+}
+
+.nav-link,
+.navbar-brand {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  color: #111;
+  padding: 10px 20px !important;
+}
+
+.nav-link:hover {
+  color: #111;
+}
+
+.navbar-brand {
+  padding: 0 23px !important;
+  position: relative;
+  float: left;
+  z-index: 20;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+
+
+/* .navbar {
   background-color: #fff !important;
   display: flex;
   justify-content: center;
@@ -204,7 +253,11 @@ div.loading {
 
 .navbar > .container-fluid {
   display: flex;
-  /* justify-content: center; */
+}
+
+.nav-log:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .nav-link,
@@ -253,10 +306,10 @@ div.loading {
 
 .dropdown-item {
   color: #fff;
-}
+} */
 
 /* Nav-link hover effects */
-.navbar-nav > .nav-item {
+/* .navbar-nav > .nav-item {
   position: relative;
   text-align: center;
   transition-duration: 0.25s;
@@ -282,19 +335,18 @@ div.loading {
   content: "";
   transform: scaleX(0);
   transform-origin: center;
-}
+} */
 
 /* Hide Dropdowns by Default */
-.dropdown-menu {
+/* .dropdown-menu {
   display: none;
   position: absolute;
-}
+} */
 
 /* Display Dropdowns on Hover */
-.nav-item:hover > .dropdown-menu {
+/* .nav-item:hover > .dropdown-menu {
   display: inherit;
-}
-/* !!!!!!!!!!!!!!Hỏi thầy làm sao để chỉ hiện dropdown khi hover vào */
+} */
 
 /* ________________SOCIAL SIDEBAR___________ */
 .social-sidebar {
@@ -767,4 +819,94 @@ input[type="radio"] {
     transform: scale(1.2);
 }
 
+.form-control:focus {
+  border-color: #111;
+  box-shadow: none;
+}
+
 /* ------RESPONSIVE----------- */
+/* @media screen and (max-width: 768px) {
+  .navbar-nav {
+    width: 100%;
+    gap: 0 !important;
+    justify-content: center;
+  }
+  .navbar-collapse {
+    padding: 0 3%;
+  }
+  #nav-log {
+    justify-content: center;
+  }
+} */
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 1200px */
+@media screen and (max-width: 1200px) {
+  .navbar-nav {
+    width: 100%;
+    gap: 0 !important;
+    justify-content: center;
+  }
+  .navbar-collapse {
+    padding: 0 8%;
+  }
+
+  #nav-log {
+    justify-content: center;
+    margin-right: 0 !important;
+    margin: 0 20px;
+  }
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 992px (tablet nằm ngang) */
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    width: 100%;
+    gap: 0 !important;
+    justify-content: center;
+  }
+  .navbar-collapse {
+    padding: 0 8%;
+  }
+
+  #nav-log {
+    justify-content: center;
+    margin-right: 0 !important;
+    margin: 0 20px;
+  }
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 768px (tablet nằm dọc) */
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    width: 100%;
+    gap: 0 !important;
+    justify-content: center;
+  }
+  .navbar-collapse {
+    padding: 0 8%;
+  }
+
+  #nav-log {
+    justify-content: center;
+    margin-right: 0 !important;
+    margin: 0 20px;
+  }
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 480px (smartphone) */
+@media screen and (max-width: 480px) {
+  .navbar-nav {
+    width: 100%;
+    gap: 0 !important;
+    justify-content: center;
+  }
+  .navbar-collapse {
+    padding: 0 8%;
+  }
+
+  #nav-log {
+    justify-content: center;
+    margin-right: 0 !important;
+    margin: 0 20px;
+  }
+}
