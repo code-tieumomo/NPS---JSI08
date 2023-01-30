@@ -196,3 +196,14 @@ spiceBtn.onclick = function () {
 othersBtn.onclick = function () {
   iso.arrange({ filter: ".others" });
 };
+
+// NAVBAR đổi màu
+const navbarElement = document.querySelector(".navbar");
+window.addEventListener("scroll", () => {
+    const position = window.scrollY;
+    if (position >= 450) {
+        navbarElement.classList.add("has-bg");
+    } else {
+        navbarElement.classList.remove("has-bg");
+    }
+});

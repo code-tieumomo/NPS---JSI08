@@ -38,3 +38,4 @@ AOS.init({
     duration: 700,
     offset: 50,
 });
+

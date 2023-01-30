@@ -14,12 +14,60 @@ body {
 
 /* ----------NAVBAR------------------------ */
 .navbar {
-  position: absolute;
-  background-color: transparent !important;
+  border-bottom: none;
+}
+
+.nav-link,
+.navbar-brand {
+  color: #ffff !important;
 }
 
 .navbar-nav > .nav-item::after {
-  background-color: #ffff;
+  background-color: #fff;
+}
+
+#nav-log {
+  border: #ffff solid 1px !important;
+}
+
+.nav-log:hover {
+  background-color: #fff;
+  color: #000 !important;
+}
+
+.navbar-toggler {
+  border: #fff solid 1px;
+}
+
+.navbar-toggler-icon {
+  background-image: url(../assets/menu.png);
+}
+
+.nav-link,
+.navbar-brand:hover {
+  color: #fff;
+}
+
+/* NAVBAR WHEN SCROLL */
+.has-bg {
+  background-color: #fff;
+  border: #878787 solid 1px;
+}
+
+.has-bg .nav-link, .has-bg .navbar-brand {
+  color: #000 !important;
+}
+
+.has-bg .nav-item::after {
+  background-color: #000;
+}
+
+.has-bg #nav-log {
+  border: #000 solid 1px !important;
+}
+.has-bg .nav-log:hover {
+  background-color: #000;
+  color: #fff !important;
 }
 
 /* ----------CARD IMAGE-------------------- */
@@ -136,7 +184,7 @@ select {
 }
 
 .list-item:hover {
-  border: 1px solid #878787
+  border: 1px solid #878787;
 }
 
 .list-item:hover .product-img {
