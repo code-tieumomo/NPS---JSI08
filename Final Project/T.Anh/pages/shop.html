@@ -130,8 +130,8 @@
               </ul> -->
             </li>
           </ul>
-          <div id="nav-log" class="d-flex me-5 nav-log">
-            <a href="" class="nav-item nav-link nav-log">LOGIN</a>
+          <div id="nav-log" class="d-flex border border-dark me-5 nav-log">
+            <a href="" class="nav-item nav-link">LOGIN</a>
           </div>
         </div>
       </div>
@@ -149,11 +149,11 @@
     <!-- MAIN CONTENT -->
     <div id="body-wrap" class="d-flex w-100 justify-content-center">
       <!-- PRODUCT LIST - left -->
-      <div class="w-75 ps-5 pe-3">
-        <div class="tool-bar ps-4">
+      <div id="prod-list-left">
+        <div class="tool-bar px-4">
           <p class="tool-bar-item">những nguyên liệu chất lượng nhất</p>
-          <div class="w-50 d-flex flex-row-reverse">
             <button
+              id="sort-btn"
               class="tool-bar-item sort-btn-w border bg-transparent text-center"
               aria-current="page"
               data-bs-toggle="dropdown"
@@ -163,40 +163,53 @@
             </button>
             <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2">
               <li>
-                <button id="original-order" class="product-dropdown-item border-0 bg-transparent py-1"
+                <button
+                  id="original-order"
+                  class="product-dropdown-item border-0 bg-transparent py-1"
                 >
                   Tất cả
                 </button>
               </li>
               <li>
-                <button id="price-asc" class="product-dropdown-item border-0 bg-transparent py-1">
+                <button
+                  id="price-asc"
+                  class="product-dropdown-item border-0 bg-transparent py-1"
+                >
                   Giá tăng dần
                 </button>
               </li>
               <li>
-                <button id="price-desc" class="product-dropdown-item border-0 bg-transparent py-1">
+                <button
+                  id="price-desc"
+                  class="product-dropdown-item border-0 bg-transparent py-1"
+                >
                   Giá giảm dần
                 </button>
               </li>
               <li>
-                <button id="name-asc" class="product-dropdown-item border-0 bg-transparent py-1">
+                <button
+                  id="name-asc"
+                  class="product-dropdown-item border-0 bg-transparent py-1"
+                >
                   Tên từ A đến Z
                 </button>
               </li>
               <li>
-                <button id="name-desc" class="product-dropdown-item border-0 bg-transparent py-1">
+                <button
+                  id="name-desc"
+                  class="product-dropdown-item border-0 bg-transparent py-1"
+                >
                   Tên từ Z đến A
                 </button>
               </li>
             </ul>
-          </div>
         </div>
-        <ul id="products-list" class="list d-flex justify-content-between px-3">
+        <ul id="products-list" class="list d-flex justify-content-center">
           <!-- Render bằng JS ở đây -->
         </ul>
       </div>
       <!-- PRODUCT LIST - right -->
-      <div class="catagories w-25 me-3 pe-5 ps-3">
+      <div id="prod-list-right" class="catagories">
         <button
           class="tool-bar-item sort-btn-w border bg-transparent text-center float-end"
           aria-current="page"
@@ -207,36 +220,58 @@
         </button>
         <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2">
           <li>
-            <button id="all" class="product-dropdown-item border-0 bg-transparent py-1">
+            <button
+              id="all"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
               Tất cả
             </button>
           </li>
           <li>
-            <button id="rice" class="product-dropdown-item border-0 bg-transparent py-1">
+            <button
+              id="rice"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
               Gạo
             </button>
           </li>
           <li>
-            <button id="leaves" class="product-dropdown-item border-0 bg-transparent py-1">
+            <button
+              id="leaves"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
               Lá gói bánh
+            </button>
           </li>
           <li>
-            <button id="meat" class="product-dropdown-item border-0 bg-transparent py-1">
+            <button
+              id="meat"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
               Thịt
             </button>
           </li>
           <li>
-            <button id="cha" class="product-dropdown-item border-0 bg-transparent py-1">
+            <button
+              id="cha"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
               Chả
             </button>
           </li>
           <li>
-            <button id="spice" class="product-dropdown-item border-0 bg-transparent py-1">
+            <button
+              id="spice"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
               Gia vị
             </button>
           </li>
           <li>
-            <button id="others" class="product-dropdown-item border-0 bg-transparent py-1">
+            <button
+              id="others"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
               Khác
             </button>
           </li>
@@ -251,34 +286,44 @@
             <li class="cat-item">Gia vị (1)</li>
             <li class="cat-item">Khác (3)</li>
           </ul>
-        
         </div>
         <div id="pop-product" class="mb-4">
           <h3 class="text-black fs-4 fw-semibold mb-3">BÁN CHẠY NHẤT</h3>
           <ul class="m-0 p-0">
             <li class="d-flex list-none mb-2">
-                <img class="w-25" src="../assets/thịt heo.png" alt="">
+              <img width="55" src="../assets/thịt heo.png" alt="" />
               <div class="d-flex flex-column ms-2">
-                <a class="text-decoration-none text-black fs-5 text-uppercase fw-semibold" href="">Thịt heo 500g</a>
+                <a
+                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
+                  href=""
+                  >Thịt heo 500g</a
+                >
                 <span>89000đ</span>
               </div>
             </li>
             <li class="d-flex list-none mb-2">
-              <img class="w-25" src="../assets/gạo ST25.jpg" alt="">
-            <div class="d-flex flex-column ms-2">
-              <a class="text-decoration-none text-black fs-5 text-uppercase fw-semibold" href="">Gạo ST25 5kg</a>
-              <span>190000đ</span>
-            </div>
-          </li>
-          <li class="d-flex list-none mb-2">
-            <img class="w-25" src="../assets/trứng.png" alt="">
-          <div class="d-flex flex-column ms-2">
-            <a class="text-decoration-none text-black fs-5 text-uppercase fw-semibold" href="">1 vỉ trứng gà</a>
-            <span>60000đ</span>
-          </div>
-        </li>
+              <img width="55" src="../assets/gạo ST25.jpg" alt="" />
+              <div class="d-flex flex-column ms-2">
+                <a
+                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
+                  href=""
+                  >Gạo ST25 5kg</a
+                >
+                <span>190000đ</span>
+              </div>
+            </li>
+            <li class="d-flex list-none mb-2">
+              <img width="55" src="../assets/trứng.png" alt="" />
+              <div class="d-flex flex-column ms-2">
+                <a
+                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
+                  href=""
+                  >1 vỉ trứng gà</a
+                >
+                <span>60000đ</span>
+              </div>
+            </li>
           </ul>
-        
         </div>
       </div>
     </div>
@@ -292,15 +337,17 @@
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div class="footer-link">
-          <a href="facebook.com"
+          <a
+            href="https://www.facebook.com/profile.php?id=100015427713945"
+            target="_blank"
             ><img class="contact-icon" src="../assets/facebook.png" alt="" />
             <img src="" alt=""
           /></a>
-          <a href="instagram.com"
+          <a href="https://www.instagram.com/tuong2971/" target="_blank"
             ><img class="contact-icon" src="../assets/instagram.png" alt="" />
             <img src="" alt=""
           /></a>
-          <a href="twitter.com"
+          <a href="https://twitter.com/JayceeK18" target="_blank"
             ><img class="contact-icon" src="../assets/twitter.png" alt="" />
             <img src="" alt=""
           /></a>
@@ -335,6 +382,7 @@
         </form>
       </div>
     </div>
+
     <!-- Javascript -->
     <script src="../scripts/index.js"></script>
     <script src="../scripts/shop.js"></script>

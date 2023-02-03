@@ -116,7 +116,7 @@ function render(productsList) {
                 ${element.name}
                 </a>
                 <span class="product-price w-100 mb-2">${element.price}đ</span>
-              <button class="border bg-transparent py-2 text-uppercase fw-semibold">Thêm vào giỏ hàng</button>
+              <button class="border bg-transparent py-2 text-uppercase fw-semibold add-to-cart-btn">Thêm vào giỏ hàng</button>
               </div>
           </li>
       `

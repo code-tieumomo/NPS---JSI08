@@ -30,11 +30,84 @@
   </head>
   <body>
     <!-- LOADING OVERLAY -->
-    <!-- <div class="loading">
-      <div class="uil-ring-css" style="transform: scale(0.79)">
-        <div></div>
+    <div id="overlay">
+      <div class="scene">
+          <div class="plane">
+              <div class="cube cube--0">
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+              </div>
+              <div class="shadow shadow--0"></div>
+              <div class="cube cube--1">
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+              </div>
+              <div class="shadow shadow--1"></div>
+              <div class="cube cube--2">
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+              </div>
+              <div class="shadow shadow--2"></div>
+              <div class="cube cube--3">
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+              </div>
+              <div class="shadow shadow--3"></div>
+              <div class="cube cube--4">
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+              </div>
+              <div class="shadow shadow--4"></div>
+              <div class="cube cube--5">
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+              </div>
+              <div class="shadow shadow--5"></div>
+              <div class="cube cube--6">
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+              </div>
+              <div class="shadow shadow--6"></div>
+              <div class="cube cube--7">
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+                  <div class="cube__side"></div>
+              </div>
+              <div class="shadow shadow--7"></div>
+          </div>
       </div>
-    </div> -->
+  </div>
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-light">
@@ -132,7 +205,7 @@
             </li>
           </ul>
           <div id="nav-log" class="d-flex border border-dark me-5 nav-log">
-            <a href="" class="nav-item nav-link nav-log">LOGIN</a>
+            <a href="" class="nav-item nav-link">LOGIN</a>
           </div>
         </div>
       </div>
@@ -250,7 +323,6 @@
       <div class="row g-0">
         <div class="col-md-4">
           <img
-            style="position: relative; z-index: 1"
             width="463"
             height="568"
             src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-8.jpg"
@@ -311,8 +383,8 @@
 
     <!-- shop catagories -->
     <div id="three-catagories-col">
-      <div class="three-catagories-col-ele" style="margin: 45px 60px 0 0">
-        <div class="tcc-card" style="width: 18rem">
+      <div class="three-catagories-col-ele">
+        <div class="tcc-card">
           <img
             width="67"
             height="43"
@@ -339,7 +411,7 @@
 
       <div
         class="three-catagories-col-ele"
-        style="margin: 45px 30px 0 35px; flex-direction: column-reverse"
+        style="flex-direction: column-reverse"
       >
         <div class="tcc-card">
           <img
@@ -366,8 +438,8 @@
         </div>
       </div>
 
-      <div class="three-catagories-col-ele" style="margin: 45px 12px 0 50px">
-        <div class="tcc-card" style="width: 18rem">
+      <div class="three-catagories-col-ele">
+        <div class="tcc-card">
           <img
             width="67"
             height="43"
@@ -416,65 +488,7 @@
     <div id="best-seller" data-aos="fade-up">
       <h6 class="best-subtitle">NHỮNG SẢN PHẨM</h6>
       <h1 class="best-title">BÁN CHẠY NHẤT</h1>
-      <!-- <div class="bst-slr-products">
-        <div class="bst-slr-pdts-inner">
-          <div class="overflow-hidden">
-            <img
-              class="w-100"
-              src="./assets/gạo ST25.jpg"
-              alt=""
-            />
-          </div>
-          <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Gạo</h6>
-            <h5>Gạo ST-25 5kg</h5>
-            <h5 style="margin: 0">190000đ</h5>
-          </div>
-        </div>
-        <div class="bst-slr-pdts-inner">
-          <div class="overflow-hidden">
-            <img
-              class="w-100"
-              src="./assets/thịt heo.png"
-              alt=""
-            />
-          </div>
-          <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Thịt</h6>
-            <h5>Thịt heo 500g</h5>
-            <h5 style="margin: 0">89000đ</h5>
-          </div>
-        </div>
-        <div class="bst-slr-pdts-inner">
-          <div class="overflow-hidden">
-            <img
-              class="w-100"
-              src="./assets/trứng.png"
-              alt=""
-            />
-          </div>
-          <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Khác</h6>
-            <h5>1 vỉ trứng gà</h5>
-            <h5 style="margin: 0">60000đ</h5>
-          </div>
-        </div>
-        <div class="bst-slr-pdts-inner">
-          <div class="overflow-hidden">
-            <img
-              class="w-100"
-              src="./assets/nước mắm.jpg"
-              alt=""
-            />
-          </div>
-          <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Gia vị</h6>
-            <h5>Nước mắm nam ngư</h5>
-            <h5 style="margin: 0">30000đ</h5>
-          </div>
-        </div>
-      </div> -->
-      <ul id="products-list" class="list d-flex justify-content-between px-3">
+      <ul id="products-list" class="list d-flex px-3">
         <li class="list-item">
           <div class="overflow-hidden">
             <img class="product-img" src="./assets/thịt heo.png" />
