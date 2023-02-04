@@ -7,7 +7,7 @@
     <title>ANTET-login</title>
     <!-- Vendors -->
     <link rel="stylesheet" href="../vendors/bootstrap.css" />
-    <!-- <script src="../vendors/bootstrap.js"></script> -->
+    <script src="../vendors/bootstrap.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/login.css" />
@@ -22,6 +22,19 @@
   </head>
 
   <body>
+    <!-- LOADING OVERLAY -->
+    <div id="overlay">
+      <!-- Credit: https://dribbble.com/shots/5092176-Newton-Loader -->
+      <div class="gooey">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
     <div id="background"></div>
     <div id="left-img"></div>
     <div class="footer-col2">
@@ -64,7 +77,11 @@
         <button type="submit" class="btn btn-primary">LOGN</button>
         <div class="d-flex flex-row">
           <!-- Google -->
-          <button id="login" class="border-top-0 btn w-100 justify-content-center" type="button">
+          <button
+            id="login"
+            class="border-top-0 btn w-100 justify-content-center"
+            type="button"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="#000000"
@@ -140,5 +157,6 @@
           });
       };
     </script>
+    <script src="../scripts/index.js"></script>
   </body>
 </html>

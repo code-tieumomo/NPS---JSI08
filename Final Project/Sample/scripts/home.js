@@ -8,11 +8,11 @@ console.log(
 
 // Xảy ra khi HTML trên trang load xong
 document.addEventListener("DOMContentLoaded", function () {
-  // document.getElementById("overlay").remove();
-  // const start = performance.now();
-  // for (let index = 0; index < 2000000000; index++) {}
-  // const end = performance.now();
-  // console.log("Thời gian chạy: ", end - start);
+  document.getElementById("overlay").remove();
+  const start = performance.now();
+  for (let index = 0; index < 2000000000; index++) {}
+  const end = performance.now();
+  console.log("Thời gian chạy: ", end - start);
 });
 
 // Xảy ra khi tất cả các tài nguyên trên trang load xong

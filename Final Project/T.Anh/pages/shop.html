@@ -35,6 +35,19 @@
     />
   </head>
   <body>
+    <!-- LOADING OVERLAY -->
+    <div id="overlay">
+      <!-- Credit: https://dribbble.com/shots/5092176-Newton-Loader -->
+      <div class="gooey">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -152,57 +165,57 @@
       <div id="prod-list-left">
         <div class="tool-bar px-4">
           <p class="tool-bar-item">những nguyên liệu chất lượng nhất</p>
-            <button
-              id="sort-btn"
-              class="tool-bar-item sort-btn-w border bg-transparent text-center"
-              aria-current="page"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              sắp xếp theo
-            </button>
-            <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2">
-              <li>
-                <button
-                  id="original-order"
-                  class="product-dropdown-item border-0 bg-transparent py-1"
-                >
-                  Tất cả
-                </button>
-              </li>
-              <li>
-                <button
-                  id="price-asc"
-                  class="product-dropdown-item border-0 bg-transparent py-1"
-                >
-                  Giá tăng dần
-                </button>
-              </li>
-              <li>
-                <button
-                  id="price-desc"
-                  class="product-dropdown-item border-0 bg-transparent py-1"
-                >
-                  Giá giảm dần
-                </button>
-              </li>
-              <li>
-                <button
-                  id="name-asc"
-                  class="product-dropdown-item border-0 bg-transparent py-1"
-                >
-                  Tên từ A đến Z
-                </button>
-              </li>
-              <li>
-                <button
-                  id="name-desc"
-                  class="product-dropdown-item border-0 bg-transparent py-1"
-                >
-                  Tên từ Z đến A
-                </button>
-              </li>
-            </ul>
+          <button
+            id="sort-btn"
+            class="tool-bar-item sort-btn-w border bg-transparent text-center"
+            aria-current="page"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            sắp xếp theo
+          </button>
+          <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2">
+            <li>
+              <button
+                id="original-order"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Tất cả
+              </button>
+            </li>
+            <li>
+              <button
+                id="price-asc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Giá tăng dần
+              </button>
+            </li>
+            <li>
+              <button
+                id="price-desc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Giá giảm dần
+              </button>
+            </li>
+            <li>
+              <button
+                id="name-asc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Tên từ A đến Z
+              </button>
+            </li>
+            <li>
+              <button
+                id="name-desc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Tên từ Z đến A
+              </button>
+            </li>
+          </ul>
         </div>
         <ul id="products-list" class="list d-flex justify-content-center">
           <!-- Render bằng JS ở đây -->
