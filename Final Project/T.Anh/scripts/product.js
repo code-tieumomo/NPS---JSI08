@@ -93,36 +93,45 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 const id = params.id;
-const product = list[id]
-const productDetail = document.getElementById("product-detail")
+const product = list[id];
+const productDetail = document.getElementById("product-detail");
 if (product === undefined) {
   document.write("Product not found");
 } else {
   productDetail.insertAdjacentHTML(
     "beforeend",
     `
-    <div class="prod-imges">
-        <img src="${product.image}" alt="" />
-        <div class="d-flex justify-content-between">
-          <img class="prod-gallery-img pt-2" width="160" height="200" src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/shop-10-gallery-1-300x400.jpg" alt="" />
-          <img class="prod-gallery-img pt-2" width="160" height="200" src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/shop-10-gallery-2-300x400.jpg" alt="" />
-          <img class="prod-gallery-img pt-2" width="160" height="200" src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/shop-10-gallery-3-300x400.jpg" alt="" />
+      <div class="prod-imges d-flex">
+        <img class="main-img" src="${product.image}" alt="" />
+        <div class="d-flex flex-column justify-content-between">
+          <img class="prod-gallery-img " width="100" src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/shop-10-gallery-1-300x400.jpg" alt="" />
+          <img class="prod-gallery-img " width="100" src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/shop-10-gallery-2-300x400.jpg" alt="" />
+          <img class="prod-gallery-img " width="100" src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/shop-10-gallery-3-300x400.jpg" alt="" />
         </div>
       </div>
       <div class="prod-info">
-        <h1 class="prod-name">${product.name}</h1>
-        <h3 class="prod-price">${product.price}</h3>
-        <button class="border bg-transparent py-2 text-uppercase fw-semibold add-to-cart-btn">Thêm vào giỏ hàng</button>
-        <h4>mô tả</h4>
+        <h1 class="prod-name text-uppercase fw-semibold text-black m-0">${product.name}</h1>
+        <div class="rating d-flex align-items-center mt-2">
+          <div class="d-flex">
+            <img src="../assets/star.png" class="me-1" width="14" height="14" alt="">
+            <img src="../assets/star.png" class="me-1" width="14" height="14" alt="">
+            <img src="../assets/star.png" class="me-1" width="14" height="14" alt="">
+            <img src="../assets/star.png" class="me-1" width="14" height="14" alt="">
+            <img src="../assets/star-outline.png" class="me-1" width="14" height="14" alt="">
+          </div>
+          <p class="mt-0">1 đánh giá</p>
+        </div>
+        <h3 class="prod-price text-black">${product.price}đ</h3>
         <p>
           Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
           Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
           Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
           ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
         </p>
+        <button class="border border-dark text-uppercase fw-semibold add-to-cart-btn">Thêm vào giỏ hàng</button>
       </div>
     `
-  )
+  );
 }
 // /**
 //  * Thêm chức năng thêm vào giỏ hàng
@@ -143,10 +152,10 @@ if (product === undefined) {
 // NAVBAR đổi màu
 const navbarElement = document.querySelector(".navbar");
 window.addEventListener("scroll", () => {
-    const position = window.scrollY;
-    if (position >= 450) {
-        navbarElement.classList.add("has-bg");
-    } else {
-        navbarElement.classList.remove("has-bg");
-    }
+  const position = window.scrollY;
+  if (position >= 450) {
+    navbarElement.classList.add("has-bg");
+  } else {
+    navbarElement.classList.remove("has-bg");
+  }
 });
