@@ -34,7 +34,7 @@ body {
   background-color: #fff;
 }
 
-#nav-log:hover .nav-log {
+#nav-log:hover a {
   color: #000 !important;
 }
 
@@ -72,7 +72,7 @@ body {
 .has-bg #nav-log:hover {
   background-color: #000;
 }
-.has-bg #nav-log:hover .nav-log {
+.has-bg #nav-log:hover a {
   color: #fff !important;
 }
 .has-bg .navbar-toggler-icon {

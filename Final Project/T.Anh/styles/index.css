@@ -162,7 +162,7 @@ body {
   background-color: #000;
 }
 
-#nav-log:hover .nav-log {
+#nav-log:hover a {
   color: #fff !important;
 }
 

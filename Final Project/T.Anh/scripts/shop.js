@@ -201,6 +201,30 @@ othersBtn.onclick = function () {
   iso.arrange({ filter: ".others" });
 };
 
+/**
+ * Chức năng thêm vào giỏ hàng
+ */
+const muaBtns = document.querySelectorAll(".list-item .card-body button");
+// var giohang = document.getElementById("gio-hang");
+const giohang = document.querySelector("#gio-hang");
+/**
+ * Duyệt qua từng phần tử ở trong muaBtns, mỗi lần duyệt thì đem
+ * button tương ứng đặt vào biến btn (do chúng ta đặt tên)
+ */
+muaBtns.forEach(function (btn) {
+  btn.onclick = function (e) {
+    var tenSP =
+      btn.parentElement.previousElementSibling.previousElementSibling
+        .textContent;
+
+    const spMoi = document.createElement("li");
+    spMoi.textContent = tenSP;
+
+    giohang.appendChild(spMoi);
+  };
+});
+
+
 // NAVBAR đổi màu
 const navbarElement = document.querySelector(".navbar");
 window.addEventListener("scroll", () => {

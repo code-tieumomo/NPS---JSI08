@@ -1,2 +1,1 @@
 - danh sách sản phẩm
-- ko mở được link trang product
