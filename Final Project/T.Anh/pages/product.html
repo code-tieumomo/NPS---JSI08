@@ -58,7 +58,11 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="http://127.0.0.1:5500/Final%20Project/T.Anh/index.html">ANTET</a>
+        <a
+          class="navbar-brand"
+          href="http://127.0.0.1:5500/Final%20Project/T.Anh/index.html"
+          >ANTET</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -120,12 +124,26 @@
                 BLOG
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#thit-kho-tau">Thịt kho tàu</a></li>
                 <li>
-                  <a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#cac-loai-mut">Các loại mứt ngày Tết</a>
+                  <a
+                    class="dropdown-item"
+                    href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#thit-kho-tau"
+                    >Thịt kho tàu</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#banh-chung">Bánh chưng</a>
+                  <a
+                    class="dropdown-item"
+                    href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#cac-loai-mut"
+                    >Các loại mứt ngày Tết</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#banh-chung"
+                    >Bánh chưng</a
+                  >
                 </li>
               </ul>
             </li>
@@ -148,7 +166,11 @@
             </li>
           </ul>
           <div id="nav-log" class="d-flex border border-dark me-5 nav-log">
-            <a href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/login.html" class="nav-item nav-link">LOGIN</a>
+            <a
+              href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/login.html"
+              class="nav-item nav-link"
+              >LOGIN</a
+            >
           </div>
         </div>
       </div>
@@ -168,6 +190,76 @@
       <!-- PRODUCT DETAIL -->
       <div id="product-detail" class="d-flex"></div>
     </div>
+
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+
+    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+    <button
+      style="
+        background-color: #6772e5;
+        color: #fff;
+        padding: 8px 12px;
+        border: 0;
+        border-radius: 4px;
+        font-size: 1em;
+        cursor: pointer;
+      "
+      id="checkout-button-price_1MXz4HIUvPZxN8XgPuXU7kJF"
+      role="link"
+      type="button"
+    >
+      Checkout
+    </button>
+
+    <div id="error-message"></div>
+
+    <script>
+      (function () {
+        var stripe = Stripe(
+          "pk_test_51MXz1DIUvPZxN8XgPaldfNDQARsEQRhPEsUsep7VddkZvMfrabLAq7s9dshr5NdVCFsXavL6EE9MMPwyuR5S27bW000KkPBGqf"
+        );
+
+        var checkoutButton = document.getElementById(
+          "checkout-button-price_1MXz4HIUvPZxN8XgPuXU7kJF"
+        );
+        checkoutButton.addEventListener("click", function () {
+          /*
+           * When the customer clicks on the button, redirect
+           * them to Checkout.
+           */
+          stripe
+            .redirectToCheckout({
+              lineItems: [
+                { price: "price_1MXz4HIUvPZxN8XgPuXU7kJF", quantity: 1 },
+                { price: "price_1MXzDUIUvPZxN8XgmdVfY2Vk", quantity: 100 },
+              ],
+              mode: "payment",
+              /*
+               * Do not rely on the redirect to the successUrl for fulfilling
+               * purchases, customers may not always reach the success_url after
+               * a successful payment.
+               * Instead use one of the strategies described in
+               * https://stripe.com/docs/payments/checkout/fulfill-orders
+               */
+              successUrl:
+                "http://127.0.0.1:5500/Final%20Project/T.Anh/pages/shop.html",
+              cancelUrl:
+                "http://127.0.0.1:5500/Final%20Project/T.Anh/index.html",
+            })
+            .then(function (result) {
+              if (result.error) {
+                /*
+                 * If `redirectToCheckout` fails due to a browser or network
+                 * error, display the localized error message to your customer.
+                 */
+                var displayError = document.getElementById("error-message");
+                displayError.textContent = result.error.message;
+              }
+            });
+        });
+      })();
+    </script>
 
     <!-- FOOTER -->
     <div class="footer" data-aos="fade">

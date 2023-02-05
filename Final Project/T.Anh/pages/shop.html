@@ -57,7 +57,11 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="http://127.0.0.1:5500/Final%20Project/T.Anh/index.html">ANTET</a>
+        <a
+          class="navbar-brand"
+          href="http://127.0.0.1:5500/Final%20Project/T.Anh/index.html"
+          >ANTET</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -119,12 +123,26 @@
                 BLOG
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#thit-kho-tau">Thịt kho tàu</a></li>
                 <li>
-                  <a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#cac-loai-mut">Các loại mứt ngày Tết</a>
+                  <a
+                    class="dropdown-item"
+                    href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#thit-kho-tau"
+                    >Thịt kho tàu</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#banh-chung">Bánh chưng</a>
+                  <a
+                    class="dropdown-item"
+                    href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#cac-loai-mut"
+                    >Các loại mứt ngày Tết</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#banh-chung"
+                    >Bánh chưng</a
+                  >
                 </li>
               </ul>
             </li>
@@ -146,8 +164,26 @@
               </ul> -->
             </li>
           </ul>
-          <div id="nav-log" class="d-flex border border-dark me-5 nav-log">
-            <a href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/login.html" class="nav-item nav-link">LOGIN</a>
+
+          <!-- SHOPPING CART -->
+          <div class="dropdown shopping-cart me-3 d-flex">
+            <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../assets/shopping-cart.png" width="22" alt="">
+            </a>
+          
+            <ul id="shopping-cart" class="dropdown-menu">
+              
+            </ul>
+          </div>
+
+
+          <!-- LOGIN BUTTON -->
+          <div id="nav-log" class="d-flex border border-dark me-3 nav-log">
+            <a
+              href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/login.html"
+              class="nav-item nav-link"
+              >LOGIN</a
+            >
           </div>
         </div>
       </div>
@@ -225,7 +261,7 @@
         </ul>
       </div>
       <!-- PRODUCT LIST - right -->
-      <div id="prod-list-right" class="catagories"  data-aos="fade-left">
+      <div id="prod-list-right" class="catagories" data-aos="fade-left">
         <button
           class="tool-bar-item sort-btn-w border bg-transparent text-center float-end"
           aria-current="page"
@@ -343,6 +379,7 @@
         </div>
       </div>
     </div>
+
 
     <!-- FOOTER -->
     <div class="footer" data-aos="fade">

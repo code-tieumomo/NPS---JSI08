@@ -5,6 +5,7 @@ const list = [
     price: 40000,
     type: "rice",
     image: "../assets/gạo nếp.jpg",
+    stripeId: "price_1MXz4HIUvPZxN8XgPuXU7kJF"
   },
   {
     id: 1,
@@ -206,7 +207,7 @@ othersBtn.onclick = function () {
  */
 const muaBtns = document.querySelectorAll(".list-item .card-body button");
 // var giohang = document.getElementById("gio-hang");
-const giohang = document.querySelector("#gio-hang");
+const giohang = document.querySelector("#shopping-cart");
 /**
  * Duyệt qua từng phần tử ở trong muaBtns, mỗi lần duyệt thì đem
  * button tương ứng đặt vào biến btn (do chúng ta đặt tên)
@@ -214,7 +215,7 @@ const giohang = document.querySelector("#gio-hang");
 muaBtns.forEach(function (btn) {
   btn.onclick = function (e) {
     var tenSP =
-      btn.parentElement.previousElementSibling.previousElementSibling
+      btn.previousElementSibling.previousElementSibling
         .textContent;
 
     const spMoi = document.createElement("li");
