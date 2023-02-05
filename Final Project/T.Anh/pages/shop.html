@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="../vendors/bootstrap.css" />
     <script src="../vendors/bootstrap.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- Animate on scroll -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css"
+    />
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/shop.css" />
@@ -51,7 +57,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">ANTET</a>
+        <a class="navbar-brand" href="http://127.0.0.1:5500/Final%20Project/T.Anh/index.html">ANTET</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -69,7 +75,7 @@
               <a
                 class="nav-link"
                 aria-current="page"
-                href="#"
+                href="http://127.0.0.1:5500/Final%20Project/T.Anh/index.html"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -107,7 +113,7 @@
             <li class="nav-item dropdown">
               <a
                 class="nav-link"
-                href="#"
+                href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -115,19 +121,19 @@
                 BLOG
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Thịt kho tàu</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#thit-kho-tau">Thịt kho tàu</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Các loại mứt ngày Tết</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#cac-loai-mut">Các loại mứt ngày Tết</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Bánh chưng</a>
+                  <a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#banh-chung">Bánh chưng</a>
                 </li>
               </ul>
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link"
-                href="#"
+                href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/shop.html"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -144,7 +150,7 @@
             </li>
           </ul>
           <div id="nav-log" class="d-flex border border-dark me-5 nav-log">
-            <a href="" class="nav-item nav-link">LOGIN</a>
+            <a href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/login.html" class="nav-item nav-link">LOGIN</a>
           </div>
         </div>
       </div>
@@ -162,7 +168,7 @@
     <!-- MAIN CONTENT -->
     <div id="body-wrap" class="d-flex w-100 justify-content-center">
       <!-- PRODUCT LIST - left -->
-      <div id="prod-list-left">
+      <div id="prod-list-left" data-aos="fade-right">
         <div class="tool-bar px-4">
           <p class="tool-bar-item">những nguyên liệu chất lượng nhất</p>
           <button
@@ -222,7 +228,7 @@
         </ul>
       </div>
       <!-- PRODUCT LIST - right -->
-      <div id="prod-list-right" class="catagories">
+      <div id="prod-list-right" class="catagories"  data-aos="fade-left">
         <button
           class="tool-bar-item sort-btn-w border bg-transparent text-center float-end"
           aria-current="page"
@@ -342,7 +348,7 @@
     </div>
 
     <!-- FOOTER -->
-    <div class="footer">
+    <div class="footer" data-aos="fade">
       <div class="footer-col1">
         <h1 class="footer-title">ANTET</h1>
         <p class="footer-text">

@@ -107,18 +107,22 @@ function render(productsList) {
       `
           
       <li class="list-item ${element.type}"  data-price="${element.price}">
-            <div class="overflow-hidden"><img class="product-img" src="${element.image}"></div>
-            <div class="card-body d-flex flex-column text-center mt-3">
-                <a 
-                target="_blank"
-                class="product-name justify-content-center mb-2" 
-                href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/product.html?id=${element.id}">
-                ${element.name}
-                </a>
-                <span class="product-price w-100 mb-2">${element.price}đ</span>
-              <button class="border bg-transparent py-2 text-uppercase fw-semibold add-to-cart-btn">Thêm vào giỏ hàng</button>
-              </div>
-          </li>
+        <a 
+        href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/product.html?id=${element.id}">
+          <div class="overflow-hidden">
+            <img class="product-img" src="${element.image}">
+          </div>
+          <div class="card-body d-flex flex-column text-center mt-3">
+            <a 
+            class="product-name justify-content-center mb-2" 
+            href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/product.html?id=${element.id}">
+            ${element.name}
+            </a>
+            <span class="product-price w-100 mb-2">${element.price}đ</span>
+            <button class="border bg-transparent py-2 text-uppercase fw-semibold add-to-cart-btn">Thêm vào giỏ hàng</button>
+          </div>
+        </a>
+      </li>
       `
     );
   });

@@ -101,7 +101,7 @@ if (product === undefined) {
   productDetail.insertAdjacentHTML(
     "beforeend",
     `
-      <div class="prod-imges d-flex">
+      <div class="prod-imges d-flex" data-aos="fade-right">
         <img class="main-img" src="${product.image}" alt="" />
         <div class="d-flex flex-column justify-content-between">
           <img class="prod-gallery-img " width="100" src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/shop-10-gallery-1-300x400.jpg" alt="" />
@@ -109,7 +109,7 @@ if (product === undefined) {
           <img class="prod-gallery-img " width="100" src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/shop-10-gallery-3-300x400.jpg" alt="" />
         </div>
       </div>
-      <div class="prod-info">
+      <div class="prod-info" data-aos="fade-left">
         <h1 class="prod-name text-uppercase fw-semibold text-black m-0">${product.name}</h1>
         <div class="rating d-flex align-items-center mt-2">
           <div class="d-flex">
