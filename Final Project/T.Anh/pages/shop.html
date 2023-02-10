@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="../vendors/bootstrap.css" />
     <script src="../vendors/bootstrap.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- Animate on scroll -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css"
+    />
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/shop.css" />
@@ -26,84 +32,160 @@
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- ---------Quicksand -->\<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- ---------Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <!-- LOADING OVERLAY -->
+    <div id="overlay">
+      <!-- Credit: https://dribbble.com/shots/5092176-Newton-Loader -->
+      <div class="gooey">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg border border-0">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">ANTET</a>
+        <a
+          class="navbar-brand"
+          href="http://127.0.0.1:5500/Final%20Project/T.Anh/index.html"
+          >ANTET</a
+        >
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="http://127.0.0.1:5500/Final%20Project/T.Anh/index.html"
+                role="button"
+                aria-expanded="false"
+              >
+                HOME
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#bog-intro"
+                    >Giới thiệu về Blog</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#shop-intro"
+                    >Giới thiệu về Shop</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#best-recipe"
+                    >Món ăn đặc biệt nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#best-seller"
+                    >Sản phẩm bán chạy nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ctmrs-comments"
+                    >Nhận xét của khách hàng</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html"
+                role="button"
+                aria-expanded="false"
+              >
+                BLOG
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#thit-kho-tau"
+                    >Thịt kho tàu</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#cac-loai-mut"
+                    >Các loại mứt ngày Tết</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#banh-chung"
+                    >Bánh chưng</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/shop.html"
+                role="button"
+                aria-expanded="false"
+              >
+                SHOP
+              </a>
+              <!-- <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul> -->
+            </li>
+          </ul>
 
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link text-white"
-              aria-current="page"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              HOME
+          <!-- SHOPPING CART -->
+          <div class="dropdown shopping-cart me-3 d-flex">
+            <a class="" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../assets/shopping-cart.png" width="22" alt="">
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
+          
+            <ul id="shopping-cart" class="dropdown-menu">
+              
             </ul>
-          </li>
-          <li class="nav-item dropdown">
+          </div>
+
+
+          <!-- LOGIN BUTTON -->
+          <div id="nav-log" class="d-flex border border-dark me-3 nav-log">
             <a
-              class="nav-link text-white"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+              href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/login.html"
+              class="nav-item nav-link"
+              >LOGIN</a
             >
-              BLOG
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown active">
-            <a
-              class="nav-link text-white"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              SHOP
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </nav>
 
@@ -119,54 +201,188 @@
     <!-- MAIN CONTENT -->
     <div id="body-wrap" class="d-flex w-100 justify-content-center">
       <!-- PRODUCT LIST - left -->
-      <div class="w-75 ">
-        <div class="tool-bar">
+      <div id="prod-list-left" data-aos="fade-right">
+        <div class="tool-bar px-4">
           <p class="tool-bar-item">những nguyên liệu chất lượng nhất</p>
-          <div class="w-50 d-flex flex-row-reverse">
-            <button 
-            class="tool-bar-item w-50 border bg-transparent text-center"
+          <button
+            id="sort-btn"
+            class="tool-bar-item sort-btn-w border bg-transparent text-center"
             aria-current="page"
             data-bs-toggle="dropdown"
-            aria-expanded="false">
+            aria-expanded="false"
+          >
             sắp xếp theo
-            </button>
-            <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2         ">
-              <li>
-                <button id="original-order" class="border-0 bg-transparent py-1">Tất cả</button>
-              </li>
-              <li>
-                <button id="price-asc" class="border-0 bg-transparent py-1">Giá tăng dần</button>
-              </li>
-              <li>
-                <button id="price-desc" class="border-0 bg-transparent py-1">Giá giảm dần</button>
-              </li>
-              <li>
-                <button id="name-asc" class="border-0 bg-transparent py-1">Tên từ A đến Z</button>
-              </li>
-              <li>
-                <button id="name-desc" class="border-0 bg-transparent py-1">Tên từ Z đến A</button>
-              </li>
-            </ul>
-          </div>
+          </button>
+          <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2">
+            <li>
+              <button
+                id="original-order"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Tất cả
+              </button>
+            </li>
+            <li>
+              <button
+                id="price-asc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Giá tăng dần
+              </button>
+            </li>
+            <li>
+              <button
+                id="price-desc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Giá giảm dần
+              </button>
+            </li>
+            <li>
+              <button
+                id="name-asc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Tên từ A đến Z
+              </button>
+            </li>
+            <li>
+              <button
+                id="name-desc"
+                class="product-dropdown-item border-0 bg-transparent py-1"
+              >
+                Tên từ Z đến A
+              </button>
+            </li>
+          </ul>
         </div>
-        <ul id="products-list" class="list d-flex justify-content-between">
+        <ul id="products-list" class="list d-flex justify-content-center">
           <!-- Render bằng JS ở đây -->
         </ul>
       </div>
       <!-- PRODUCT LIST - right -->
-      <div class="catagories">
-        <label for="filter" class="text-uppercase">Thể loại</label>
-        <select id="filter">
-          <option value="all">Tất cả</option>
-          <option value="flower">Hoa</option>
-          <option value="vase">Lọ hoa</option>
-          <option value="accessories">Phụ kiện</option>
-        </select>
+      <div id="prod-list-right" class="catagories" data-aos="fade-left">
+        <button
+          class="tool-bar-item sort-btn-w border bg-transparent text-center float-end"
+          aria-current="page"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Lọc theo
+        </button>
+        <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2">
+          <li>
+            <button
+              id="all"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Tất cả
+            </button>
+          </li>
+          <li>
+            <button
+              id="rice"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Gạo
+            </button>
+          </li>
+          <li>
+            <button
+              id="leaves"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Lá gói bánh
+            </button>
+          </li>
+          <li>
+            <button
+              id="meat"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Thịt
+            </button>
+          </li>
+          <li>
+            <button
+              id="cha"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Chả
+            </button>
+          </li>
+          <li>
+            <button
+              id="spice"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Gia vị
+            </button>
+          </li>
+          <li>
+            <button
+              id="others"
+              class="product-dropdown-item border-0 bg-transparent py-1"
+            >
+              Khác
+            </button>
+          </li>
+        </ul>
+        <div id="product-catagories" class="mb-4">
+          <h3 class="text-black fs-4 fw-semibold mb-3">DANH MỤC SẢN PHẨM</h3>
+          <ul class="m-0 p-0">
+            <li class="cat-item">Gạo (2)</li>
+            <li class="cat-item">Lá gói bánh (2)</li>
+            <li class="cat-item">Thịt (2)</li>
+            <li class="cat-item">Chả (2)</li>
+            <li class="cat-item">Gia vị (1)</li>
+            <li class="cat-item">Khác (3)</li>
+          </ul>
+        </div>
+        <div id="pop-product" class="mb-4">
+          <h3 class="text-black fs-4 fw-semibold mb-3">BÁN CHẠY NHẤT</h3>
+          <ul class="m-0 p-0">
+            <li class="d-flex list-none mb-2">
+              <img width="55" src="../assets/thịt heo.png" alt="" />
+              <div class="d-flex flex-column ms-2">
+                <a
+                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
+                  href=""
+                  >Thịt heo 500g</a
+                >
+                <span>89000đ</span>
+              </div>
+            </li>
+            <li class="d-flex list-none mb-2">
+              <img width="55" src="../assets/gạo ST25.jpg" alt="" />
+              <div class="d-flex flex-column ms-2">
+                <a
+                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
+                  href=""
+                  >Gạo ST25 5kg</a
+                >
+                <span>190000đ</span>
+              </div>
+            </li>
+            <li class="d-flex list-none mb-2">
+              <img width="55" src="../assets/trứng.png" alt="" />
+              <div class="d-flex flex-column ms-2">
+                <a
+                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
+                  href=""
+                  >1 vỉ trứng gà</a
+                >
+                <span>60000đ</span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
+
     <!-- FOOTER -->
-    <div class="footer">
+    <div class="footer" data-aos="fade">
       <div class="footer-col1">
         <h1 class="footer-title">ANTET</h1>
         <p class="footer-text">
@@ -174,25 +390,18 @@
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div class="footer-link">
-          <a href="facebook.com"
-            ><img
-              class="contact-icon"
-              src="../assets/facebook.png"
-              alt="" />
+          <a
+            href="https://www.facebook.com/profile.php?id=100015427713945"
+            target="_blank"
+            ><img class="contact-icon" src="../assets/facebook.png" alt="" />
             <img src="" alt=""
           /></a>
-          <a href="instagram.com"
-            ><img
-              class="contact-icon"
-              src="../assets/instagram.png"
-              alt="" />
+          <a href="https://www.instagram.com/tuong2971/" target="_blank"
+            ><img class="contact-icon" src="../assets/instagram.png" alt="" />
             <img src="" alt=""
           /></a>
-          <a href="twitter.com"
-            ><img
-              class="contact-icon"
-              src="../assets/twitter.png"
-              alt="" />
+          <a href="https://twitter.com/JayceeK18" target="_blank"
+            ><img class="contact-icon" src="../assets/twitter.png" alt="" />
             <img src="" alt=""
           /></a>
         </div>
@@ -226,6 +435,7 @@
         </form>
       </div>
     </div>
+
     <!-- Javascript -->
     <script src="../scripts/index.js"></script>
     <script src="../scripts/shop.js"></script>

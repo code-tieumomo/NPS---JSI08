@@ -21,190 +21,112 @@ body {
 }
 
 /* _____________OVERLAY______________ */
-*.hidden {
-  display: none !important;
-}
-
-div.loading {
+#overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  z-index: 99999999999;
   background-color: #fff;
 }
-
-@-webkit-keyframes uil-ring-anim {
-  0% {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes uil-ring-anim {
-  0% {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-moz-keyframes uil-ring-anim {
-  0% {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-ms-keyframes uil-ring-anim {
-  0% {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-moz-keyframes uil-ring-anim {
-  0% {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes uil-ring-anim {
-  0% {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-o-keyframes uil-ring-anim {
-  0% {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes uil-ring-anim {
-  0% {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-.uil-ring-css {
-  margin: auto;
+.gooey {
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
+  top: 50%;
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  background: #fff;
+  filter: contrast(20);
 }
-.uil-ring-css > div {
+.gooey .dot {
   position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  filter: blur(4px);
+  background: #000;
+  border-radius: 50%;
+  transform: translateX(0);
+  animation: dot 2.8s infinite;
+}
+.gooey .dots {
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  animation: dots 2.8s infinite;
+}
+.gooey .dots span {
   display: block;
-  width: 100px;
-  height: 100px;
-  top: 20px;
-  left: 20px;
-  border-radius: 80px;
-  box-shadow: 0 4px 0 0 #000;
-  -ms-animation: uil-ring-anim 1s linear infinite;
-  -moz-animation: uil-ring-anim 1s linear infinite;
-  -webkit-animation: uil-ring-anim 1s linear infinite;
-  -o-animation: uil-ring-anim 1s linear infinite;
-  animation: uil-ring-anim 1s linear infinite;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  filter: blur(4px);
+  background: #000;
+  border-radius: 50%;
+}
+@-moz-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-webkit-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-o-keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+}
+@-moz-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@-webkit-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@-o-keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
+}
+@keyframes dots {
+  50% {
+    transform: translateX(-31px);
+  }
 }
 
 /* ______________NAVBAR___________________ */
 .navbar {
-  background-color: #fff !important;
-  display: flex;
-  justify-content: center;
-  padding: 40px;
-  border-bottom: 1px solid #e1e1e1;
-
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 110;
+  border-bottom: 1px solid #d3d3d3;
+
+  width: 100%;
+  padding: 30px 8.3%;
 }
 
-.navbar > .container-fluid {
-  display: flex;
-  /* justify-content: center; */
+.navbar-nav {
+  width: 100%;
+  gap: 70px;
+  justify-content: center;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  border: 1px solid #111;
 }
 
 .nav-link,
@@ -213,10 +135,11 @@ div.loading {
   font-weight: 600;
   line-height: 23px;
   letter-spacing: 0.1em;
-  color: #111;
+  color: #111 !important;
   padding: 10px 20px !important;
 }
 
+.navbar-brand:hover,
 .nav-link:hover {
   color: #111;
 }
@@ -231,33 +154,16 @@ div.loading {
   margin-left: 30px;
 }
 
-.nav-item {
-  border: 30px solid transparent;
+#nav-log {
+  border: #000 solid 1px !important;
 }
 
-.navbar-nav {
-  height: 100%;
-  width: 100% !important;
-  position: absolute;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
+#nav-log:hover {
+  background-color: #000;
 }
 
-.dropdown-menu {
-  /* display: inherit; */
-  margin-top: 30px !important;
-  padding: 30px 5px 30px 0;
-  background-color: #0b0b0b;
-  border: none;
-  border-radius: 0px;
-  float: none;
-}
-
-.dropdown-item {
-  color: #fff;
+#nav-log:hover a {
+  color: #fff !important;
 }
 
 /* Nav-link hover effects */
@@ -288,17 +194,31 @@ div.loading {
   transform-origin: center;
 }
 
-/* Hide Dropdowns by Default */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-}
-
 /* Display Dropdowns on Hover */
 .nav-item:hover > .dropdown-menu {
   display: inherit;
 }
-/* !!!!!!!!!!!!!!Hỏi thầy làm sao để chỉ hiện dropdown khi hover vào */
+
+/* Dropdowns */
+.dropdown-menu {
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+  padding: 20px 10px;
+}
+.dropdown-item {
+  color: #fff;
+  padding: 5px 10px;
+}
+/* Navbar toggler icon */
+.navbar-toggler {
+  background-color: transparent;
+  border: #000 solid 1px;
+}
+.navbar-toggler-icon {
+  background-image: url(../assets/manu-black.png);
+  background-repeat: no-repeat;
+}
 
 /* ________________SOCIAL SIDEBAR___________ */
 .social-sidebar {
@@ -358,7 +278,7 @@ div.loading {
 
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 1021px;
+  width: 100%;
   right: 0;
   left: 0;
 }
@@ -426,11 +346,6 @@ div.loading {
   transition-duration: 0.25s;
 }
 
-.img-fluid {
-  max-width: none;
-  position: relative;
-}
-
 /* Page link hover */
 .page-link-btn:hover {
   color: #111;
@@ -470,6 +385,8 @@ div.loading {
   width: 20%;
   display: flex;
   flex-wrap: wrap;
+  margin: 45px 30px;
+  flex-direction: column;
 }
 
 .tcc-card {
@@ -652,9 +569,12 @@ input[type="radio"] {
 .bst-slr-pdts-body > h5 {
   color: #111;
 }
+#products-list {
+  justify-content: center;
+}
 
 /* CUSTOMERS COMMENTS */
-.ctmrs-comments {
+#ctmrs-comments {
   margin: 100px 8.3%;
   display: flex;
   flex-direction: column;
@@ -674,7 +594,7 @@ input[type="radio"] {
   margin: 29px auto 0;
 }
 
-.ctmrs-comments > img {
+#ctmrs-comments > img {
   margin: 42px 0 0;
 }
 
@@ -683,11 +603,12 @@ input[type="radio"] {
   margin: 100px 8.3%;
   display: flex;
   flex-direction: row;
+  border-top: 1px solid #b0b0b0;
 }
 
-.footer-col1 , .footer-col2 {
+.footer-col1,
+.footer-col2 {
   width: 50%;
-  height: 300px;
   padding: 60px;
 }
 
@@ -755,19 +676,133 @@ input[type="radio"] {
   height: 20px;
 }
 
-.footer-link >a {
+.footer-link > a {
   text-decoration: none;
   margin-right: 19px;
 }
 
 .bst-slr-pdts-inner img {
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
 .bst-slr-pdts-inner:hover {
-    border-width: 2px;
+  border-width: 2px;
 }
 
 .bst-slr-pdts-inner:hover img {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
+
+.form-control:focus {
+  border-color: #111;
+  box-shadow: none;
+}
+
+/* ------RESPONSIVE----------- */
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 1200px */
+@media screen and (max-width: 1200px) {
+  .navbar-nav {
+    width: 100%;
+    gap: 0 !important;
+    justify-content: center;
+  }
+  .navbar-collapse {
+    padding: 0 8%;
+  }
+
+  #nav-log {
+    justify-content: center;
+    margin-right: 0 !important;
+  }
+  /* navbar hover */
+  .navbar-nav > .nav-item::after {
+    background-color: transparent;
+  }
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 992px (tablet nằm ngang) */
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    width: 100%;
+    gap: 0 !important;
+    justify-content: center;
+  }
+  .navbar-collapse {
+    padding: 0 8%;
+  }
+
+  #nav-log {
+    justify-content: center;
+    margin-right: 0 !important;
+  }
+
+  /* navbar hover */
+  .navbar-nav > .nav-item::after {
+    background-color: transparent;
+  }
+}
+
+/* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 768px (tablet nằm dọc) */
+@media screen and (max-width: 768px) {
+  /* NAVBAR */
+  .navbar-nav {
+    width: 100%;
+    gap: 0 !important;
+    justify-content: center;
+  }
+  .navbar-collapse {
+    padding: 0 8%;
+  }
+  #nav-log {
+    justify-content: center;
+    margin-right: 0 !important;
+  }
+  /* navbar hover */
+  .navbar-nav > .nav-item::after {
+    background-color: transparent;
+  }
+
+  /* CARD 1 */
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-md-4 , .col-md-8 {
+    width: 100%;
+  }
+  #blog-intro .card-body {
+    text-align: end;
+    margin-bottom: 30px;
+  }
+
+  /* CARD 2 */
+  #shop-intro .card-body {
+    margin-top: 30px;
+  }
+
+  /* SHOP CATAGORIES */
+  #three-catagories-col {
+    flex-direction: column;
+  }
+  .three-catagories-col-ele {
+    width: 100%;
+  }
+  .tcc-img {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  /* BEST SELLER */
+  .list {
+    justify-content: center;
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-direction: column;
+  }
+  .footer-col1, .footer-col2 {
+    width: 100%;
+  }
+}
+

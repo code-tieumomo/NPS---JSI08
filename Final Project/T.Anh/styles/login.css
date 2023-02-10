@@ -115,7 +115,7 @@ input {
 /* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 992px (tablet nằm ngang) */
 @media screen and (max-width: 992px) {
   form {
-    width: 70%;
+    width: 90%;
   }
 }
 

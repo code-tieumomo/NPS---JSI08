@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ANTET</title>
     <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="../assets/favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <!-- Vendors -->
     <link rel="stylesheet" href="./vendors/bootstrap.css" />
     <script src="./vendors/bootstrap.js"></script>
+    <!-- Animate on scroll -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css"
+    />
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
     <!-- Styles -->
+    <link rel="stylesheet" href="./styles/shop.css" />
     <link rel="stylesheet" href="./styles/index.css" />
     <!-- Fonts -->
     <!-- ---------Dosis -->
@@ -27,94 +30,123 @@
   </head>
   <body>
     <!-- LOADING OVERLAY -->
-    <!-- <div class="loading">
-      <div class="uil-ring-css" style="transform: scale(0.79)">
-        <div></div>
+    <div id="overlay">
+      <!-- Credit: https://dribbble.com/shots/5092176-Newton-Loader -->
+      <div class="gooey">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">ANTET</a>
+        <a class="navbar-brand" href="http://127.0.0.1:5500/Final%20Project/T.Anh/index.html">ANTET</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown active">
-            <a
-              class="nav-link"
-              aria-current="page"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              HOME
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              BLOG
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              SHOP
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="http://127.0.0.1:5500/Final%20Project/T.Anh/index.html"
+                role="button"
+                aria-expanded="false"
+              >
+                HOME
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#bog-intro"
+                    >Giới thiệu về Blog</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#shop-intro"
+                    >Giới thiệu về Shop</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#best-recipe"
+                    >Món ăn đặc biệt nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#best-seller"
+                    >Sản phẩm bán chạy nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#ctmrs-comments"
+                    >Nhận xét của khách hàng</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html"
+                role="button"
+                aria-expanded="false"
+              >
+                BLOG
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#thit-kho-tau">Thịt kho tàu</a></li>
+                <li>
+                  <a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#cac-loai-mut">Các loại mứt ngày Tết</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/blog.html#banh-chung">Bánh chưng</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/shop.html"
+                role="button"
+                aria-expanded="false"
+              >
+                SHOP
+              </a>
+              <!-- <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul> -->
+            </li>
+          </ul>
+          <div id="nav-log" class="d-flex border border-dark me-5 nav-log">
+            <a href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/login.html" class="nav-item nav-link">LOGIN</a>
+          </div>
+        </div>
       </div>
     </nav>
 
     <!-- SOCIAL SIDEBAR -->
     <div class="social-sidebar" id="ss-left">
       <div class="ss-inner">
-        <a href="">INSTAGRAM</a>
-        <a href="">TWITTER</a>
-        <a href="">FACEBOOK</a>
+        <a href="https://www.instagram.com/tuong2971/"  target="_blank">INSTAGRAM</a>
+        <a href="https://twitter.com/JayceeK18"  target="_blank">TWITTER</a>
+        <a href="https://www.facebook.com/profile.php?id=100015427713945"  target="_blank">FACEBOOK</a>
       </div>
     </div>
     <div class="social-sidebar" id="ss-right">
@@ -127,8 +159,8 @@
     <!-- CAROUSEL -->
     <div
       id="carouselExampleCaptions"
-      class="carousel slide"
-      data-bs-ride="false"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
     >
       <div class="carousel-indicators">
         <button
@@ -217,25 +249,17 @@
     </div>
 
     <!-- CARD 1: blog introduction -->
-    <div class="card mb-3">
+    <div id="blog-intro" class="card mb-3">
       <div class="row g-0">
         <div class="col-md-4">
           <img
-            style="position: relative; z-index: 1"
             width="463"
             height="568"
             src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-8.jpg"
             class="img-fluid"
             alt="..."
+            data-aos="fade-down"
           />
-          <!-- <img
-          style="position: relative; z-index: 200; top: 0;"
-            width="435"
-            height="306"
-            src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-9.jpg"
-            class="img-fluid"
-            alt="..."
-          /> -->
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -255,7 +279,7 @@
     </div>
 
     <!-- CARD 2: shop introduction -->
-    <div class="card mb-3">
+    <div id="shop-intro" class="card mb-3">
       <div class="row g-0" style="flex-direction: row-reverse">
         <div class="col-md-4" style="justify-content: right">
           <img
@@ -265,15 +289,8 @@
             src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-2.jpg"
             class="img-fluid"
             alt="..."
+            data-aos="fade-up"
           />
-          <!-- <img
-          style="position: relative; z-index: 200; top: 0;"
-            width="435"
-            height="306"
-            src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-9.jpg"
-            class="img-fluid"
-            alt="..."
-          /> -->
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -294,10 +311,10 @@
       </div>
     </div>
 
-    <!-- 3 catagories column -->
+    <!-- shop catagories -->
     <div id="three-catagories-col">
-      <div class="three-catagories-col-ele" style="margin: 45px 60px 0 0">
-        <div class="tcc-card" style="width: 18rem">
+      <div class="three-catagories-col-ele">
+        <div class="tcc-card">
           <img
             width="67"
             height="43"
@@ -317,13 +334,14 @@
             width="100%"
             src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/h1-custom-icon-img-9.png"
             alt=""
+            data-aos="fade-up"
           />
         </div>
       </div>
 
       <div
         class="three-catagories-col-ele"
-        style="margin: 45px 30px 0 35px; flex-direction: column-reverse"
+        style="flex-direction: column-reverse"
       >
         <div class="tcc-card">
           <img
@@ -345,12 +363,13 @@
             width="100%"
             src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/h1-custom-icon-img-9.png"
             alt=""
+            data-aos="fade-up"
           />
         </div>
       </div>
 
-      <div class="three-catagories-col-ele" style="margin: 45px 12px 0 50px">
-        <div class="tcc-card" style="width: 18rem">
+      <div class="three-catagories-col-ele">
+        <div class="tcc-card">
           <img
             width="67"
             height="43"
@@ -370,13 +389,14 @@
             width="100%"
             src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/h1-custom-icon-img-9.png"
             alt=""
+            data-aos="fade-up"
           />
         </div>
       </div>
     </div>
 
     <!-- BEST RECIPE -->
-    <div id="best-recipe">
+    <div id="best-recipe" data-aos="fade-down">
       <h6 class="best-subtitle">NHỮNG MÓN ĂN</h6>
       <h1 class="best-title">ĐẶC BIỆT NHẤT</h1>
       <section id="slider">
@@ -395,71 +415,77 @@
     </div>
 
     <!-- BEST SELLER -->
-    <div id="best-seller">
+    <div id="best-seller" data-aos="fade-up">
       <h6 class="best-subtitle">NHỮNG SẢN PHẨM</h6>
       <h1 class="best-title">BÁN CHẠY NHẤT</h1>
-      <div class="bst-slr-products">
-        <div class="bst-slr-pdts-inner">
+      <ul id="products-list" class="list d-flex px-3">
+        <li class="list-item">
           <div class="overflow-hidden">
-            <img
-              class="w-100"
-              src="https://food-market.cmsmasters.net/wp-content/uploads/2015/05/15-580x580.jpg"
-              alt=""
-            />
+            <img class="product-img" src="./assets/thịt heo.png" />
           </div>
-          <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Products</h6>
-            <h5>Smoked Ham</h5>
-            <h5 style="margin: 0">$8.35</h5>
+          <div class="card-body d-flex flex-column text-center mt-3">
+            <a
+              target="_blank"
+              class="product-name justify-content-center mb-2"
+              href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/product.html?id=${element.id}"
+            >
+              thịt heo 500g
+            </a>
+            <span class="product-price w-100 mb-2">89000đ</span>
+            <button
+              class="border bg-transparent py-2 text-uppercase fw-semibold"
+            >
+              Thêm vào giỏ hàng
+            </button>
           </div>
-        </div>
-        <div class="bst-slr-pdts-inner">
+        </li>
+
+        <li class="list-item">
           <div class="overflow-hidden">
-            <img
-              class="w-100"
-              src="https://food-market.cmsmasters.net/wp-content/uploads/2015/05/15-580x580.jpg"
-              alt=""
-            />
+            <img class="product-img" src="./assets/gạo ST25.jpg" />
           </div>
-          <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Products</h6>
-            <h5>Smoked Ham</h5>
-            <h5 style="margin: 0">$8.35</h5>
+          <div class="card-body d-flex flex-column text-center mt-3">
+            <a
+              target="_blank"
+              class="product-name justify-content-center mb-2"
+              href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/product.html?id=${element.id}"
+            >
+              gạo st-25 5kg
+            </a>
+            <span class="product-price w-100 mb-2">190000đ</span>
+            <button
+              class="border bg-transparent py-2 text-uppercase fw-semibold"
+            >
+              Thêm vào giỏ hàng
+            </button>
           </div>
-        </div>
-        <div class="bst-slr-pdts-inner">
+        </li>
+
+        <li class="list-item">
           <div class="overflow-hidden">
-            <img
-              class="w-100"
-              src="https://food-market.cmsmasters.net/wp-content/uploads/2015/05/15-580x580.jpg"
-              alt=""
-            />
+            <img class="product-img" src="./assets/trứng.png" />
           </div>
-          <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Products</h6>
-            <h5>Smoked Ham</h5>
-            <h5 style="margin: 0">$8.35</h5>
+          <div class="card-body d-flex flex-column text-center mt-3">
+            <a
+              target="_blank"
+              class="product-name justify-content-center mb-2"
+              href="http://127.0.0.1:5500/Final%20Project/T.Anh/pages/product.html?id=${element.id}"
+            >
+              1 vỉ trứng gà
+            </a>
+            <span class="product-price w-100 mb-2">60000</span>
+            <button
+              class="border bg-transparent py-2 text-uppercase fw-semibold"
+            >
+              Thêm vào giỏ hàng
+            </button>
           </div>
-        </div>
-        <div class="bst-slr-pdts-inner">
-          <div class="overflow-hidden">
-            <img
-              class="w-100"
-              src="https://food-market.cmsmasters.net/wp-content/uploads/2015/05/15-580x580.jpg"
-              alt=""
-            />
-          </div>
-          <div class="bst-slr-pdts-body">
-            <h6 style="margin: 0">Products</h6>
-            <h5>Smoked Ham</h5>
-            <h5 style="margin: 0">$8.35</h5>
-          </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
 
     <!-- CUSTOMERS COMMENTS -->
-    <div class="ctmrs-comments">
+    <div id="ctmrs-comments" data-aos="fade-left">
       <div class="ctmrs-cmt-body">
         <h5 class="ctmrs-cmt-title">HAPPY CUSTOMERS</h5>
         <p class="ctmrs-cmt-text">
@@ -476,7 +502,7 @@
     </div>
 
     <!-- FOOTER -->
-    <div class="footer">
+    <div class="footer" data-aos="fade">
       <div class="footer-col1">
         <h1 class="footer-title">ANTET</h1>
         <p class="footer-text">
@@ -484,21 +510,21 @@
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div class="footer-link">
-          <a href="facebook.com"
+          <a href="https://www.facebook.com/profile.php?id=100015427713945" target="_blank"
             ><img
               class="contact-icon"
               src="../T.Anh/assets/facebook.png"
               alt="" />
             <img src="" alt=""
           /></a>
-          <a href="instagram.com"
+          <a href="https://www.instagram.com/tuong2971/" target="_blank"
             ><img
               class="contact-icon"
               src="../T.Anh/assets/instagram.png"
               alt="" />
             <img src="" alt=""
           /></a>
-          <a href="twitter.com"
+          <a href="https://twitter.com/JayceeK18" target="_blank"
             ><img
               class="contact-icon"
               src="../T.Anh/assets/twitter.png"
