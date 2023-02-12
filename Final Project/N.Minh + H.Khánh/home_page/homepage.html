@@ -15,6 +15,7 @@
     <title>Home</title>
   </head>
   <body>
+    <div class="loader"></div>
     <!-- đầu trang -->
     <!-- thanh nav -->
     <header>
@@ -46,7 +47,7 @@
           </li> -->
           </li>
           <li>
-            <a href="#"
+            <a href="../subpages/cart_page.html"
               ><img src="../img/cart2.png" alt="" id="cart-image" height="50px"
             /></a>
           </li>
@@ -129,32 +130,28 @@
       </div>
       <div id="main">
         <div class="produce-img">
-          <a href="#">
-            <img src="../img/w.png" alt="" />
-            <span>2,300,000$</span>
-            <span>Áo Dài</span>
+          <a href="../information/produce1.html">
+            <img src="../img/w.png" alt="">
+            <span>Áo dài</span>
+            <span>84.84 $</span>
           </a>
+          <button id="btn-produce">Buy Now</button>
         </div>
         <div class="produce-img">
-          <a href="#">
-            <img src="../img/w.png" alt="" />
-            <span>2,300,000$</span>
-            <span>Áo Dài</span>
+          <a href="../information/produce2.html">
+            <img src="../img/bokho.png" alt="">
+            <span>Mức Dừa</span>
+            <span>9.99 $</span>
           </a>
+          <button id="btn-produce">Buy Now</button>
         </div>
         <div class="produce-img">
-          <a href="#">
-            <img src="../img/w.png" alt="" />
-            <span>2,300,000$</span>
-            <span>Áo Dài</span>
+          <a href="../information/produce3.html">
+            <img src="../img/mucdua.png" alt="">
+            <span>Bò Khô</span>
+            <span>8.99 $</span>
           </a>
-        </div>
-        <div class="produce-img">
-          <a href="#">
-            <img src="../img/w.png" alt="" />
-            <span>2,300,000$</span>
-            <span>Áo Dài</span>
-          </a>
+          <button id="btn-produce">Buy Now</button>
         </div>
       </div>
       <div class="button">
@@ -200,6 +197,16 @@
       </ul>
     </footer>
   </div>
-    <script src="./homepage.js"></script>
+    <script src="./homepage.js">
+      // const btn = document.getElementById('btn-produce')
+      // btn.onclick = function (){
+      //   window.location.href("../pay/pay.html")
+      // }
+      // function myFunc(){
+      //   alert("i love you")
+      // }
+    </script>
+    <!-- <script src="../subpages/cart_page.js"></script>
+    <script src="../subpages/auth.js"></script> -->
   </body>
 </html>
