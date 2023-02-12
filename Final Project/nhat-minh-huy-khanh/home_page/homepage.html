@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./homepage.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="loader"></div>
+    <!-- đầu trang -->
+    <!-- thanh nav -->
+    <header>
+      <nav class="container">
+        <!-- logo -->
+        <div id="logo">
+          <a href="./homepage.html"><img src="../img/Logo.png" alt="" /></a>
+        </div>
+        <!-- các mục cho người dùng vd(sản phẩm,...) -->
+        <ul id="main-nav">
+          <li>
+            <input type="text" />
+          </li>
+          <li>
+            <a href="../login-signin/login.html" class="product-link"
+              ><img
+                src="../img/user.png"
+                alt="account-icon"
+                id="account-icon"
+                height="50px"
+              />
+            </a>
+            <!-- <ul class="sub-menu">
+              <li><a href="">Bánh Chưng</a></li>
+              <li><a href="">Bánh Tét</a></li>
+              <li><a href="">Dưa</a></li>
+              <li><a href="">Thịt</a></li>
+            </ul>
+          </li> -->
+          </li>
+          <li>
+            <a href="../subpages/cart_page.html"
+              ><img src="../img/cart2.png" alt="" id="cart-image" height="50px"
+            /></a>
+          </li>
+        </ul>
+        <!-- thanh search, account, giỏ hàng -->
+        <!-- <div id="for_user">
+          <form action="" id="search-box">
+            <input
+              type="text"
+              placeholder="search here"
+              id="search-text"
+              name="search-text"
+            />
+            <button id="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+         <span class="account"><a href="../login-signin/signin.html" class="account-btn"><i class="fa-solid fa-user"></i></a></span>
+          <span class="cart"><a class="account-btn"><i class="fa-solid fa-cart-shopping"></i></a></span>
+        </div> -->
+      </nav>
+      <!-- slides start -->
+      <div class="slider">
+        <div class="slides">
+          <!-- radio button -->
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+          <!-- slide image -->
+          <div class="slide first">
+            <img src="../img/Sales happy new year.png " alt="" />
+          </div>
+          <div class="slide">
+            <img src="../img/happy.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="../img/new year.png" alt="" />
+          </div>
+          <!-- end -->
+          <!--  -->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+        </div>
+      </div>
+    </header>
+    <!-- thân trang -->
+    <div id="more-nav">
+      <div class="ship free">
+        <a href="#" title=""
+          ><img src="../img/free ship.png" alt="" />Miễn Phí Vẫn Chuyển trên
+          toàn quốc</a
+        >
+      </div>
+      <div class="ship fast">
+        <a href="#"
+          ><img src="../img/fast ship.png" alt="" /> Vận Chuyển nhanh chóng</a
+        >
+      </div>
+      <div class="ship return">
+        <a href="#"
+          ><img src="../img/return.png" alt="" />Hoàn trả hàng bị hỏng, bị lỗi
+          trong vòng 30 ngày</a
+        >
+      </div>
+    </div>
+    <div id="container-main">
+      <div class="produce">
+        <h3>Clothes</h3>
+        <p></p>
+      </div>
+      <div id="main">
+        <div class="produce-img">
+          <a href="../information/produce1.html">
+            <img src="../img/w.png" alt="">
+            <span>Áo dài</span>
+            <span>84.84 $</span>
+          </a>
+          <button id="btn-produce">Buy Now</button>
+        </div>
+        <div class="produce-img">
+          <a href="../information/produce2.html">
+            <img src="../img/bokho.png" alt="">
+            <span>Mức Dừa</span>
+            <span>9.99 $</span>
+          </a>
+          <button id="btn-produce">Buy Now</button>
+        </div>
+        <div class="produce-img">
+          <a href="../information/produce3.html">
+            <img src="../img/mucdua.png" alt="">
+            <span>Bò Khô</span>
+            <span>8.99 $</span>
+          </a>
+          <button id="btn-produce">Buy Now</button>
+        </div>
+      </div>
+      <div class="button">
+        <a href="#"> see more products </a>
+      </div>
+    </div>
+    <!-- cuối trang -->
+<div class="footer">
+    <form action="">
+      <div class="text">
+        To receive new information from us as well as attractive promotions</div>
+      <input type="email" placeholder="Email" name="email" id="email" required autocomplete="off"/>
+      <input type="submit" value="Submit">
+      <!-- <span>
+        <button>Submit</button>
+      </span> -->
+    </form>
+    <footer>
+      <ul id="about">
+        <h4>About</h4>
+        <li><a href="#">Products </a></li>
+        <li><a href="#"> Featured products</a></li>
+      </ul>
+      <ul id="information">
+        <h4>Information</h4>
+        <li><a href="#">Delivery method</a></li>
+        <li><a href="#"> Payments</a></li>
+        <li><a href="#"> Return Policy</a></li>
+        <li><a href="#"> Warranty Policy</a></li>
+        <li><a href="#"> Loyalty policy</a></li>
+      </ul>
+      <ul id="contact">
+        <h4>Contact</h4>
+        <li>Hotline: <a href="#">0766543055</a></li>
+        <li>Email: <a href="#">fansyshop@gmail.com</a></li>
+
+        <div class="icons-contact">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </ul>
+    </footer>
+  </div>
+    <script src="./homepage.js">
+      // const btn = document.getElementById('btn-produce')
+      // btn.onclick = function (){
+      //   window.location.href("../pay/pay.html")
+      // }
+      // function myFunc(){
+      //   alert("i love you")
+      // }
+    </script>
+    <!-- <script src="../subpages/cart_page.js"></script>
+    <script src="../subpages/auth.js"></script> -->
+  </body>
+</html>

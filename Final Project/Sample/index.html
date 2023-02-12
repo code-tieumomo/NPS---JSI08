@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
 
-        <!-- Vendors -->
-        <link rel="stylesheet" href="./vendors/bootstrap.css" />
-        <script src="./vendors/bootstrap.js"></script>
-        <!-- Styles -->
-        <link rel="stylesheet" href="./styles/index.css" />
-        <link rel="stylesheet" href="./styles/home.css" />
-    </head>
-    <body>
-        <!-- <div id="overlay">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Vendors -->
+    <link rel="stylesheet" href="./vendors/bootstrap.css" />
+    <script src="./vendors/bootstrap.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+</head>
+
+<body>
+    <div id="overlay">
             <div class="scene">
                 <div class="plane">
                     <div class="cube cube--0">
@@ -91,119 +94,152 @@
                     <div class="shadow shadow--7"></div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
-        <!-- Header -->
-        <header>
-            <!-- Navbar -->
-            <nav>OKE</nav>
-        </header>
+    <!-- Header -->
+    <header>
+        <nav>OKE</nav>
+    </header>
 
-        <!-- Sidebar -->
-        <aside></aside>
+    <aside></aside>
 
-        <!-- Main -->
-        <main>
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div
-                        class="collapse navbar-collapse"
-                        id="navbarSupportedContent"
-                    >
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link active"
-                                    aria-current="page"
-                                    href="#"
-                                    >Home</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a
-                                    class="nav-link dropdown-toggle"
-                                    href="#"
-                                    role="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="#"
-                                            >Action</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#"
-                                            >Another action</a
-                                        >
-                                    </li>
-                                    <li><hr class="dropdown-divider" /></li>
-                                    <li>
-                                        <a class="dropdown-item" href="#"
-                                            >Something else here</a
-                                        >
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled">Disabled</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex" role="search">
-                            <input
-                                class="form-control me-2"
-                                type="search"
-                                placeholder="Search"
-                                aria-label="Search"
-                            />
-                            <button
-                                class="btn btn-outline-success"
-                                type="submit"
-                            >
-                                Search
-                            </button>
-                        </form>
-                    </div>
+    <main>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">
+                            Search
+                        </button>
+                    </form>
                 </div>
-            </nav>
-
-            <div class="alert alert-primary" role="alert">
-                A simple primary alert—check it out!
             </div>
+        </nav>
 
-            <div id="back" class="w-100">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                odit porro, veniam accusamus sint explicabo aliquam sunt,
-                numquam maxime omnis consequuntur cum culpa aut nesciunt
-                incidunt facilis eveniet inventore ab?
+        <div class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div>
+
+        <div id="back" class="w-100">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+            odit porro, veniam accusamus sint explicabo aliquam sunt,
+            numquam maxime omnis consequuntur cum culpa aut nesciunt
+            incidunt facilis eveniet inventore ab?
+        </div>
+
+        <button id="original-order">Original</button>
+        <button id="order-by-name-asc">Name ASC</button>
+        <button id="order-by-name-desc">Name DESC</button>
+        <button id="order-by-price-asc">Price ASC</button>
+        <button id="order-by-price-desc">Price DESC</button>
+        <ul id="products" class="grid"></ul>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar.has-bg {
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
+        </div>
+    </nav>
 
-            <ul id="products"></ul>
-        </main>
+    <div style="background-color: aliceblue; height:  500px;"></div>
+    <div style="background-color: green; height:  500px;"></div>
+    <div style="background-color: red; height:  500px;"></div> -->
 
-        <!-- Footer -->
-        <footer></footer>
+    <!-- Scripts -->
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/home.js"></script>
+</body>
 
-        <!-- Scripts -->
-        <script src="./scripts/index.js"></script>
-        <script src="./scripts/home.js"></script>
-    </body>
 </html>
