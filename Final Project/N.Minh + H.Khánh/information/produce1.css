@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500;1,600&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+    background-color: #a9e2ffba;
+    /* margin-top: 10px; */
+    height: 80px;
+  }
+nav {
+    /* margin: auto; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* border-radius: 10px; */
+  }
+  #logo {
+    /* pointer-events: none; */
+    display: flex;
+    width: 100px;
+    height: 85px;
+    justify-content: center;
+    align-items: center;
+  }
+  #logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+  }
+  #main-nav {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    width: 600px;
+  }
+  #main-nav li {
+    position: relative;
+  }
+  #main-nav li a {
+    color: rgb(255, 255, 255);
+    /* display: block; */
+    text-decoration: none;
+  }
+  #main-nav input {
+    height: 30px;
+    width: 450px;
+    border-radius: 10px;
+    border: 3px solid black;
+    background-color: #a9e2ffba;
+    font-size: 15px;
+    padding: 15px 15px;
+  }
+  #main-nav ul.sub-menu {
+    position: absolute;
+    background-color: #a9e2ffba;
+    margin-top: 20px;
+    padding: 15px 20px;
+    list-style: none;
+    width: 140px;
+    /* display: none; */
+    border-radius: 15px;
+  }
+  #main-nav li:hover ul.sub-menu {
+    display: block;
+  }
+  #main-nav ul.sub-menu a {
+    padding: 4px 0px;
+    /* border-bottom: 1px solid #d6b918d4; */
+  }
+  #main-nav ul.sub-menu li:last-child a {
+    border: none;
+    /* padding: 5px; */
+  }
+.body-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+/* .body-container .button_all{
+
+} */
+.text p{
+    font-size: 30px;
+    color: black;
+}
+
+#checkout-button-price_1MaIyLCMxtY1N5I6Mp3Kt2kJ{
+    padding: 10px 70px;
+    margin-top: 20px;
+    border: 1px solid black;
+    background-color: transparent;
+    transition: color 0.4s linear;
+    position: relative;
+    text-transform: uppercase   ;
+  }
+  #checkout-button-price_1MaIyLCMxtY1N5I6Mp3Kt2kJ:hover{
+    color: #ffffff;
+  }
+  #checkout-button-price_1MaIyLCMxtY1N5I6Mp3Kt2kJ::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+    transform: scaleX(0);
+  }
+  #checkout-button-price_1MaIyLCMxtY1N5I6Mp3Kt2kJ:hover::before{
+    transform: scaleX(1);
+  }
+  
+  #add{
+    padding: 10px 52px;
+    margin-top: 20px;
+    border: 1px solid black;
+    background-color: transparent;
+    transition: color 0.4s linear;
+    position: relative;
+    text-transform: uppercase   ;
+  }
+  #add:hover{
+    color: #ffffff;
+  }
+  #add::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+    transform: scaleY(0);
+  }
+  #add:hover::before{
+    transform: scaleY(1);
+  }
+.body-container .img img{
+    width: 80%;
+    /* margin-right: ; */
+}
+/* .body-container .img{
+    margin-right: 0px;
+} */
+
+.footer{
+    margin-top: 100px;
+  }
+  footer{
+    /* margin-top: 100px; */
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #about h4{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+  }
+  #about li{
+    list-style: none;
+  }
+  #about li a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  #about li a:hover{
+    color: red;
+  }
+  #information h4{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+  }
+  #information li{
+    list-style: none;
+  }
+  #information li a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  #information li a:hover{
+    color: red;
+  }
+  #contact h4{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+  }
+  #contact li{
+    list-style: none;
+  }
+  #contact li a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  #contact li a:hover{
+    color: red;
+  }
+  #contact .icons-contact a{
+    font-size: 25px;
+    padding: 0 10px;
+    /* margin-top: 100px; */
+  }
+  #contact .icons-contact a .fa-facebook{
+    color: #535c68;
+  }
+  #contact .icons-contact a .fa-facebook:hover{
+    color: #3b5998;
+  }
+  #contact .icons-contact a .fa-twitter{
+    color: #535c68
+  }
+  #contact .icons-contact a .fa-twitter:hover{
+    color: #1da1f2;
+  }
+  #contact .icons-contact a .fa-instagram{
+    color: #535c68;
+  }
+  #contact .icons-contact a .fa-instagram:hover{
+    color: #5851db;
+  }
+  #contact .icons-contact a .fa-youtube{
+    color: #535c68;
+  }
+  #contact .icons-contact a .fa-youtube:hover{
+    color: #ff0000;
+  }
+  .text{
+    /* color: white;
+    font-size: 12px;
+    margin: 0 100px; */
+    color: #F2F2F2;
+      margin: 5px 115px;
+      font-weight: 500;
+      font-size: 14px;
+    /* text-align: center; */
+  }
+  form{
+    margin-top: 50px;
+    text-align: center;
+    background-color: #231f20 ;
+    padding: 15px 0;
+    display: flex;
+  }
+  form input[type="email"]{
+    border: none;
+    border-radius: 4px 0 0 4px;
+    height: 30px;
+    font-size: 13px;
+    min-height: unset;
+    width: 300px;
+    padding: 0 10px;
+    outline: none;
+    position: relative;
+  }
+  form input[type="submit"]{
+    /* position: absolute; */
+    /* display: inline-block; */
+    text-align: center;
+    /* white-space: nowrap; */
+    outline: none;
+    font-weight: 400px;
+    height: 30px;
+    padding: 0 15px;
+    border-radius: 0 4px 4px 0;
+    border: none;
+    font-weight: 400;
+    transition: 0.4s;
+  }
+  form input[type="submit"]:hover{
+    background-color: #e74c3c;
+    color: #f1f2f6;
+  }
