@@ -5,7 +5,7 @@ const list = [
     price: 40000,
     type: "rice",
     image: "../assets/gạo nếp.jpg",
-    stripeId: "price_1MXz4HIUvPZxN8XgPuXU7kJF"
+    stripeId: "price_1MXz4HIUvPZxN8XgPuXU7kJF",
   },
   {
     id: 1,
@@ -13,6 +13,7 @@ const list = [
     price: 20000,
     type: "leaves",
     image: "../assets/lá dong.jpg",
+    stripeId: "price_1MXzDUIUvPZxN8XgmdVfY2Vk",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const list = [
     price: 89000,
     type: "meat",
     image: "../assets/thịt heo.png",
+    stripeId: "price_1MaAbhIUvPZxN8XgFfQ4lxDz",
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const list = [
     price: 190000,
     type: "rice",
     image: "../assets/gạo ST25.jpg",
+    stripeId: "price_1MaAewIUvPZxN8XgPTYqLuOA",
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ const list = [
     price: 19000,
     type: "others",
     image: "../assets/đậu xanh không vỏ.jpg",
+    stripeId: "price_1MaAfUIUvPZxN8Xgxqvcu8Ns",
   },
   {
     id: 5,
@@ -41,6 +45,7 @@ const list = [
     price: 60000,
     type: "others",
     image: "../assets/trứng.png",
+    stripeId: "price_1MaAfxIUvPZxN8XgCphniPs5",
   },
   {
     id: 6,
@@ -48,6 +53,7 @@ const list = [
     price: 37900,
     type: "meat",
     image: "../assets/thịt gà.jpg",
+    stripeId: "price_1MaAgOIUvPZxN8XgpQH04S3x",
   },
   {
     id: 7,
@@ -55,6 +61,7 @@ const list = [
     price: 85000,
     type: "others",
     image: "../assets/củ kiệu sơ chế.jpg",
+    stripeId: "price_1MaAgpIUvPZxN8XgmUtsnLMR",
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ const list = [
     price: 90000,
     type: "cha",
     image: "../assets/chả lụa.jpg",
+    stripeId: "price_1MaAhMIUvPZxN8XgUOKfJtFZ",
   },
   {
     id: 9,
@@ -69,6 +77,7 @@ const list = [
     price: 30000,
     type: "spice",
     image: "../assets/nước mắm.jpg",
+    stripeId: "price_1MaAhhIUvPZxN8XgnAkzlKsg",
   },
   {
     id: 10,
@@ -76,6 +85,7 @@ const list = [
     price: 25000,
     type: "leaves",
     image: "../assets/lá chuối.jpg",
+    stripeId: "price_1MaAiBIUvPZxN8XgpgatlR5H",
   },
   {
     id: 11,
@@ -83,6 +93,7 @@ const list = [
     price: 49000,
     type: "cha",
     image: "../assets/chả lụa bì.jpg",
+    stripeId: "price_1MaAiYIUvPZxN8XgCqHPB30D",
   },
 ];
 localStorage.setItem("products", JSON.stringify(list));
@@ -214,25 +225,23 @@ const giohang = document.querySelector("#shopping-cart");
  */
 muaBtns.forEach(function (btn) {
   btn.onclick = function (e) {
-    var tenSP =
-      btn.previousElementSibling.previousElementSibling
-        .textContent;
+    var tenSP = btn.previousElementSibling.previousElementSibling.textContent;
 
     const spMoi = document.createElement("li");
     spMoi.textContent = tenSP;
 
     giohang.appendChild(spMoi);
+    localStorage.setItem(tenSP, "1");
   };
 });
-
 
 // NAVBAR đổi màu
 const navbarElement = document.querySelector(".navbar");
 window.addEventListener("scroll", () => {
-    const position = window.scrollY;
-    if (position >= 450) {
-        navbarElement.classList.add("has-bg");
-    } else {
-        navbarElement.classList.remove("has-bg");
-    }
+  const position = window.scrollY;
+  if (position >= 450) {
+    navbarElement.classList.add("has-bg");
+  } else {
+    navbarElement.classList.remove("has-bg");
+  }
 });

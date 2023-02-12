@@ -5,6 +5,7 @@ const list = [
     price: 40000,
     type: "rice",
     image: "../assets/gạo nếp.jpg",
+    stripe: "price_1MXz4HIUvPZxN8XgPuXU7kJF",
   },
   {
     id: 1,
@@ -94,60 +95,48 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 
 const id = params.id;
 const product = list[id];
-const productDetail = document.getElementById("product-detail");
+const productImage = document.querySelector(".prod-imges");
+const productName = document.querySelector(".prod-info");
+const productPrice = document.querySelector("#product-price");
 if (product === undefined) {
   document.write("Product not found");
 } else {
-  productDetail.insertAdjacentHTML(
-    "beforeend",
-    `
-      <div class="prod-imges d-flex" data-aos="fade-right">
-        <img class="main-img" src="${product.image}" alt="" />
-        <div class="d-flex flex-column justify-content-between">
-          <img class="prod-gallery-img " width="100" src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/shop-10-gallery-1-300x400.jpg" alt="" />
-          <img class="prod-gallery-img " width="100" src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/shop-10-gallery-2-300x400.jpg" alt="" />
-          <img class="prod-gallery-img " width="100" src="https://nigiri.qodeinteractive.com/wp-content/uploads/2018/06/shop-10-gallery-3-300x400.jpg" alt="" />
-        </div>
-      </div>
-      <div class="prod-info" data-aos="fade-left">
-        <h1 class="prod-name text-uppercase fw-semibold text-black m-0">${product.name}</h1>
-        <div class="rating d-flex align-items-center mt-2">
-          <div class="d-flex">
-            <img src="../assets/star.png" class="me-1" width="14" height="14" alt="">
-            <img src="../assets/star.png" class="me-1" width="14" height="14" alt="">
-            <img src="../assets/star.png" class="me-1" width="14" height="14" alt="">
-            <img src="../assets/star.png" class="me-1" width="14" height="14" alt="">
-            <img src="../assets/star-outline.png" class="me-1" width="14" height="14" alt="">
-          </div>
-          <p class="mt-0">1 đánh giá</p>
-        </div>
-        <h3 class="prod-price text-black">${product.price}đ</h3>
-        <p>
-          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-          Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
-          Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-          ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-        </p>
-        <button class="border border-dark text-uppercase fw-semibold add-to-cart-btn">Thêm vào giỏ hàng</button>
-      </div>
-    `
+  productImage.insertAdjacentHTML(
+    "afterbegin",
+    `<img class="main-img" src="${product.image}" alt="" />`
+  );
+  productName.insertAdjacentHTML(
+    "afterbegin",
+    `<h1 class="prod-name text-uppercase fw-semibold text-black m-0">${product.name}</h1>`
+  );
+  productPrice.insertAdjacentHTML(
+    "afterbegin",
+    `<h3 class="prod-price text-black">${product.price}đ</h3>
+  `
   );
 }
-// /**
-//  * Thêm chức năng thêm vào giỏ hàng
-//  */
-// // var muaBtns = document.querySelectorAll(".san-pham .mua button");
-// var giohang = document.querySelector("#gio-hang");
-// /**
-//  * Duyệt qua từng phần tử ở trong muaBtns, mỗi lần duyệt thì đem
-//  * button tương ứng đặt vào biến btn (do chúng ta đặt tên)
-//  */
-// muaBtns.forEach(function (btn) {
-//   btn.onclick = function (e) {
-//     var tenSP = btn.parentElement
-//     localStorage.setItem(JSON.stringify(tenSP),  )
-//   };
-// });
+
+/**
+ * Chức năng thêm vào giỏ hàng
+ */
+const muaBtns = document.querySelectorAll("#product-detail .prod-info button");
+// var giohang = document.getElementById("gio-hang");
+const giohang = document.querySelector("#shopping-cart");
+/**
+ * Duyệt qua từng phần tử ở trong muaBtns, mỗi lần duyệt thì đem
+ * button tương ứng đặt vào biến btn (do chúng ta đặt tên)
+ */
+muaBtns.forEach(function (btn) {
+  btn.onclick = function (e) {
+    var tenSP = btn.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent;
+
+    const spMoi = document.createElement("li");
+    spMoi.textContent = tenSP;
+
+    giohang.appendChild(spMoi);
+    localStorage.setItem(tenSP, "1");
+  };
+});
 
 // NAVBAR đổi màu
 const navbarElement = document.querySelector(".navbar");

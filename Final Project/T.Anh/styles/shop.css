@@ -57,6 +57,10 @@ body {
   padding: 10px 20px;
   line-height: 23px;
 }
+#shopping-cart li {
+  color: #fff;
+  padding: 5px 10px;
+}
 .shopping-cart:hover {
   background-color: #fff;
 }
