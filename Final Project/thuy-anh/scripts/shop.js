@@ -60,8 +60,6 @@ const priceDescBtn = document.getElementById("price-desc");
 const nameAscBtn = document.getElementById("name-asc");
 const nameDescBtn = document.getElementById("name-desc");
 
-console.log(nameAscBtn);
-
 priceAscBtn.onclick = function () {
   iso.arrange({ sortBy: "price", sortAscending: true });
 };
@@ -127,14 +125,16 @@ if (localStorage.getItem("user") != null) {
     btn.onclick = function (e) {
       // var tenSP = btn.previousElementSibling.previousElementSibling.textContent;
       const id = Number(btn.dataset.id);
-  
-      addToCart(id)
+
+      addToCart(id);
     };
   });
 } else {
-  btn.onclick = function (e) {
-    window.location.href = "/Final%20Project/thuy-anh/pages/login.html"
-  };
+  muaBtns.forEach(function (btn) {
+    btn.onclick = function (e) {
+      window.location.href = "/Final%20Project/thuy-anh/pages/login.html";
+    };
+  });
 }
 
 // NAVBAR đổi màu

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ANTET-shop</title>
+    <title>ANTET-blog</title>
     <!-- Favicon -->
     <link
       rel="shortcut icon"
@@ -23,7 +23,9 @@
     <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
     <!-- Style -->
     <link rel="stylesheet" href="../styles/index.css" />
-    <link rel="stylesheet" href="../styles/shop.css" />
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="stylesheet" href="../styles/thit-kho-tau.css" />
+    <link rel="stylesheet" href="../styles/cac-loai-mut.css" />
     <!-- Fonts -->
     <!-- ---------Dosis -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,7 +57,7 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg bg-white">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">ANTET</a>
         <button
@@ -109,7 +111,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
               <a
                 class="nav-link"
                 href="../pages/blog.html"
@@ -136,7 +138,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown active">
+            <li class="nav-item dropdown">
               <a
                 class="nav-link"
                 href="../pages/shop.html"
@@ -171,197 +173,71 @@
       </div>
     </nav>
 
-    <!-- CARD IMAGE -->
-    <div
-      id="elementor"
-      class="d-flex align-items-center justify-content-center"
-    >
-      <div id="elementor-overlay"></div>
-      <h1>ANTET SHOP</h1>
-    </div>
+    <!-- CAROUSEL -->
+    <img class="carousel-img" src="../assets/blog-elementor.jpg" alt="" />
 
-    <!-- MAIN CONTENT -->
-    <div id="body-wrap" class="d-flex w-100 justify-content-center">
-      <!-- PRODUCT LIST - left -->
-      <div id="prod-list-left" data-aos="fade-right">
-        <div class="tool-bar px-4">
-          <p class="tool-bar-item">những nguyên liệu chất lượng nhất</p>
-          <button
-            id="sort-btn"
-            class="tool-bar-item sort-btn-w border bg-transparent text-center"
-            aria-current="page"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            sắp xếp theo
-          </button>
-          <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2">
-            <li>
-              <button
-                id="original-order"
-                class="product-dropdown-item border-0 bg-transparent py-1"
-              >
-                Tất cả
-              </button>
-            </li>
-            <li>
-              <button
-                id="price-asc"
-                class="product-dropdown-item border-0 bg-transparent py-1"
-              >
-                Giá tăng dần
-              </button>
-            </li>
-            <li>
-              <button
-                id="price-desc"
-                class="product-dropdown-item border-0 bg-transparent py-1"
-              >
-                Giá giảm dần
-              </button>
-            </li>
-            <li>
-              <button
-                id="name-asc"
-                class="product-dropdown-item border-0 bg-transparent py-1"
-              >
-                Tên từ A đến Z
-              </button>
-            </li>
-            <li>
-              <button
-                id="name-desc"
-                class="product-dropdown-item border-0 bg-transparent py-1"
-              >
-                Tên từ Z đến A
-              </button>
-            </li>
-          </ul>
+    <h1 class="blog-title">ANTET BLOG</h1>
+
+    <!-- MAIN-CONTENT -->
+    <div class="d-flex">
+      <!-- -----------COLUMN LEFT -->
+      <div id="thit-kho-tau" class="card ps-5 pe-4" data-aos="fade-right">
+        <!-- carousel -->
+        <iframe
+        height="400"
+        src="https://www.youtube.com/embed/KI9qErCHGb4"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+        <!-- content -->
+        <div class="card-body d-flex flex-column p-0">
+          <p class="pt-4">19/12/2019</p>
+          <a class="card-title card-link pb-1">BÁNH CHƯNG</a>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id.
+          </p>
+
+          <div class="post-info-bottom d-flex mt-2 pt-3 pb-5">
+            <div class="info-bottom-item d-flex justify-content-start">
+              <div class="d-flex align-items-center">
+                <img src="../assets/speech-bubble.png" height="12px" alt="" />
+                <p class="text-uppercase mb-0 ms-2">3 comments</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <img src="../assets/heart.png" height="12px" alt="" />
+                <p class="text-uppercase mb-0 ms-2">6 likes</p>
+              </div>
+            </div>
+            <hr />
+          </div>
         </div>
-        <ul id="products-list" class="list d-flex justify-content-center">
-          <!-- Render bằng JS ở đây -->
-        </ul>
       </div>
-      <!-- PRODUCT LIST - right -->
-      <div id="prod-list-right" class="catagories" data-aos="fade-left">
-        <button
-          class="tool-bar-item sort-btn-w border bg-transparent text-center float-end"
-          aria-current="page"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Lọc theo
-        </button>
-        <ul id="sort" class="dropdown-menu bg-white border m-0 px-3 py-2">
-          <li>
-            <button
-              id="all"
-              class="product-dropdown-item border-0 bg-transparent py-1"
-            >
-              Tất cả
-            </button>
-          </li>
-          <li>
-            <button
-              id="rice"
-              class="product-dropdown-item border-0 bg-transparent py-1"
-            >
-              Gạo
-            </button>
-          </li>
-          <li>
-            <button
-              id="leaves"
-              class="product-dropdown-item border-0 bg-transparent py-1"
-            >
-              Lá gói bánh
-            </button>
-          </li>
-          <li>
-            <button
-              id="meat"
-              class="product-dropdown-item border-0 bg-transparent py-1"
-            >
-              Thịt
-            </button>
-          </li>
-          <li>
-            <button
-              id="cha"
-              class="product-dropdown-item border-0 bg-transparent py-1"
-            >
-              Chả
-            </button>
-          </li>
-          <li>
-            <button
-              id="spice"
-              class="product-dropdown-item border-0 bg-transparent py-1"
-            >
-              Gia vị
-            </button>
-          </li>
-          <li>
-            <button
-              id="others"
-              class="product-dropdown-item border-0 bg-transparent py-1"
-            >
-              Khác
-            </button>
-          </li>
-        </ul>
-        <div id="product-catagories" class="mb-4">
-          <h3 class="text-black fs-4 fw-semibold mb-3">DANH MỤC SẢN PHẨM</h3>
-          <ul class="m-0 p-0">
-            <li class="cat-item">Gạo (2)</li>
-            <li class="cat-item">Lá gói bánh (2)</li>
-            <li class="cat-item">Thịt (2)</li>
-            <li class="cat-item">Chả (2)</li>
-            <li class="cat-item">Gia vị (1)</li>
-            <li class="cat-item">Khác (3)</li>
-          </ul>
+
+      <!-- COLUMN RIGHT -->
+      <div class="w-25 pe-5 ps-4">
+        <div class="widget">
+          <h3>ABOUT US</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque
+            penatibus.
+          </p>
         </div>
-        <div id="pop-product" class="mb-4">
-          <h3 class="text-black fs-4 fw-semibold mb-3">BÁN CHẠY NHẤT</h3>
-          <ul class="m-0 p-0">
-            <li class="d-flex list-none mb-2">
-              <img width="55" src="../assets/thịt heo.png" alt="" />
-              <div class="d-flex flex-column ms-2">
-                <a
-                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
-                  href=""
-                  >Thịt heo 500g</a
-                >
-                <span>89000đ</span>
-              </div>
-            </li>
-            <li class="d-flex list-none mb-2">
-              <img width="55" src="../assets/gạo ST25.jpg" alt="" />
-              <div class="d-flex flex-column ms-2">
-                <a
-                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
-                  href=""
-                  >Gạo ST25 5kg</a
-                >
-                <span>190000đ</span>
-              </div>
-            </li>
-            <li class="d-flex list-none mb-2">
-              <img width="55" src="../assets/trứng.png" alt="" />
-              <div class="d-flex flex-column ms-2">
-                <a
-                  class="text-decoration-none text-black fs-6 text-uppercase fw-semibold"
-                  href=""
-                  >1 vỉ trứng gà</a
-                >
-                <span>60000đ</span>
-              </div>
-            </li>
+        <div class="widget">
+          <h3>CATAGORIES ON BLOG</h3>
+          <ul class="p-0 list-unstyled">
+            <li>Thịt kho tàu</li>
+            <li>Các loại mứt ngày tết</li>
+            <li>Bánh chưng</li>
           </ul>
         </div>
       </div>
     </div>
-
 
     <!-- FOOTER -->
     <div class="footer" data-aos="fade">
@@ -418,8 +294,7 @@
       </div>
     </div>
 
-    <!-- Javascript -->
+    <!-- SCRIPT -->
     <script src="../scripts/index.js"></script>
-    <script src="../scripts/shop.js"></script>
   </body>
 </html>
