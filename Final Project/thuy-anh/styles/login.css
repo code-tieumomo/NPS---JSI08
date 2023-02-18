@@ -6,6 +6,10 @@ body {
   margin: 0;
   flex-direction: row;
   align-items: center;
+  background-image: url("../assets/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 /* Viết style cho desktop trước (desktop-first) */
@@ -17,16 +21,21 @@ body {
 }
 
 h1 {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 30px 0px;
   font-size: 40px;
-  color: #111;
+  color: #fff;
+  text-align: center;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin: 0;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: center;
+  border: 1px solid #fff;
+  padding: 50px;
+  background-color: #00000073;
 }
 
 .form-control {
@@ -35,8 +44,8 @@ form {
 }
 
 .input-title {
-  border: 1px solid #111;
-  color: #111;
+  border: 1px solid #fff;
+  color: #fff;
   width: 120px;
   padding: 15px;
 }
@@ -46,14 +55,16 @@ form {
 }
 
 .footer-col2 {
-  height: unset;
-}
-
-input {
-  padding: 15px;
-  font-size: 15px;
-  border: 1px solid #111 !important;
-  border-radius: 5px;
+  background-color: #0000007a;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .text-decoration-none {
@@ -63,6 +74,15 @@ input {
 .text-decoration-none:hover {
   text-decoration: underline !important;
   color: #111;
+}
+
+.btn {
+  border: 1px solid #fff !important;
+  color: #fff;;
+}
+.btn:hover {
+  background-color: #fff !important;
+  color: #000 !important;
 }
 
 /* GOOGLE BUTTON */
@@ -79,31 +99,10 @@ input {
 }
 
 #login:hover svg {
-  filter: brightness(0) invert(1);
-  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0);
+  -webkit-filter: brightness(0);
 }
 
-/* NỀN */
-#left-img {
-  margin-left: 50px;
-  width: 50%;
-  height: 100vh;
-  background-image: url(https://file1.dangcongsan.vn/data/0/images/2021/02/08/duongntcd/13-chung-tet-td.jpg?dpi=150&quality=100&w=680);
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 99;
-}
-
-#background {
-  width: 25%;
-  background-color: #333;
-  z-index: 0;
-  position: absolute;
-  content: "";
-  min-height: 100%;
-  top: 0;
-  left: 0;
-}
 
 /* Mọi thứ được style trong đây sẽ chỉ áp dụng cho màn hình có width tối đa là 1200px */
 @media screen and (max-width: 1200px) {

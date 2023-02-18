@@ -137,6 +137,7 @@ body {
   letter-spacing: 0.1em;
   color: #111 !important;
   padding: 10px 20px !important;
+  width: max-content;
 }
 
 .navbar-brand:hover,
@@ -412,6 +413,10 @@ body {
   vertical-align: middle;
   padding-top: 137px;
 }
+.tcc-img img {
+  object-fit: cover;
+  border-radius: 7px;
+}
 
 /* _____________BEST RECIPE___________________ */
 #best-recipe {
@@ -466,23 +471,28 @@ input[type="radio"] {
 }
 
 #slide1 {
-  background-image: url(https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-7.jpg);
+  background-image: url("../assets/blog-elementor.jpg");
+  background-size: cover;
 }
 
 #slide2 {
-  background-image: url(https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-6.jpg);
+  background-image: url("../assets/mut-dua.jpg");
+  background-size: cover;
 }
 
 #slide3 {
-  background-image: url(https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-5.jpg);
+  background-image: url("../assets/mut-gung.jpg");
+  background-size: cover;
 }
 
 #slide4 {
-  background-image: url(https://nigiri.qodeinteractive.com/wp-content/uploads/2018/07/h1-image-4.jpg);
+  background-image: url("../assets/mut-me.jpg");
+  background-size: cover;
 }
 
 #slide5 {
-  background: violet;
+  background: url("../assets/banh-chung.jpg");
+  background-size: cover;
 }
 
 /* Slider Functionality */
@@ -700,41 +710,22 @@ input[type="radio"] {
 
 /* Cart */
 #cart svg {
-    width: 20px;
-    height: 20px;
-    color: #fff;
+  width: 20px;
+  height: 20px;
+  color: #000;
 }
 
 .bg-light #cart svg,
 .has-bg #cart svg {
-    color: #111;
-}
-
-.cart-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
-.cart-name {
-    font-size: 18px;
-    color: #000;
-    font-weight: 700;
-}
-
-.cart-price {
-    color: #000;
-    font-size: 16px;
-    font-weight: 500;
+  color: #000;
 }
 
 #cart img {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 #cart #logout {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* ------RESPONSIVE----------- */
@@ -805,7 +796,8 @@ input[type="radio"] {
   .row {
     flex-direction: column-reverse;
   }
-  .col-md-4 , .col-md-8 {
+  .col-md-4,
+  .col-md-8 {
     width: 100%;
   }
   #blog-intro .card-body {
@@ -840,8 +832,8 @@ input[type="radio"] {
   .footer {
     flex-direction: column;
   }
-  .footer-col1, .footer-col2 {
+  .footer-col1,
+  .footer-col2 {
     width: 100%;
   }
 }
-
