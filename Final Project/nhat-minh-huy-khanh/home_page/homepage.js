@@ -15,6 +15,17 @@ window.addEventListener("load", function () {
     })
   });
 
+document.addEventListener("DOMContentLoaded", function(){
+
+    if(localStorage.getItem("user") == null){
+} 
+    else{
+    // nếu đã đăng nhập
+    document.querySelector("#account-icon").remove();
+    document.querySelector("#user-img-").src = user.photoURL;
+}
+});
+
 // let btn = document.getElementById("btn-produce")
 
 // const produce = [{
