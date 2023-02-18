@@ -20,6 +20,38 @@ h3 {
     width: 70%;
 }
 
+/* Nguên liệu */
+.fs-18 {
+  font-size: 18px;
+}
+
+/* Cách chế biến */
+.steps-header hr{
+  width: 20px;
+  border-top: 2px solid #e43d34;
+  opacity: unset;
+}
+.w-100 {
+  height: 450px;
+  object-fit: cover;
+  padding: 0 50px;
+  margin-top: 20px;
+}
+
+/* column right */
+.widget-ele-link {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.widget-ele-link hr {
+  width: 5px;
+  border-top: 2px solid #e43d34;
+  opacity: unset;
+  margin: 13px 0;
+
+}
+
 /* Unable page link hover */
 .card-link:hover {
   color: #111;
@@ -39,4 +71,10 @@ h3 {
   transition-duration: 0.25s;
   width: inherit;
   margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .w-100 {
+    height: 300px;
+  }
 }

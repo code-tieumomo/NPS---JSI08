@@ -51,6 +51,10 @@ body {
   color: #fff;
 }
 
+.navbar-collapse {
+  background-color: transparent;
+}
+
 /* SHOPPING CART BTN */
 .shopping-cart a {
   border: 1px solid #fff;
@@ -208,16 +212,15 @@ select {
 .list {
   padding: 0 2%;
   max-width: 100%;
-  flex-wrap: wrap;
+  display: block;
 }
 
 .list-item {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
+  width: 230px;
   height: max-content;
   margin: 0 10px 8px;
   padding: 10px;
+  float: left;
 }
 
 .overflow-hidden {
@@ -442,7 +445,7 @@ select {
 
   /* PRODUCT LIST */
   .list-item {
-    width: 45%;
+    width: 40%;
   }
   .product-img {
     height: 147px;

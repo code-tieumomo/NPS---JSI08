@@ -63,7 +63,7 @@
               <a
                 class="nav-link"
                 aria-current="page"
-                href="../index.html"
+                href="./index.html"
                 role="button"
                 aria-expanded="false"
               >
@@ -71,27 +71,27 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="../index.html#bog-intro"
+                  <a class="dropdown-item" href="./index.html#blog-intro"
                     >Giới thiệu về Blog</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="../index.html#shop-intro"
+                  <a class="dropdown-item" href="./index.html#shop-intro"
                     >Giới thiệu về Shop</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="../index.html#best-recipe"
+                  <a class="dropdown-item" href="./index.html#best-recipe"
                     >Món ăn đặc biệt nhất</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="../index.html#best-seller"
+                  <a class="dropdown-item" href="./index.html#best-seller"
                     >Sản phẩm bán chạy nhất</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="../index.html#ctmrs-comments"
+                  <a class="dropdown-item" href="./index.html#ctmrs-comments"
                     >Nhận xét của khách hàng</a
                   >
                 </li>
@@ -108,17 +108,19 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="./pages/blog.htm#thit-kho-tau"
+                  <a
+                    class="dropdown-item"
+                    href="./pages/blog.html#thit-kho-tauu"
                     >Thịt kho tàu</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="./pages/blog.htm#cac-loai-mut"
+                  <a class="dropdown-item" href="./pages/blog.html#cac-loai-mut"
                     >Các loại mứt ngày Tết</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="./pages/blog.htm#banh-chung"
+                  <a class="dropdown-item" href="./pages/blog.html#banh-chung"
                     >Bánh chưng</a
                   >
                 </li>
@@ -383,7 +385,7 @@
             </p>
           </div>
         </div>
-        <div class="tcc-img" style="padding: 0 0 80px 0">
+        <div class="tcc-img special" style="padding: 0 0 80px 0">
           <img
             width="200"
             height="200"
@@ -445,7 +447,7 @@
     <div id="best-seller" data-aos="fade-up">
       <h6 class="best-subtitle">NHỮNG SẢN PHẨM</h6>
       <h1 class="best-title">BÁN CHẠY NHẤT</h1>
-      <ul id="products-list" class="list d-flex px-3">
+      <ul id="products-list" class="list d-flex px-3 list-unstyled">
         <li class="list-item">
           <div class="overflow-hidden">
             <img class="product-img" src="./assets/thịt heo.png" />
@@ -519,13 +521,13 @@
       <div class="ctmrs-cmt-body">
         <h5 class="ctmrs-cmt-title">HAPPY CUSTOMERS</h5>
         <p class="ctmrs-cmt-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          ANTET là một trang web cực kì hữu ích, nó giúp tôi tự tin hơn khi vào
+          bếp nấu những bữa ăn cho gia đình vào ngày Tết.
         </p>
       </div>
       <img
         style="width: 120px; height: 68px"
-        src="https://cdn-icons-png.flaticon.com/128/7314/7314921.png"
+        src="./assets/signature.jpg"
         class="card-img-top"
         alt="..."
       />
@@ -533,11 +535,12 @@
 
     <!-- FOOTER -->
     <div class="footer" data-aos="fade">
+      <!-- footer column 1 -->
       <div class="footer-col1">
         <h1 class="footer-title">ANTET</h1>
         <p class="footer-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Là trang web giới thiệu, hướng dẫn cách chế biến và cung cấp nguyên
+          liệu cho những bữa ăn ngày Tết thêm ấm no, sum vầy.
         </p>
         <div class="footer-link">
           <a
@@ -565,27 +568,28 @@
           /></a>
         </div>
       </div>
+      <!-- footer column 2 -->
       <div class="footer-col2">
-        <form action="">
+        <form onsubmit="submitForm(event)">
           <div class="mb-3">
             <input
               type="text"
               class="form-control"
-              id="exampleInputName1"
+              id="name"
               aria-describedby="emailHelp"
               placeholder="Họ và tên"
             />
             <input
               type="email"
               class="form-control"
-              id="exampleInputEmail1"
+              id="email"
               aria-describedby="emailHelp"
               placeholder="Email"
             />
             <input
               type="text"
               class="form-control"
-              id="exampleInputComment1"
+              id="comment"
               aria-describedby="emailHelp"
               placeholder="Nhận xét"
             />

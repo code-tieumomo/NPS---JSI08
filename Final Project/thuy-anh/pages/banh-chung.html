@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ANTET-blog</title>
+    <title>ANTET-bánh chưng</title>
     <!-- Favicon -->
     <link
       rel="shortcut icon"
@@ -122,17 +122,17 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="../pages/blog.htm#thit-kho-tau"
+                  <a class="dropdown-item" href="./blog.html#thit-kho-tau"
                     >Thịt kho tàu</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="../pages/blog.htm#cac-loai-mut"
+                  <a class="dropdown-item" href="./blog.html#cac-loai-mut"
                     >Các loại mứt ngày Tết</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="../pages/blog.htm#banh-chung"
+                  <a class="dropdown-item" href="./blog.html#banh-chung"
                     >Bánh chưng</a
                   >
                 </li>
@@ -241,50 +241,61 @@
 
     <!-- FOOTER -->
     <div class="footer" data-aos="fade">
+      <!-- footer column 1 -->
       <div class="footer-col1">
         <h1 class="footer-title">ANTET</h1>
         <p class="footer-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Là trang web giới thiệu, hướng dẫn cách chế biến và cung cấp nguyên
+          liệu cho những bữa ăn ngày Tết thêm ấm no, sum vầy.
         </p>
         <div class="footer-link">
           <a
             href="https://www.facebook.com/profile.php?id=100015427713945"
             target="_blank"
-            ><img class="contact-icon" src="../assets/facebook.png" alt="" />
+            ><img
+              class="contact-icon"
+              src="../assets/facebook.png"
+              alt="" />
             <img src="" alt=""
           /></a>
           <a href="https://www.instagram.com/tuong2971/" target="_blank"
-            ><img class="contact-icon" src="../assets/instagram.png" alt="" />
+            ><img
+              class="contact-icon"
+              src="../assets/instagram.png"
+              alt="" />
             <img src="" alt=""
           /></a>
           <a href="https://twitter.com/JayceeK18" target="_blank"
-            ><img class="contact-icon" src="../assets/twitter.png" alt="" />
+            ><img
+              class="contact-icon"
+              src="../assets/twitter.png"
+              alt="" />
             <img src="" alt=""
           /></a>
         </div>
       </div>
+      <!-- footer column 2 -->
       <div class="footer-col2">
-        <form action="">
+        <form onsubmit="submitForm(event)">
           <div class="mb-3">
             <input
               type="text"
               class="form-control"
-              id="exampleInputName1"
+              id="name"
               aria-describedby="emailHelp"
               placeholder="Họ và tên"
             />
             <input
               type="email"
               class="form-control"
-              id="exampleInputEmail1"
+              id="email"
               aria-describedby="emailHelp"
               placeholder="Email"
             />
             <input
               type="text"
               class="form-control"
-              id="exampleInputComment1"
+              id="comment"
               aria-describedby="emailHelp"
               placeholder="Nhận xét"
             />

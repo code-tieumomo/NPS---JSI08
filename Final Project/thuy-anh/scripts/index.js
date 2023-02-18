@@ -171,7 +171,7 @@ function addToCart(id) {
   let user = JSON.parse(localStorage.getItem("user"));
   const cartName = `cart-${user.uid}`;
   let cart = JSON.parse(localStorage.getItem(cartName)) || [];
-  
+
   // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
   const index = cart.findIndex(function (item) {
     return item.id == id;
@@ -197,4 +197,18 @@ function addToCart(id) {
       fontWeight: "bold",
     },
   }).showToast();
+}
+
+/**
+ * Chức năng lưu thông tin ở footer
+ */
+function submitForm(event) {
+  event.preventDefault();
+  var hoTen = document.getElementById("name");
+  var email = document.getElementById("email");
+  var comment = document.getElementById("comment");
+
+  const customer = [hoTen.value, email.value, comment.value];
+
+  localStorage.setItem(hoTen.value, JSON.stringify(customer));
 }
