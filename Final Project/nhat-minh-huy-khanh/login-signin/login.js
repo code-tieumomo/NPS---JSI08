@@ -32,7 +32,7 @@ loginBtn.onclick = function () {
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
-    localStorage.setItem("uselr",JSON.stringify(user))
+    localStorage.setItem("user",JSON.stringify(user))
     window.location.href= "../home_page/homepage.html"
     // ...
   }).catch((error) => {
