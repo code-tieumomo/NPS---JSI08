@@ -10,6 +10,12 @@
     <!-- Vendors -->
     <link rel="stylesheet" href="./vendors/bootstrap.css" />
     <script src="./vendors/bootstrap.js"></script>
+    <!-- Toastify -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <!-- Animate on scroll -->
     <link
       rel="stylesheet"
@@ -570,7 +576,7 @@
       </div>
       <!-- footer column 2 -->
       <div class="footer-col2">
-        <form onsubmit="submitForm(event)">
+        <form onsubmit="submitForm(event)" id="myForm">
           <div class="mb-3">
             <input
               type="text"
@@ -600,6 +606,10 @@
     </div>
 
     <!-- Link scripts -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/logout.js" type="module"></script>
   </body>

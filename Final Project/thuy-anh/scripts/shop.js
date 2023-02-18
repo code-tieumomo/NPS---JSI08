@@ -31,7 +31,7 @@ function render(productsList) {
             ${element.name}
             </a>
             <span class="product-price w-100 mb-2">${element.price}đ</span>
-            <button data-id="${element.id}" class="border bg-transparent py-2 text-uppercase fw-semibold add-to-cart-btn">Thêm vào giỏ hàng</button>
+            <button onclick="setTimeout(addToCartSuccessfully, 3000)" data-id="${element.id}" class="border bg-transparent py-2 text-uppercase fw-semibold add-to-cart-btn">Thêm vào giỏ hàng</button>
           </div>
         </a>
       </div>
@@ -111,84 +111,6 @@ othersBtn.onclick = function () {
   iso.arrange({ filter: ".others" });
 };
 
-// /**
-//  * Chức năng lọc, sắp xếp sản phẩm
-//  */
-//  const ascBtn = document.getElementById("asc");
-//  const descBtn = document.getElementById("desc");
- 
-//  // onclick là thuộc tính của thẻ button, chứ không phải hàm
-//  // onlick sẽ được gán bằng 1 function, function này sẽ chỉ có 1 tham số duy nhất đại diện cho sự kiện xảy ra
-//  ascBtn.onclick = function () {
-//      // Sắp xếp tăng dần
-//      const sortedProducts = products.sort(function (a, b) {
-//          if (a.price == b.price) {
-//              // Nếu giá tiền bằng nhau, thì ko cần đổi chỗ a và b => return 0
-//              return 0;
-//          } else if (a.price > b.price) {
-//              // Nếu giá tiền của a lớn hơn b, thì đổi chỗ a và b => return 1
-//              return 1;
-//          } else {
-//              // Nếu giá tiền của a nhỏ hơn b, thì ko cần đổi chỗ a và b => return -1
-//              return -1;
-//          }
-//      });
- 
-//      // Sau khi sắp xếp xong, render lại danh sách sản phẩm
-//      render(sortedProducts);
-//  };
- 
-//  descBtn.onclick = function () {
-//      const sortedProducts = products.sort(function (a, b) {
-//          if (a.price == b.price) {
-//              // Nếu giá tiền bằng nhau, thì ko cần đổi chỗ a và b => return 0
-//              return 0;
-//          } else if (a.price > b.price) {
-//              // Nếu giá tiền của a lớn hơn b, thì đổi chỗ a và b => return 1
-//              return -1;
-//          } else {
-//              // Nếu giá tiền của a nhỏ hơn b, thì ko cần đổi chỗ a và b => return -1
-//              return 1;
-//          }
-//      });
- 
-//      // Sau khi sắp xếp xong, render lại danh sách sản phẩm
-//      render(sortedProducts);
-//  };
- 
-//  const filterSelect = document.getElementById("filter");
-//  filterSelect.onchange = function () {
-//      const typeSlected = filterSelect.value;
-//      let filteredProducts = [];
-//      switch (typeSlected) {
-//          case "sport":
-//              filteredProducts = products.filter(function (element) {
-//                  if (element.type == "sport") {
-//                      return true;
-//                  } else {
-//                      return false;
-//                  }
-//              });
-//              break;
- 
-//          case "casual":
-//              filteredProducts = products.filter(function (element) {
-//                  if (element.type == "casual") {
-//                      return true;
-//                  } else {
-//                      return false;
-//                  }
-//              });
-//              break;
- 
-//          default:
-//              filteredProducts = products;
-//              break;
-//      }
-//      render(filteredProducts);
-//  };
- 
-
 /**
  * Chức năng thêm vào giỏ hàng
  */
@@ -205,6 +127,8 @@ if (localStorage.getItem("user") != null) {
       const id = Number(btn.dataset.id);
 
       addToCart(id);
+
+      setTimeout(alert("Đã thêm vào giỏ hàng"), 1000);
     };
   });
 } else {

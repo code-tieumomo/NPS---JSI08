@@ -184,11 +184,10 @@
     <!-- MAIN CONTENT -->
     <div id="container">
       <div class="d-flex justify-content-between cart-items-header">
-        <div class="w-10"></div>
-        <h6 class="thumbnail-image justify-content-end">Tên sản phẩm</h6>
-        <h6 class="w-10">Giá</h6>
-        <h6 class="w-10">Số lượng</h6>
-        <h6 class="w-10">Tổng</h6>
+        <h6 id="name" class="thumbnail-image justify-content-end text-center">Tên sản phẩm</h6>
+        <h6 id="price" class="w-10">Giá</h6>
+        <h6 id="quantity" class="w-10">Số lượng</h6>
+        <h6 id="subtotal" class="w-10 text-center">Tổng</h6>
       </div>
       <!-- PRODUCT DETAIL -->
       <div id="cart-items" class="d-flex flex-column gap-3"></div>
@@ -233,14 +232,12 @@
             const product = products[item.id];
             document.querySelector("#cart-items").innerHTML += `
               <div class="row align-items-center border-bottom pb-4">
-                <div class="remove-btn">
+                <div class="thumbnail-image">
                   <button class="btn btn-danger" onclick="removeItem(${
                     item.id
                   })">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M19 5L4.99998 19M5.00001 5L19 19" stroke="#878787" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                   </button>
-                </div>
-                <div class="thumbnail-image">
                   <img class="cart-image" src="${product.image}" alt="" />
                   <h3 class="cart-name">${product.name}</h3>
                 </div>
@@ -383,6 +380,6 @@
     <script src="../vendors/bootstrap.js"></script>
     <!-- Javascript -->
     <script src="../scripts/index.js"></script>
-    <script src="../scripts/product.js"></script>
+    <!-- <script src="../scripts/product.js"></script> -->
   </body>
 </html>
