@@ -311,7 +311,7 @@ select {
     justify-content: center;
   }
   .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0.493);
+    /* background-color: rgba(0, 0, 0, 0.493); */
     margin-top: 25px;
     padding: 0 8% 15px;
   }
@@ -336,7 +336,7 @@ select {
     justify-content: center;
   }
   .navbar-collapse {
-    padding: 0 8% 15px;
+    padding: 15px 8%;
     background-color: rgba(0, 0, 0, 0.493);
     margin-top: 25px;
   }

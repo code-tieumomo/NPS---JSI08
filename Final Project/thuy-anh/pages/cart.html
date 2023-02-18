@@ -40,6 +40,11 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Instant page -->
+    <script src="//instant.page/5.1.1" type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+    <!-- Toast -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </head>
   <body>
     <!-- LOADING OVERLAY -->
@@ -183,7 +188,7 @@
 
     <!-- MAIN CONTENT -->
     <div id="container">
-      <div class="d-flex justify-content-between cart-items-header">
+      <div id="header" class="d-flex justify-content-between cart-items-header mb-5">
         <h6 id="name" class="thumbnail-image justify-content-end text-center">Tên sản phẩm</h6>
         <h6 id="price" class="w-10">Giá</h6>
         <h6 id="quantity" class="w-10">Số lượng</h6>
@@ -213,13 +218,19 @@
       const products = JSON.parse(localStorage.getItem("products"));
       const user = JSON.parse(localStorage.getItem("user"));
       const cartName = `cart-${user.uid}`;
+      let cart = JSON.parse(localStorage.getItem(cartName)) || [];
       if (isSuccess) {
         localStorage.removeItem(cartName);
         window.location.href = ".....";
       }
 
+      function removeItem(id) {
+        cart = cart.filter((item) => item.id != id);
+        localStorage.setItem(cartName, JSON.stringify(cart));
+        window.location.reload();
+      }
+
       (function () {
-        let cart = JSON.parse(localStorage.getItem(cartName)) || [];
 
         if (cart.length < 1) {
           document.querySelector("#cart-items").innerHTML = `
@@ -227,6 +238,8 @@
               <h3>Không có sản phẩm nào trong giỏ hàng</h3>
             </div>
           `;
+          document.querySelector("#header")?.remove();
+          document.querySelector("#pay")?.remove();
         } else {
           cart.forEach((item) => {
             const product = products[item.id];
@@ -281,9 +294,9 @@
                  * https://stripe.com/docs/payments/checkout/fulfill-orders
                  */
                 successUrl:
-                  "./success.html?success=true",
+                  "http://127.0.0.1:5500/Final%20Project/thuy-anh/pages/success.html?success=true",
                 cancelUrl:
-                  "./failure.html?success=false",
+                  "http://127.0.0.1:5500/Final%20Project/thuy-anh/pages/failure.html?success=false",
               })
               .then(function (result) {
                 if (result.error) {

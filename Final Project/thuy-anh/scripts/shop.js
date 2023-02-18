@@ -128,7 +128,13 @@ if (localStorage.getItem("user") != null) {
 
       addToCart(id);
 
-      setTimeout(alert("Đã thêm vào giỏ hàng"), 1000);
+      Toastify({
+        text: "Đã thêm vào giỏ hàng",
+        className: "info",
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        }
+      }).showToast();
     };
   });
 } else {
@@ -143,7 +149,7 @@ if (localStorage.getItem("user") != null) {
 const navbarElement = document.querySelector(".navbar");
 window.addEventListener("scroll", () => {
   const position = window.scrollY;
-  if (position >= 450) {
+  if (position >= 330) {
     navbarElement.classList.add("has-bg");
   } else {
     navbarElement.classList.remove("has-bg");

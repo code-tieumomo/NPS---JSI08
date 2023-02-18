@@ -105,7 +105,7 @@ if (localStorage.getItem("products") == null) {
  */
 // Xảy ra khi tất cả các tài nguyên trên trang load xong
 window.addEventListener("load", function () {
-  document.querySelector("#overlay").remove();
+  document.querySelector("#overlay")?.remove();
 });
 
 // AOS
@@ -123,8 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Nếu đã đăng nhập
     const user = JSON.parse(localStorage.getItem("user"));
 
-    document.getElementById("nav-log").remove();
-    document.querySelector("#cart img").src = user.photoURL;
+    document.getElementById("nav-log")?.remove();
+    if (document.querySelector("#cart img")) document.querySelector("#cart img").src = user.photoURL;
   }
 });
 
@@ -171,13 +171,36 @@ function addToCart(id) {
  */
 function submitForm(event) {
   event.preventDefault();
-  var hoTen = document.getElementById("name");
-  var email = document.getElementById("email");
-  var comment = document.getElementById("comment");
+  const hoTen = document.getElementById("name");
+  const email = document.getElementById("email");
+  const comment = document.getElementById("comment");
 
-  const customer = [hoTen.value, email.value, comment.value];
+  if(hoTen.value == "" || email.value == "" || comment.value == "") {
+    Toastify({
+      text: "Vui lòng nhập đầy đủ thông tin!",
+      className: "info",
+      style: {
+        background: "linear-gradient(to right, rgb(255, 95, 109), rgb(255, 195, 113))",
+      }
+    }).showToast();
+    return;
+  }
 
-  localStorage.setItem(hoTen.value, JSON.stringify(customer));
+  const customer = {
+    hoTen: hoTen.value,
+    email: email.value,
+    comment: comment.value
+  };
 
+  const feedback = JSON.parse(localStorage.getItem("feedback")) || [];
+  feedback.push(customer);
+  localStorage.setItem("feedback", JSON.stringify(feedback));
+  Toastify({
+    text: "Cảm ơn bạn đã góp ý!",
+    className: "info",
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    }
+  }).showToast();
   document.getElementById("myForm").reset();
 }

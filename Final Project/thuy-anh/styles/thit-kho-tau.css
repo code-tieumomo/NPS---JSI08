@@ -82,7 +82,25 @@ h3 {
   margin-top: 30px;
   padding-top: 30px;
   font-size: 15px;
-  height: 100vh;
+  height: calc(100vh - 459px);
+}
+
+@media screen and (max-width: 992px) {
+    #col-right {
+        display: none;
+    }
+
+    .w-75 {
+        width: 100% !important;
+    }
+
+    .card {
+        width: 100% !important;
+    }
+
+    #thit-kho-tau {
+        padding: 0 1.5rem !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
