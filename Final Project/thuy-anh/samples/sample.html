@@ -4,737 +4,506 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
-      /* Reset CSS */
-      /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-      /* Document
-   ========================================================================== */
-
-      /**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
-      html {
-        line-height: 1.15; /* 1 */
-        -webkit-text-size-adjust: 100%; /* 2 */
-      }
-
-      /* Sections
-     ========================================================================== */
-
-      /**
-   * Remove the margin in all browsers.
-   */
-
-      body {
-        margin: 0;
-        font-family: "Mali", cursive;
-      }
-
-      /**
-   * Render the `main` element consistently in IE.
-   */
-
-      main {
-        display: block;
-      }
-
-      /**
-   * Correct the font size and margin on `h1` elements within `section` and
-   * `article` contexts in Chrome, Firefox, and Safari.
-   */
-
-      h1 {
-        font-size: 2em;
-        margin: 0.67em 0;
-      }
-
-      /* Grouping content
-     ========================================================================== */
-
-      /**
-   * 1. Add the correct box sizing in Firefox.
-   * 2. Show the overflow in Edge and IE.
-   */
-
-      hr {
-        box-sizing: content-box; /* 1 */
-        height: 0; /* 1 */
-        overflow: visible; /* 2 */
-      }
-
-      /**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
-
-      pre {
-        font-family: monospace, monospace; /* 1 */
-        font-size: 1em; /* 2 */
-      }
-
-      /* Text-level semantics
-     ========================================================================== */
-
-      /**
-   * Remove the gray background on active links in IE 10.
-   */
-
-      a {
-        background-color: transparent;
-        text-decoration: none;
-      }
-
-      /**
-   * 1. Remove the bottom border in Chrome 57-
-   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-   */
-
-      abbr[title] {
-        border-bottom: none; /* 1 */
-        text-decoration: underline; /* 2 */
-        text-decoration: underline dotted; /* 2 */
-      }
-
-      /**
-   * Add the correct font weight in Chrome, Edge, and Safari.
-   */
-
-      b,
-      strong {
-        font-weight: bolder;
-      }
-
-      /**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
-
-      code,
-      kbd,
-      samp {
-        font-family: monospace, monospace; /* 1 */
-        font-size: 1em; /* 2 */
-      }
-
-      /**
-   * Add the correct font size in all browsers.
-   */
-
-      small {
-        font-size: 80%;
-      }
-
-      /**
-   * Prevent `sub` and `sup` elements from affecting the line height in
-   * all browsers.
-   */
-
-      sub,
-      sup {
-        font-size: 75%;
-        line-height: 0;
-        position: relative;
-        vertical-align: baseline;
-      }
-
-      sub {
-        bottom: -0.25em;
-      }
-
-      sup {
-        top: -0.5em;
-      }
-
-      /* Embedded content
-     ========================================================================== */
-
-      /**
-   * Remove the border on images inside links in IE 10.
-   */
-
-      img {
-        border-style: none;
-      }
-
-      /* Forms
-     ========================================================================== */
-
-      /**
-   * 1. Change the font styles in all browsers.
-   * 2. Remove the margin in Firefox and Safari.
-   */
-
-      button,
-      input,
-      optgroup,
-      select,
-      textarea {
-        font-family: inherit; /* 1 */
-        font-size: 100%; /* 1 */
-        line-height: 1.15; /* 1 */
-        margin: 0; /* 2 */
-      }
-
-      /**
-   * Show the overflow in IE.
-   * 1. Show the overflow in Edge.
-   */
-
-      button,
-      input {
-        /* 1 */
-        overflow: visible;
-      }
-
-      /**
-   * Remove the inheritance of text transform in Edge, Firefox, and IE.
-   * 1. Remove the inheritance of text transform in Firefox.
-   */
-
-      button,
-      select {
-        /* 1 */
-        text-transform: none;
-      }
-
-      /**
-   * Correct the inability to style clickable types in iOS and Safari.
-   */
-
-      button,
-      [type="button"],
-      [type="reset"],
-      [type="submit"] {
-        -webkit-appearance: button;
-      }
-
-      /**
-   * Remove the inner border and padding in Firefox.
-   */
-
-      button::-moz-focus-inner,
-      [type="button"]::-moz-focus-inner,
-      [type="reset"]::-moz-focus-inner,
-      [type="submit"]::-moz-focus-inner {
-        border-style: none;
-        padding: 0;
-      }
-
-      /**
-   * Restore the focus styles unset by the previous rule.
-   */
-
-      button:-moz-focusring,
-      [type="button"]:-moz-focusring,
-      [type="reset"]:-moz-focusring,
-      [type="submit"]:-moz-focusring {
-        outline: 1px dotted ButtonText;
-      }
-
-      /**
-   * Correct the padding in Firefox.
-   */
-
-      fieldset {
-        padding: 0.35em 0.75em 0.625em;
-      }
-
-      /**
-   * 1. Correct the text wrapping in Edge and IE.
-   * 2. Correct the color inheritance from `fieldset` elements in IE.
-   * 3. Remove the padding so developers are not caught out when they zero out
-   *    `fieldset` elements in all browsers.
-   */
-
-      legend {
-        box-sizing: border-box; /* 1 */
-        color: inherit; /* 2 */
-        display: table; /* 1 */
-        max-width: 100%; /* 1 */
-        padding: 0; /* 3 */
-        white-space: normal; /* 1 */
-      }
-
-      /**
-   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
-   */
-
-      progress {
-        vertical-align: baseline;
-      }
-
-      /**
-   * Remove the default vertical scrollbar in IE 10+.
-   */
-
-      textarea {
-        overflow: auto;
-      }
-
-      /**
-   * 1. Add the correct box sizing in IE 10.
-   * 2. Remove the padding in IE 10.
-   */
-
-      [type="checkbox"],
-      [type="radio"] {
-        box-sizing: border-box; /* 1 */
-        padding: 0; /* 2 */
-      }
-
-      /**
-   * Correct the cursor style of increment and decrement buttons in Chrome.
-   */
-
-      [type="number"]::-webkit-inner-spin-button,
-      [type="number"]::-webkit-outer-spin-button {
-        height: auto;
-      }
-
-      /**
-   * 1. Correct the odd appearance in Chrome and Safari.
-   * 2. Correct the outline style in Safari.
-   */
-
-      [type="search"] {
-        -webkit-appearance: textfield; /* 1 */
-        outline-offset: -2px; /* 2 */
-      }
-
-      /**
-   * Remove the inner padding in Chrome and Safari on macOS.
-   */
-
-      [type="search"]::-webkit-search-decoration {
-        -webkit-appearance: none;
-      }
-
-      /**
-   * 1. Correct the inability to style clickable types in iOS and Safari.
-   * 2. Change font properties to `inherit` in Safari.
-   */
-
-      ::-webkit-file-upload-button {
-        -webkit-appearance: button; /* 1 */
-        font: inherit; /* 2 */
-      }
-
-      /* Interactive
-     ========================================================================== */
-
-      /*
-   * Add the correct display in Edge, IE 10+, and Firefox.
-   */
-
-      details {
-        display: block;
-      }
-
-      /*
-   * Add the correct display in all browsers.
-   */
-
-      summary {
-        display: list-item;
-      }
-
-      /* Misc
-     ========================================================================== */
-
-      /**
-   * Add the correct display in IE 10+.
-   */
-
-      template {
-        display: none;
-      }
-
-      /**
-   * Add the correct display in IE 10.
-   */
-
-      [hidden] {
-        display: none;
-      }
-
-      /* Variables */
-      :root {
-        --hue: 185;
-        --radius: 5.5;
-        --size: 4;
-      }
-
-      /* Overlay */
-      #overlay {
-        position: fixed;
-        inset: 0;
-        z-index: 9999999;
-        background-color: #fff;
-      }
-
-      #overlay [type="checkbox"] {
-        position: absolute;
-        left: 100%;
-        opacity: 0;
-        height: 0;
-        width: 0;
-      }
-      .scene {
-        perspective: 800px;
-        transform-style: preserve-3d;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .plane {
-        height: 5vmin;
-        width: 5vmin;
-        transform-style: preserve-3d;
-        transform: rotateX(-40deg) rotateY(-45deg) rotateX(90deg);
-      }
-      .cube,
-      .shadow {
-        --width: var(--size);
-        --height: var(--size);
-        --depth: var(--size);
-        height: calc(var(--depth) * 1vmin);
-        width: calc(var(--width) * 1vmin);
-        transform-style: preserve-3d;
-        position: absolute;
-        font-size: 1rem;
-        -webkit-animation: jump 0.8s calc(var(--d) * 1s) infinite;
-        animation: jump 0.8s calc(var(--d) * 1s) infinite;
-        transform: translate3d(
-          calc((var(--x) * var(--radius)) * 1vmin),
-          calc((var(--y) * var(--radius)) * -1vmin),
-          0
-        );
-      }
-      .cube > div:nth-of-type(1),
-      .shadow > div:nth-of-type(1) {
-        background: hsl(var(--hue), 60%, 50%);
-        height: calc(var(--height) * 1vmin);
-        width: 100%;
-        transform-origin: 50% 50%;
-        transform: rotateX(-90deg);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotateX(-90deg)
-          translate3d(0, 0, calc((var(--depth) / 2) * 1vmin));
-      }
-      .cube > div:nth-of-type(2),
-      .shadow > div:nth-of-type(2) {
-        background: hsl(var(--hue), 60%, 60%);
-        height: calc(var(--height) * 1vmin);
-        width: 100%;
-        transform-origin: 50% 50%;
-        transform: translate(-50%, -50%) rotateX(-90deg) rotateY(180deg)
-          translate3d(0, 0, calc((var(--depth) / 2) * 1vmin));
-        position: absolute;
-        top: 50%;
-        left: 50%;
-      }
-      .cube > div:nth-of-type(3),
-      .shadow > div:nth-of-type(3) {
-        background: hsl(var(--hue), 60%, 60%);
-        height: calc(var(--height) * 1vmin);
-        width: calc(var(--depth) * 1vmin);
-        transform: translate(-50%, -50%) rotateX(-90deg) rotateY(90deg)
-          translate3d(0, 0, calc((var(--width) / 2) * 1vmin));
-        position: absolute;
-        top: 50%;
-        left: 50%;
-      }
-      .cube > div:nth-of-type(4),
-      .shadow > div:nth-of-type(4) {
-        background: hsl(var(--hue), 60%, 55%);
-        height: calc(var(--height) * 1vmin);
-        width: calc(var(--depth) * 1vmin);
-        transform: translate(-50%, -50%) rotateX(-90deg) rotateY(-90deg)
-          translate3d(0, 0, calc((var(--width) / 2) * 1vmin));
-        position: absolute;
-        top: 50%;
-        left: 50%;
-      }
-      .cube > div:nth-of-type(5),
-      .shadow > div:nth-of-type(5) {
-        background: hsl(var(--hue), 60%, 45%);
-        height: calc(var(--depth) * 1vmin);
-        width: calc(var(--width) * 1vmin);
-        transform: translate(-50%, -50%)
-          translate3d(0, 0, calc((var(--height) / 2) * 1vmin));
-        position: absolute;
-        top: 50%;
-        left: 50%;
-      }
-      .cube > div:nth-of-type(6),
-      .shadow > div:nth-of-type(6) {
-        background: hsl(var(--hue), 60%, 65%);
-        height: calc(var(--depth) * 1vmin);
-        width: calc(var(--width) * 1vmin);
-        transform: translate(-50%, -50%)
-          translate3d(0, 0, calc((var(--height) / 2) * -1vmin)) rotateX(180deg);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-      }
-      .shadow {
-        -webkit-animation: none;
-        animation: none;
-        background: radial-gradient(#000, transparent);
-        transform: translate3d(
-            calc((var(--x) * var(--radius)) * 1vmin),
-            calc((var(--y) * var(--radius)) * -1vmin),
-            calc(var(--size) * -0.5vmin)
-          )
-          scale(1);
-        -webkit-animation: shadow 0.8s calc(var(--d) * 1s) infinite;
-        animation: shadow 0.8s calc(var(--d) * 1s) infinite;
-      }
-      .cube--0,
-      .shadow--0 {
-        --x: 1;
-        --y: 0;
-        --d: -0.7;
-      }
-      .cube--1,
-      .shadow--1 {
-        --x: 1;
-        --y: -1;
-        --d: -0.6;
-      }
-      .cube--2,
-      .shadow--2 {
-        --x: 0;
-        --y: -1;
-        --d: -0.5;
-      }
-      .cube--3,
-      .shadow--3 {
-        --x: -1;
-        --y: -1;
-        --d: -0.4;
-      }
-      .cube--4,
-      .shadow--4 {
-        --x: -1;
-        --y: 0;
-        --d: -0.3;
-      }
-      .cube--5,
-      .shadow--5 {
-        --x: -1;
-        --y: 1;
-        --d: -0.2;
-      }
-      .cube--6,
-      .shadow--6 {
-        --x: 0;
-        --y: 1;
-        --d: -0.1;
-      }
-      .cube--7,
-      .shadow--7 {
-        --x: 1;
-        --y: 1;
-        --d: 0;
-      }
-      @-webkit-keyframes jump {
-        0%,
-        30%,
-        100% {
-          transform: translate3d(
-            calc((var(--x) * var(--radius)) * 1vmin),
-            calc((var(--y) * var(--radius)) * -1vmin),
-            0
-          );
-        }
-        15% {
-          transform: translate3d(
-            calc((var(--x) * var(--radius)) * 1vmin),
-            calc((var(--y) * var(--radius)) * -1vmin),
-            3.5vmin
-          );
-        }
-      }
-      @keyframes jump {
-        0%,
-        30%,
-        100% {
-          transform: translate3d(
-            calc((var(--x) * var(--radius)) * 1vmin),
-            calc((var(--y) * var(--radius)) * -1vmin),
-            0
-          );
-        }
-        15% {
-          transform: translate3d(
-            calc((var(--x) * var(--radius)) * 1vmin),
-            calc((var(--y) * var(--radius)) * -1vmin),
-            3.5vmin
-          );
-        }
-      }
-      @-webkit-keyframes shadow {
-        0%,
-        30%,
-        100% {
-          transform: translate3d(
-              calc((var(--x) * var(--radius)) * 1vmin),
-              calc((var(--y) * var(--radius)) * -1vmin),
-              calc(var(--size) * -0.5vmin)
-            )
-            scale(1);
-        }
-        15% {
-          transform: translate3d(
-              calc((var(--x) * var(--radius)) * 1vmin),
-              calc((var(--y) * var(--radius)) * -1vmin),
-              calc(var(--size) * -0.5vmin)
-            )
-            scale(0.85);
-          opacity: 0.2;
-        }
-      }
-      @keyframes shadow {
-        0%,
-        30%,
-        100% {
-          transform: translate3d(
-              calc((var(--x) * var(--radius)) * 1vmin),
-              calc((var(--y) * var(--radius)) * -1vmin),
-              calc(var(--size) * -0.5vmin)
-            )
-            scale(1);
-        }
-        15% {
-          transform: translate3d(
-              calc((var(--x) * var(--radius)) * 1vmin),
-              calc((var(--y) * var(--radius)) * -1vmin),
-              calc(var(--size) * -0.5vmin)
-            )
-            scale(0.85);
-          opacity: 0.2;
-        }
-      }
-
-      /* Header */
-      /* ... */
-
-      /* Footer */
-      /* ... */
-    </style>
+    <title>ANTET-các loại mứt</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Vendors -->
+    <link rel="stylesheet" href="../vendors/bootstrap.css" />
+    <script src="../vendors/bootstrap.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- Animate on scroll -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css"
+    />
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="stylesheet" href="../styles/thit-kho-tau.css" />
+    <link rel="stylesheet" href="../styles/cac-loai-mut.css" />
+    <!-- Fonts -->
+    <!-- ---------Dosis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ---------Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <!-- LOADING OVERLAY -->
     <div id="overlay">
-      <div class="scene">
-        <div class="plane">
-          <div class="cube cube--0">
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-          </div>
-          <div class="shadow shadow--0"></div>
-          <div class="cube cube--1">
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-          </div>
-          <div class="shadow shadow--1"></div>
-          <div class="cube cube--2">
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-          </div>
-          <div class="shadow shadow--2"></div>
-          <div class="cube cube--3">
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-          </div>
-          <div class="shadow shadow--3"></div>
-          <div class="cube cube--4">
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-          </div>
-          <div class="shadow shadow--4"></div>
-          <div class="cube cube--5">
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-          </div>
-          <div class="shadow shadow--5"></div>
-          <div class="cube cube--6">
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-          </div>
-          <div class="shadow shadow--6"></div>
-          <div class="cube cube--7">
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-            <div class="cube__side"></div>
-          </div>
-          <div class="shadow shadow--7"></div>
+      <!-- Credit: https://dribbble.com/shots/5092176-Newton-Loader -->
+      <div class="gooey">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </div>
 
-    <script>
-      console.log(
-        `%c ༼ つ ◕_◕ ༽つ %c ✔ home.js %c`,
-        "background:#35495e; padding: 1px; border-radius: 3px 0 0 3px; color: #fff; display: inline-block;",
-        `background: green; padding: 1px; border-radius: 0 3px 3px 0; color: #fff; display: inline-block;`,
-        "background:transparent"
-      );
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">ANTET</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="../index.html"
+                role="button"
+                aria-expanded="false"
+              >
+                TRANG CHỦ
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="../index.html#bog-intro"
+                    >Giới thiệu về Blog</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../index.html#shop-intro"
+                    >Giới thiệu về Shop</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../index.html#best-recipe"
+                    >Món ăn đặc biệt nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../index.html#best-seller"
+                    >Sản phẩm bán chạy nhất</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../index.html#ctmrs-comments"
+                    >Nhận xét của khách hàng</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link"
+                href="../pages/blog.html"
+                role="button"
+                aria-expanded="false"
+              >
+                BLOG
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./blog.html#thit-kho-tau"
+                    >Thịt kho tàu</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./blog.html#cac-loai-mut"
+                    >Các loại mứt ngày Tết</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./blog.html#banh-chung"
+                    >Bánh chưng</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="../pages/shop.html"
+                role="button"
+                aria-expanded="false"
+              >
+                CỬA HÀNG
+              </a>
+            </li>
+          </ul>
+          <div id="nav-log" class="d-flex border border-dark nav-log">
+            <a href="../pages/login.html" class="nav-item nav-link"
+              >ĐĂNG NHẬP</a
+            >
+          </div>
+          <div id="cart" class="d-flex gap-4 align-items-center">
+            <a href="../pages/cart.html">
+              <svg viewBox="0 0 576 512" fill="currentColor">
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                />
+              </svg>
+            </a>
+            <div id="logout">
+              <svg viewBox="0 0 512 512" fill="currentColor">
+                <path
+                  d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                />
+              </svg>
+            </div>
+            <img src="" width="30" height="30" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
 
-      // Xảy ra khi HTML trên trang load xong
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("overlay").remove();
-        const start = performance.now();
-        for (let index = 0; index < 2000000000; index++) {}
-        const end = performance.now();
-        console.log("Thời gian chạy: ", end - start);
-      });
+    <!-- CAROUSEL -->
+    <img class="carousel-img" src="../assets/blog-elementor.jpg" alt="" />
 
-      // Xảy ra khi tất cả các tài nguyên trên trang load xong
-      window.addEventListener("load", function () {
-        // document.getElementById("overlay").remove();
-      });
-    </script>
+    <h1 class="blog-title">ANTET BLOG</h1>
+
+    <!-- MAIN-CONTENT -->
+    <div class="d-flex">
+      <!-- -----------COLUMN LEFT -->
+      <div id="thit-kho-tau" class="card ps-5 pe-4" data-aos="fade-right">
+        <!-- carousel -->
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img
+                src="../assets/mut-dua.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img
+                src="../assets/mut-gung.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="../assets/mut-me.jpg" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- content -->
+        <div class="card-body d-flex flex-column p-0 fs-18">
+          <p class="pt-4">21/9/2021</p>
+          <a class="card-title card-link pb-1">CÁC LOẠI MỨT NGÀY TẾT</a>
+          <p class="card-text">
+            Một hình ảnh không thể thiếu trong những ngày Tết cổ truyền Việt Nam
+            chính là những khay đựng mứt, hạt. Ngày Tết, hầu như gia đình nào
+            cũng bày trên bàn khách của mình đủ loại bánh kẹo, mứt Tết.
+          </p>
+
+          <div class="fs-18">
+            <!-- Mứt dừa -->
+            <div id="mut-dua" class="mb-5">
+              <hr />
+              <h3>Mứt dừa</h3>
+              <hr />
+
+              <img class="mb-4" src="../assets/mut-dua-3.jpg" alt="" />
+
+              <p>
+                Mứt dừa là một loại mứt quen thuộc không thể thiếu trong mâm mứt
+                Tết truyền thống, loại mứt này có
+                <strong> mùi vị thơm béo, dễ ăn, </strong>
+                trẻ em hay người lớn dùng đều thích. Hơn nữa,
+                <strong>
+                  dừa có nhiều enzym có tác dụng tốt cho hệ tiêu hóa, điều trị
+                  các chứng đầy bụng, khó tiêu, táo bón.
+                </strong>
+                Mấy năm gần đây mứt dừa được chế biến rất nhiều kiểu khác nhau
+                như
+                <strong> mứt dừa sợi, mứt dừa viên, mứt dừa non,... </strong>
+              </p>
+
+              <div class="d-flex steps-header flex-column">
+                <div class="d-flex additional-link">
+                  <hr class="me-3" />
+                  <a
+                    class="text-decoration-none text-reset"
+                    href="https://www.bachhoaxanh.com/kinh-nghiem-hay/tu-lam-mut-dua-tai-nha-ngon-gion-don-tet-1140737"
+                    >Cách làm mứt dừa sợi</a
+                  >
+                </div>
+
+                <div class="d-flex additional-link">
+                  <hr class="me-3" />
+                  <a
+                    class="text-decoration-none text-reset"
+                    href="https://www.bachhoaxanh.com/kinh-nghiem-hay/cach-lam-mut-dua-vien-hat-luu-ngon-don-tet-1058947"
+                    >Cách làm mứt dừa viên</a
+                  >
+                </div>
+
+                <div class="d-flex additional-link">
+                  <hr class="me-3" />
+                  <a
+                    class="text-decoration-none text-reset"
+                    href="https://www.bachhoaxanh.com/kinh-nghiem-hay/cach-lam-mut-dua-nhieu-mau-1141112"
+                    >Cách làm mứt dừa nhiều màu sắc</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Mứt dừa -->
+            <div id="mut-dua" class="mb-5">
+              <hr />
+              <h3>Mứt dừa</h3>
+              <hr />
+
+              <img class="mb-4" src="../assets/mut-dua-3.jpg" alt="" />
+
+              <p>
+                Mứt dừa là một loại mứt quen thuộc không thể thiếu trong mâm mứt
+                Tết truyền thống, loại mứt này có
+                <strong> mùi vị thơm béo, dễ ăn, </strong>
+                trẻ em hay người lớn dùng đều thích. Hơn nữa,
+                <strong>
+                  dừa có nhiều enzym có tác dụng tốt cho hệ tiêu hóa, điều trị
+                  các chứng đầy bụng, khó tiêu, táo bón.
+                </strong>
+                Mấy năm gần đây mứt dừa được chế biến rất nhiều kiểu khác nhau
+                như
+                <strong> mứt dừa sợi, mứt dừa viên, mứt dừa non,... </strong>
+              </p>
+
+              <div class="d-flex steps-header flex-column">
+                <div class="d-flex additional-link">
+                  <hr class="me-3" />
+                  <a
+                    class="text-decoration-none text-reset"
+                    href="https://www.bachhoaxanh.com/kinh-nghiem-hay/tu-lam-mut-dua-tai-nha-ngon-gion-don-tet-1140737"
+                    >Cách làm mứt dừa sợi</a
+                  >
+                </div>
+
+                <div class="d-flex additional-link">
+                  <hr class="me-3" />
+                  <a
+                    class="text-decoration-none text-reset"
+                    href="https://www.bachhoaxanh.com/kinh-nghiem-hay/cach-lam-mut-dua-vien-hat-luu-ngon-don-tet-1058947"
+                    >Cách làm mứt dừa viên</a
+                  >
+                </div>
+
+                <div class="d-flex additional-link">
+                  <hr class="me-3" />
+                  <a
+                    class="text-decoration-none text-reset"
+                    href="https://www.bachhoaxanh.com/kinh-nghiem-hay/cach-lam-mut-dua-nhieu-mau-1141112"
+                    >Cách làm mứt dừa nhiều màu sắc</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Mứt me -->
+            <div id="mut-dua" class="mb-5">
+              <hr />
+              <h3>Mứt dừa</h3>
+              <hr />
+
+              <img class="mb-4" src="../assets/mut-me-2.jpg" alt="" />
+
+              <div class="d-flex steps-header flex-column">
+                <div class="d-flex additional-link">
+                  <hr class="me-3" />
+                  <a
+                    class="text-decoration-none text-reset"
+                    href="https://www.bachhoaxanh.com/kinh-nghiem-hay/tu-lam-mut-dua-tai-nha-ngon-gion-don-tet-1140737"
+                    >Cách làm mứt dừa sợi</a
+                  >
+                </div>
+
+                <div class="d-flex additional-link">
+                  <hr class="me-3" />
+                  <a
+                    class="text-decoration-none text-reset"
+                    href="https://www.bachhoaxanh.com/kinh-nghiem-hay/cach-lam-mut-dua-vien-hat-luu-ngon-don-tet-1058947"
+                    >Cách làm mứt dừa viên</a
+                  >
+                </div>
+
+                <div class="d-flex additional-link">
+                  <hr class="me-3" />
+                  <a
+                    class="text-decoration-none text-reset"
+                    href="https://www.bachhoaxanh.com/kinh-nghiem-hay/cach-lam-mut-dua-nhieu-mau-1141112"
+                    >Cách làm mứt dừa nhiều màu sắc</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- bình luận và lượt thích -->
+            <div class="post-info-bottom d-flex mt-2 pt-3 pb-5">
+              <div class="info-bottom-item d-flex justify-content-start">
+                <div class="d-flex align-items-center">
+                  <img src="../assets/speech-bubble.png" height="12px" alt="" />
+                  <p class="text-uppercase mb-0 ms-2">3 comments</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img src="../assets/heart.png" height="12px" alt="" />
+                  <p class="text-uppercase mb-0 ms-2">6 likes</p>
+                </div>
+              </div>
+              <hr />
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN RIGHT -->
+        <div class="w-25 pe-5 ps-4">
+          <div class="widget">
+            <h3>ABOUT US</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque
+              penatibus.
+            </p>
+          </div>
+          <div class="widget">
+            <h3>CATAGORIES ON BLOG</h3>
+            <ul class="p-0 list-unstyled">
+              <li>Thịt kho tàu</li>
+              <li>Các loại mứt ngày tết</li>
+              <li>Bánh chưng</li>
+            </ul>
+          </div>
+          <div class="widget">
+            <h3>CATAGORIES ON PAGE</h3>
+            <ul class="p-0 list-unstyled">
+              <li class="widget-ele-link">
+                <a
+                  href="./cac-loai-mut.html#mut-dua"
+                  class="text-decoration-none text-reset"
+                  >Mứt dừa</a
+                >
+              </li>
+              <li class="widget-ele-link">
+                <a
+                  href="./cac-loai-mut.html#mut-gung"
+                  class="text-decoration-none text-reset"
+                  >Mứt gừng</a
+                >
+              </li>
+              <li class="widget-ele-link">
+                <a
+                  href="./cac-loai-mut.html#mut-me"
+                  class="text-decoration-none text-reset"
+                  >Mứt me</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer" data-aos="fade">
+      <!-- footer column 1 -->
+      <div class="footer-col1">
+        <h1 class="footer-title">ANTET</h1>
+        <p class="footer-text">
+          Là trang web giới thiệu, hướng dẫn cách chế biến và cung cấp nguyên
+          liệu cho những bữa ăn ngày Tết thêm ấm no, sum vầy.
+        </p>
+        <div class="footer-link">
+          <a
+            href="https://www.facebook.com/profile.php?id=100015427713945"
+            target="_blank"
+            ><img class="contact-icon" src="../assets/facebook.png" alt="" />
+            <img src="" alt=""
+          /></a>
+          <a href="https://www.instagram.com/tuong2971/" target="_blank"
+            ><img class="contact-icon" src="../assets/instagram.png" alt="" />
+            <img src="" alt=""
+          /></a>
+          <a href="https://twitter.com/JayceeK18" target="_blank"
+            ><img class="contact-icon" src="../assets/twitter.png" alt="" />
+            <img src="" alt=""
+          /></a>
+        </div>
+      </div>
+      <!-- footer column 2 -->
+      <div class="footer-col2">
+        <form onsubmit="submitForm(event)">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              aria-describedby="emailHelp"
+              placeholder="Họ và tên"
+            />
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              class="form-control"
+              id="comment"
+              aria-describedby="emailHelp"
+              placeholder="Nhận xét"
+            />
+            <button type="submit" class="btn btn-primary">Gửi</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="../scripts/index.js"></script>
   </body>
 </html>

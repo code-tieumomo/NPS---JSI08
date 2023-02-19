@@ -41,3 +41,6 @@ if (cart) {
         window.location.href = "index.html";
     });
 }
+function addToCart(){
+    let cart = JSON.parse 
+}

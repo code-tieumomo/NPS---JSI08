@@ -27,6 +27,11 @@
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- Instant page -->
+    <script src="//instant.page/5.1.1" type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+    <!-- Toast -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </head>
   <body>
     <!-- LOADING OVERLAY -->
@@ -46,13 +51,15 @@
     <div id="background-overlay">
         <h1 class="text-uppercase">Thanh toán thành công</h1>
         <p>Cảm ơn bạn đã lựa chọn sản phẩm của chúng tôi</p>
-        <a href="http://127.0.0.1:5500/Final%20Project/T.Anh/index.html" class="page-link-btn text-uppercase text-white">trở lại trang chủ</a>
+        <a href="http://127.0.0.1:5500/Final%20Project/thuy-anh/index.html" class="page-link-btn text-uppercase text-white">trở lại trang chủ</a>
     </div>
-
-
-
 
     <!-- SCRIPT -->
     <script src="../scripts/index.js"></script>
+    <script>
+        let user = JSON.parse(localStorage.getItem("user"));
+        const cartName = `cart-${user.uid}`;
+        localStorage.removeItem(cartName);
+    </script>
   </body>
 </html>

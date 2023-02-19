@@ -116,7 +116,8 @@ p{
     padding: 6px 8px;
     gap: 10px;
     border: none;
-    border-radius: 5px; ;
+    border-radius: 5px; 
+    cursor: pointer;
 }
 .text_or{
     margin-bottom: 0px;
