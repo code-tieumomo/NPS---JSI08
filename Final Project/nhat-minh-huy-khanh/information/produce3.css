@@ -132,7 +132,7 @@ nav {
     color: black;
 }
 
-#checkout-button-price_1MaJHKCMxtY1N5I6z9ON2hKS{
+#checkout-button-price_1Meek7CMxtY1N5I6sWKb85Ln{
     padding: 10px 70px;
     margin-top: 20px;
     border: 1px solid black;
@@ -141,10 +141,10 @@ nav {
     position: relative;
     text-transform: uppercase   ;
   }
-  #checkout-button-price_1MaJHKCMxtY1N5I6z9ON2hKS:hover{
+  #checkout-button-price_1Meek7CMxtY1N5I6sWKb85Ln:hover{
     color: #ffffff;
   }
-  #checkout-button-price_1MaJHKCMxtY1N5I6z9ON2hKS::before{
+  #checkout-button-price_1Meek7CMxtY1N5I6sWKb85Ln::before{
     content: "";
     position: absolute;
     left: 0;
@@ -158,7 +158,7 @@ nav {
     transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
     transform: scaleX(0);
   }
-  #checkout-button-price_1MaJHKCMxtY1N5I6z9ON2hKS:hover::before{
+  #checkout-button-price_1Meek7CMxtY1N5I6sWKb85Ln:hover::before{
     transform: scaleX(1);
   }
   

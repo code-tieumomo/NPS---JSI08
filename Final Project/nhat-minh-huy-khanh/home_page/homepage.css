@@ -161,7 +161,8 @@ a:hover:after{
   justify-content: center;
   align-items: center;
   background-color: #d63031;
-  transition: opacity 0.75s, visibility 0.75s;
+  transition: opacity 1s, visibility 1s;
+  z-index: 999;
 }
 .loader-hidden{
   opacity: 0;
@@ -360,6 +361,7 @@ a:hover:after{
 }
 #main .produce-img a img{
   width: 180px;
+  height: 170px;
   margin-bottom: 10px;
   /* transition: 2s; */
 }
