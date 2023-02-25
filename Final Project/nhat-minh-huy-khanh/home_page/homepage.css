@@ -19,7 +19,7 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  /* position: fixed; */
+  position: fixed;
   /* opacity: 0.5; */
   top: 0;
   width: 100%;

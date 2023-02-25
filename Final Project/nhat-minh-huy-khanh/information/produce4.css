@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500;1,600&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+    background-color: #a9e2ffba;
+    /* margin-top: 10px; */
+    height: 80px;
+  }
+nav {
+    /* margin: auto; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    /* border-radius: 10px; */
+  }
+  .nav-btn{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-left: 240px; 
+  }
+  .nav-btn a {
+    padding: 18px 20px;
+    /* text-align: center; */
+    /* margin-left: 50px; */
+    font-size: 20px;
+    text-decoration: none;
+    color: #d63031;
+    position: relative;
+    letter-spacing: 2px;
+    margin-left: 80px;
+  }
+  .nav-btn a::after{
+    content: "";
+    border-top: 4px solid #fdcb6e;
+    position: absolute;
+    width: 0;
+    height: 3px;
+    /* top:; */
+    /* right: 0; */
+    left:0;
+    bottom:-10px;
+    transition: 0.3s;
+  }
+  a:hover:after{
+    width: 100%;
+  }
+  #logo {
+    /* pointer-events: none; */
+    display: flex;
+    width: 100px;
+    height: 85px;
+    justify-content: center;
+    align-items: center;
+  }
+  #logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-left: 30px;
+  }
+  #main-nav {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    width: 600px;
+  }
+  #main-nav li {
+    position: relative;
+  }
+  #main-nav li a {
+    color: rgb(255, 255, 255);
+    /* display: block; */
+    text-decoration: none;
+  }
+  #main-nav input {
+    height: 30px;
+    width: 450px;
+    border-radius: 10px;
+    border: 3px solid black;
+    background-color: #a9e2ffba;
+    font-size: 15px;
+    padding: 15px 15px;
+  }
+  #main-nav ul.sub-menu {
+    position: absolute;
+    background-color: #a9e2ffba;
+    margin-top: 20px;
+    padding: 15px 20px;
+    list-style: none;
+    width: 140px;
+    /* display: none; */
+    border-radius: 15px;
+  }
+  #main-nav li:hover ul.sub-menu {
+    display: block;
+  }
+  #main-nav ul.sub-menu a {
+    padding: 4px 0px;
+    /* border-bottom: 1px solid #d6b918d4; */
+  }
+  #main-nav ul.sub-menu li:last-child a {
+    border: none;
+    /* padding: 5px; */
+  }

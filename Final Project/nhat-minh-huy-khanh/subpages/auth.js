@@ -3,3 +3,5 @@ if (!localStorage.getItem("list-user")) {
 }
 
 window.user = localStorage.getItem("user");
+
+

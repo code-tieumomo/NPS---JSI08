@@ -29,17 +29,17 @@ const products = [
   },
   {
     name: "Áo dài trẻ em",
-    price: 3.99,
-    image: "../img/4.png",
+    price: 29.99,
+    image: "../img/6.png",
     to: "../information/produce4.html",
-    type: "food",
+    type: "clothes",
   },
   {
-    name: "Áo dài trẻ em",
-    price: 3.99,
-    image: "../img/4.png",
+    name: "Câu Đối",
+    price: 0.99,
+    image: "../img/3.png",
     to: "../information/produce4.html",
-    type: "food",
+    type: "thing",
   },
 ];
 
@@ -63,9 +63,8 @@ function render(productsList) {
             <span>${element.name}</span>
             <span>${element.price}$</span>
             </a>
-            <button type="button"> + Add to cart</button>
+            <button id="addto" class="btn-produce" type="button"> + Add to cart</button>
             </div>
-            
             `
     );
   });
@@ -125,6 +124,16 @@ filterSelect.onchange = function () {
         }
       });
       break;
+
+      case "thing":
+        filteredProducts = products.filter(function (element) {
+          if (element.type == "thing") {
+            return true;
+          } else {
+            return false;
+          }
+        });
+        break;
 
     default:
       filteredProducts = products;
