@@ -1,81 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./produce2.css">
-    <title>Document</title>
-</head>
-<body>
-  
-  <div class="loader"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./produce2.css" />
+    <title>UniFes</title>
+  </head>
+  <body>
+    <div class="loader"></div>
     <nav class="container">
       <!-- logo -->
       <div id="logo">
-        <a href="../home_page/homepage.html"><img src="../img/Logo.png" alt="" /></a>
+        <a href="../home_page/homepage.html"
+          ><img src="../img/Logo.png" alt=""
+        /></a>
       </div>
       <div class="nav-btn">
-        <a href="#">Home</a>
-        <a href="#">Products</a>
+        <a href="../home_page/homepage.html">Home</a>
+        <a href="../information/more.html">Products</a>
         <a href="#">More</a>
       </div>
       <!-- các mục cho người dùng vd(sản phẩm,...) -->
       <ul id="main-nav">
         <li>
-          <!-- <input type="text" /> -->
-        </li>
-        <li>
           <a
             href="../login-signin/login.html"
             id="account-icon"
             class="product-link"
-            ><img
-              src="../img/user.png"
-              alt="account-icon"
-              id="account-icon"
-              height="35px"
-            />
+          >
           </a>
         </li>
-        <!-- <img id="user-img-"src="" width="35" height="35" alt=""> -->
+        <img
+          src="../img/user.png"
+          alt="account-icon"
+          id="account-icon"
+          height="35px"
+        />
+
         <li>
-          <img id="log-out" height="35px" style="cursor: pointer;" src="../img/Log-out.png" alt="">
+          <img
+            id="log-out"
+            height="35px"
+            style="cursor: pointer"
+            src="../img/Log-out.png"
+            alt=""
+          />
         </li>
         <li>
           <a href="../subpages/cart_page.html"
-            ><img src="../img/cart2.png" alt="" id="cart-image"  height="35px"
+            ><img src="../img/cart2.png" alt="" id="cart-image" height="35px"
           /></a>
         </li>
       </ul>
     </nav>
-<div class="body-container">
-        <div class="img">
-            <img src="../img/5 (1).png" alt="">
-        </div>
-    <div class="button_all">
+    <div class="body-container">
+      <div class="img">
+        <img src="../img/5 (1).png" alt="" />
+      </div>
+      <div class="button_all">
         <div class="text">
-            <p>9.99$</p>
-            <p>Mức</p>
+          <p>9.99$</p>
+          <p>Mứt</p>
         </div>
         <div class="btn-pay">
-            <button   
+          <button
             id="checkout-button-price_1MaJHKCMxtY1N5I6z9ON2hKS"
             role="link"
-            type="button">Buy Now</button>
+            type="button"
+          >
+            Buy Now
+          </button>
         </div>
         <div class="add-to-cart">
-            <button id="add">+ Add to cart</button>
+          <button id="add">+ Add to cart</button>
         </div>
+      </div>
     </div>
-</div>
 
-    
     <!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
+    <script src="https://js.stripe.com/v3"></script>
 
-<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<!-- <button
+    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+    <!-- <button
   style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
   id="checkout-button-price_1MaJHKCMxtY1N5I6z9ON2hKS"
   role="link"
@@ -84,84 +91,101 @@
   Checkout
 </button> -->
 
-<div id="error-message"></div>
+    <div id="error-message"></div>
 
-<script>
-(function() {
-  var stripe = Stripe('pk_test_51MXz23CMxtY1N5I6gomkj73v8S1e1YgPQmyzqVP58N9l3UQmqZiJ38yCKuJPItciFUI9PaUsGEQY8r09F3zrUMZy008jM1Xzh3');
+    <script>
+      (function () {
+        var stripe = Stripe(
+          "pk_test_51MXz23CMxtY1N5I6gomkj73v8S1e1YgPQmyzqVP58N9l3UQmqZiJ38yCKuJPItciFUI9PaUsGEQY8r09F3zrUMZy008jM1Xzh3"
+        );
 
-  var checkoutButton = document.getElementById('checkout-button-price_1MaJHKCMxtY1N5I6z9ON2hKS');
-  checkoutButton.addEventListener('click', function () {
-    /*
-     * When the customer clicks on the button, redirect
-     * them to Checkout.
-     */
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1MaJHKCMxtY1N5I6z9ON2hKS', quantity: 1}],
-      mode: 'payment',
-      /*
-       * Do not rely on the redirect to the successUrl for fulfilling
-       * purchases, customers may not always reach the success_url after
-       * a successful payment.
-       * Instead use one of the strategies described in
-       * https://stripe.com/docs/payments/checkout/fulfill-orders
-       */
-      successUrl: 'http://127.0.0.1:5500/NPS---JSI08/Final%20Project/N.Minh%20+%20H.Kh%C3%A1nh/home_page/success.html',
-      cancelUrl: 'http://127.0.0.1:5500/NPS---JSI08/Final%20Project/N.Minh%20+%20H.Kh%C3%A1nh/home_page/cancel.html',
-    })
-    .then(function (result) {
-      if (result.error) {
-        /*
-         * If `redirectToCheckout` fails due to a browser or network
-         * error, display the localized error message to your customer.
-         */
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
+        var checkoutButton = document.getElementById(
+          "checkout-button-price_1MaJHKCMxtY1N5I6z9ON2hKS"
+        );
+        checkoutButton.addEventListener("click", function () {
+          /*
+           * When the customer clicks on the button, redirect
+           * them to Checkout.
+           */
+          stripe
+            .redirectToCheckout({
+              lineItems: [
+                { price: "price_1MaJHKCMxtY1N5I6z9ON2hKS", quantity: 1 },
+              ],
+              mode: "payment",
+              /*
+               * Do not rely on the redirect to the successUrl for fulfilling
+               * purchases, customers may not always reach the success_url after
+               * a successful payment.
+               * Instead use one of the strategies described in
+               * https://stripe.com/docs/payments/checkout/fulfill-orders
+               */
+              successUrl:
+                "http://127.0.0.1:5500/NPS---JSI08/Final%20Project/N.Minh%20+%20H.Kh%C3%A1nh/home_page/success.html",
+              cancelUrl:
+                "http://127.0.0.1:5500/NPS---JSI08/Final%20Project/N.Minh%20+%20H.Kh%C3%A1nh/home_page/cancel.html",
+            })
+            .then(function (result) {
+              if (result.error) {
+                /*
+                 * If `redirectToCheckout` fails due to a browser or network
+                 * error, display the localized error message to your customer.
+                 */
+                var displayError = document.getElementById("error-message");
+                displayError.textContent = result.error.message;
+              }
+            });
+        });
+      })();
+    </script>
 
-<div class="footer">
-  <form action="">
-    <div class="text">
-      To receive new information from us as well as attractive promotions</div>
-    <input type="email" placeholder="Email" name="email" id="email" required autocomplete="off"/>
-    <input type="submit" value="Submit">
-    <!-- <span>
+    <div class="footer">
+      <form action="">
+        <div class="text">
+          To receive new information from us as well as attractive promotions
+        </div>
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          id="email"
+          required
+          autocomplete="off"
+        />
+        <input type="submit" value="Submit" />
+        <!-- <span>
       <button>Submit</button>
     </span> -->
-  </form>
-  <footer>
-    <ul id="about">
-      <h4>About</h4>
-      <li><a href="#">Products </a></li>
-      <li><a href="#"> Featured products</a></li>
-    </ul>
-    <ul id="information">
-      <h4>Information</h4>
-      <li><a href="#">Delivery method</a></li>
-      <li><a href="#"> Payments</a></li>
-      <li><a href="#"> Return Policy</a></li>
-      <li><a href="#"> Warranty Policy</a></li>
-      <li><a href="#"> Loyalty policy</a></li>
-    </ul>
-    <ul id="contact">
-      <h4>Contact</h4>
-      <li>Hotline: <a href="#">0766543055</a></li>
-      <li>Email: <a href="#">fansyshop@gmail.com</a></li>
+      </form>
+      <footer>
+        <ul id="about">
+          <h4>About</h4>
+          <li><a href="#">Products </a></li>
+          <li><a href="#"> Featured products</a></li>
+        </ul>
+        <ul id="information">
+          <h4>Information</h4>
+          <li><a href="#">Delivery method</a></li>
+          <li><a href="#"> Payments</a></li>
+          <li><a href="#"> Return Policy</a></li>
+          <li><a href="#"> Warranty Policy</a></li>
+          <li><a href="#"> Loyalty policy</a></li>
+        </ul>
+        <ul id="contact">
+          <h4>Contact</h4>
+          <li>Hotline: <a href="#">0766543055</a></li>
+          <li>Email: <a href="#">fansyshop@gmail.com</a></li>
 
-      <div class="icons-contact">
-      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-      <a href="#"><i class="fa-brands fa-twitter"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-brands fa-youtube"></i></a>
-      </div>
-    </ul>
-  </footer>
-  <script src="../login-signin/login.js"></script>
-  <script src="../home_page/homepage.js"></script>
-</div>
-</body>
+          <div class="icons-contact">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </ul>
+      </footer>
+      <script src="../login-signin/login.js"></script>
+      <script src="../home_page/homepage.js"></script>
+    </div>
+  </body>
 </html>
