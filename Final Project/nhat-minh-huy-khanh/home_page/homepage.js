@@ -28,49 +28,79 @@ document.addEventListener("DOMContentLoaded", function(){
 
 // let btn = document.getElementById("btn-produce")
 
-// const produce = [{
-//     name : "Áo dài",
-//     price : 84.84,
-//     image : "../img/w.png",   
-// },
-// {
-//     name:"Bò Khô",
-//     price: 5.99,
-//     image:"../img/bokho.png"
-// },
-// {
-//     name:"mức",
-//     price: 8.99,
-//     image:"../img/mucdua.png"
-// },
-// // localStorage.setItem("user", JSON.stringify(produce))
-// ]
+// const listCart = [
+//     {
+//       name: "Áo dài nữ",
+//       price: 84.84,
+//       image: "../img/1.png",
+//       to: "../information/produce1.html",
+//       type: "clothes",
+//     },
+//     {
+//       name: "Mứt dừa",
+//       price: 9.99,
+//       image: "../img/5 (1).png",
+//       to: "../information/produce2.html",
+//       type: "food",
+//     },
+//     {
+//       name: "Áo dài nam",
+//       price: 34.34,
+//       image: "../img/2.png",
+//       to: "../information/produce3.html",
+//       type: "clothes",
+//     },
+//     {
+//       name: "Bò khô",
+//       price: 3.99,
+//       image: "../img/4.png",
+//       to: "../information/produce5.html",
+//       type: "food",
+//     },
+//     {
+//       name: "Áo dài trẻ em",
+//       price: 29.99,
+//       image: "../img/6.png",
+//       to: "../information/produce4.html",
+//       type: "clothes",
+//     },
+//     {
+//       name: "Câu Đối",
+//       price: 0.99,
+//       image: "../img/3.png",
+//       to: "../information/produce4.html",
+//       type: "thing",
+//     },
+//   ];
+  
+// // // localStorage.setItem("user", JSON.stringify(produce))
+// // ]
 
-// for (let index = 0; index < produce.length; index++){
-//     const element = produce[index];
-//     document.getElementById("main")?.insertAdjacentHTML(
-//         "beforeend",
-//         `
-//     <div class="produce-img" id="produce${index}">
-//         <a href="../information/produce.html">
-//           <img src="${element.image}" alt="" />
-//           <span>${element.name}</span>
-//           <span>${element.price} $</span>
-//         </a>
-//         <button id="btn-produce">Buy Now</button>
-//     </div>
+// // for (let index = 0; index < produce.length; index++){
+// //     const element = produce[index];
+// //     document.getElementById("main")?.insertAdjacentHTML(
+// //         "beforeend",
+// //         `
+// //     <div class="produce-img" id="produce${index}">
+// //         <a href="../information/produce.html">
+// //           <img src="${element.image}" alt="" />
+// //           <span>${element.name}</span>
+// //           <span>${element.price} $</span>
+// //         </a>
+// //         <button id="btn-produce">Buy Now</button>
+// //     </div>
             
-//         `,
-//  );
-// // const btn = doucument.getElementById("btn-produce")
-// // btn.onclick = function (){
-// //     window.location.href("../information/produce1.html")
-// // }
-//  document.querySelector("#produce" + index + "button")?.addEventListener("click", function (e){
-//     if (!user) {
-//         alert("Please login to add to cart");
+// //         `,
+// //  );
+// // // const btn = doucument.getElementById("btn-produce")
+//  btn.onclick = function (){
+//     window.location.href("../information/produce1.html")
+// }
+//   document.querySelector("#produce" + index + "button")?.addEventListener("click", function (e){
+//    if (!user) {
+//        alert("Please login to add to cart");
 //         return;
-//     }
+//      }
 //     let listCart = JSON.parse(localStorage.getItem("list-cart")) || [];
 //             listCart.push({
 //                 name: element.name,
@@ -80,4 +110,4 @@ document.addEventListener("DOMContentLoaded", function(){
 //             localStorage.setItem("list-cart", JSON.stringify(listCart));
 //             alert("Added " + element.name + " to cart");
 //  })
-// }
+

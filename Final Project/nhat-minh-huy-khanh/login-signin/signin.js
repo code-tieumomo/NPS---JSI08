@@ -6,7 +6,7 @@ import {
   signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 
-// TODO: Add SDKs for Firebase products that you want to use
+//  TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -49,10 +49,10 @@ signupBtn.onclick = function () {
       // ...
     });
 };
-function submit(){
-    const firstname = document.getElementById("firstname")
-    const lastname = document.getElementById("lastname")
-    const phonenumber = document.getElementById("phonenumber")
-    const email = document.getElementById("email")
-    const password = document.getElementById("password")
-}
+// function submit(){
+//     const firstname = document.getElementById("firstname")
+//     const lastname = document.getElementById("lastname")
+//     const phonenumber = document.getElementById("phonenumber")
+//     const email = document.getElementById("email")
+//     const password = document.getElementById("password")
+// }

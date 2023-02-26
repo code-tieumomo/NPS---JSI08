@@ -24,7 +24,7 @@ const products = [
     name: "Bò khô",
     price: 3.99,
     image: "../img/4.png",
-    to: "../information/produce4.html",
+    to: "../information/produce5.html",
     type: "food",
   },
   {
@@ -42,7 +42,7 @@ const products = [
     type: "thing",
   },
 ];
-
+localStorage.setItem("products", JSON.stringify( products) )
 const productsListElement = document.getElementById("container-main");
 
 /**
